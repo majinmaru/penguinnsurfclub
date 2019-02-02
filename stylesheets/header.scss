@@ -1,0 +1,212 @@
+@import 'base/color.scss';
+@import 'base/font.scss';
+@import 'base/mixin.scss';
+
+html {
+	font-size: 10px;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.header {
+	width: 100%;
+	@include flexbox();
+	@include box-sizing(border-box);
+	border-bottom: 3px solid $main-color;
+	.header-left {
+		width: calc((79.97% / 4) + 10%);
+		height: 15rem;
+		@include box-sizing(border-box);
+		border-right: 3px solid $main-color;
+		padding-left: 10%;
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(center);
+		.header__logo {
+			width: 100%;
+			@include box-sizing(border-box);
+			padding-right: 50%;
+			a {
+				width: 100%;
+				margin-top: 0.5rem;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				img {
+					width: 70%;
+				}
+			}
+		}
+		.header__brand {
+			width: 100%;
+			@include box-sizing(border-box);
+			padding-right: 50%;
+			margin-top: 1rem;
+			a {
+				width: 100%;
+				text-decoration: none;
+				text-align: center;
+				color: $main-color;
+				font-size: 1.4rem;
+				line-height: 1.7rem;
+				font-family: 'Lachata';
+				font-weight: bold;
+				letter-spacing: 0.1rem;
+				display: block;
+			}
+		}
+	}
+	.header-right {
+		width: calc((79.97% * 0.75) + 10.03%);
+		height: 15rem;
+		@include flexbox();
+		@include flex-direction(column);
+		@include box-sizing(border-box);
+		.header__weather {
+			width: 100%;
+			height: 70%;
+			@include flexbox();
+			@include box-sizing(border-box);
+			border-bottom: 3px solid $main-color;
+			padding-left: 5%;
+			padding-right: 15%;
+			padding-top: 2%;
+			padding-bottom: 2%;
+			.waether-tab {
+				width: calc(97% / 4);
+				height: 100%;
+				@include flexbox();
+				@include flex-direction(column);
+				@include box-sizing(border-box);
+				.waether-tab__name {
+					width: 100%;
+					height: 30%;
+					color: $font-gray4;					
+				}
+				.waether-tab__content {
+					width: 100%;
+					height: 70%;
+					@include flexbox();
+					@include align-items(center);
+					.content-location {
+						width: 100%;
+						height: 100%;
+						@include box-sizing(border-box);
+						font-family: 'oACYCZno';
+						font-weight: bold;
+						color: $font-gray2;
+						font-size: 1.5rem;
+						@include flexbox();
+						@include align-items(center);
+					}
+					.content-icon {
+						width: 40%;
+						height: 100%;
+						@include flexbox();
+						@include align-items(flex-end);
+						img {
+							height: 80%;
+						}
+					}
+					.content-text {
+						width: 60%;
+						@include flexbox();
+						@include flex-direction(column);
+						@include justify-content(space-between);
+						font-family: 'oACYCZno'; 
+						padding-top: 3%;
+						@include box-sizing(border-box);
+						.content-text__max {							
+							color: $sub-red;
+							font-size: 1.8rem;
+							@include flexbox();
+							@include align-items(flex-end);
+							span {
+								color: $font-gray3;
+								font-size: 1.4rem;
+								margin-left: 0.7rem;
+							}
+						}
+						.content-text__min {
+							margin-top: 0.7rem;
+							color: #97b5ff;
+							font-size: 1.8rem;
+							@include flexbox();
+							@include align-items(flex-end);
+							span {
+								color: $font-gray3;
+								font-size: 1.4rem;
+								margin-left: 0.7rem;
+							}
+						}
+						.content-text__surf {
+							color: $main-color;
+							font-size: 1.8rem;
+							font-family: 'oACYCZno';
+							font-weight: bold;
+							margin-left: -1.5rem;
+						}
+					}
+				}
+			}
+			.waether-dir {
+				margin-top: 0.5rem;
+				width: 3%;
+				height: 100%;
+				@include flexbox();
+				@include flex-direction(column);
+				.dir-up {
+					width: 100%;
+					height: 50%;
+					@include flexbox();
+					@include align-items(center);
+					img {
+						width: 60%;
+						cursor: pointer;
+					}
+				}
+				.dir-down {
+					width: 100%;
+					height: 50%;
+					@include flexbox();
+					@include align-items(center);
+					img {
+						cursor: pointer;
+						width: 60%;
+						@include transform(rotate(180deg));
+					}
+				}
+			}
+		}
+		.header__nav {
+			@include flexbox();
+			width: 100%;
+			height: 30%;
+			@include box-sizing(border-box);
+			padding-right: 18%;
+			.nav-tab {
+				width: calc(100% / 3);
+				height: 100%;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				cursor: pointer;
+				&.active {
+					width: calc(100% / 3);
+					height: 100%;
+					background: url('../../images/common/wave-red.svg');
+					background-size: 20%;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+				a {
+					text-decoration: none;
+					font-family: 'Do Hyeon', sans-serif;
+					color: $main-color;
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}

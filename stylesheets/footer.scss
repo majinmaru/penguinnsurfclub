@@ -1,0 +1,15 @@
+@import 'base/color.scss';
+@import 'base/font.scss';
+@import 'base/mixin.scss';
+
+html {
+	font-size: 10px;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.footer {
+	margin-top: 12rem;
+	width: 100%;
+}

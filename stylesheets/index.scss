@@ -1,0 +1,852 @@
+@import 'base/color.scss';
+@import 'base/font.scss';
+@import 'base/mixin.scss';
+
+html {
+	font-size: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.slider {
+	width: 100%;
+	height: 50vh;
+	overflow: hidden;
+	position: relative;
+	.slider-wrapper {
+		width: 100%;
+		.slide {
+			position: relative;
+			width: 100%;
+			height: 50vh;
+			.slide-image {
+				position: relative;
+				width: 100%;
+				height: 50vh;
+				overflow: hidden;
+				img {
+					position: absolute;
+					width: 100%;
+				}
+			}
+			.slide-filter {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: $main-color-500;
+				top: 0;
+				left: 0;
+			}
+			.slide-sideblur {
+				position: absolute;
+				width: 7%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				margin-right: 3%;
+				background-color: $white-500;
+			}
+			.slide-content {
+				position: absolute;
+				@include flexbox();
+				@include justify-content(space-between);
+				@include align-items(center);
+				width: 76%;
+				height: 100%;
+				margin-left: 12%;
+				top: 0;
+				left: 0;
+				.content-text {
+					width: calc((99.952% * 0.5) + 0.016%);
+					height: 100%;
+					color: $white;
+					@include box-sizing(border-box);
+					padding-top: 5%;
+					.content-text__title {
+						font-size: 9rem;
+						font-family: 'OTEnjoystoriesBA'; 
+						font-weight: bolder;
+					}
+					.content-text__subtitle {
+						font-size: 1.8rem;
+						font-family: 'oACYCZno';
+						font-weight: bold;
+						margin-top: 2.5rem;
+					}
+					.content-text__desc {					
+						font-size: 1.2rem;
+						line-height: 2.4rem;
+						font-family: 'oACYCZno'; 
+						margin-top: 1.8rem;
+						width: 60%;
+						word-break: keep-all;
+						word-wrap: break-word;
+					}
+				}
+				.content-img {
+					width: 34%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.slider-control {
+		width: 60%;
+		position: absolute;
+		bottom: 5%;
+		@include box-sizing(border-box);
+		padding-left: 12%;
+		@include flexbox();
+		@include align-items(flex-end);
+		@include justify-content(space-between);
+		.control-navigation {
+			width: 10%;
+			@include flexbox();
+			@include justify-content(space-between);
+			.navigation-dot {
+				width: 2rem;
+				height: 2rem;
+				background-color: $font-gray4;
+				cursor: pointer;
+				&.active {
+					background-color: $sub-red;
+				}
+			}
+		}
+		.control-arrow {
+			width: 25%;
+			@include flexbox();
+			@include align-items(flex-end);
+			.control-arrow__prev {
+				width: 50%;
+				img {
+					width: 70%;
+					cursor: pointer;
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+			.control-arrow__next {
+				width: 50%;
+				img {
+					width: 70%;
+					cursor: pointer;
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+}
+.review {
+	width: 100%;
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	margin-top: 8rem;
+	.review-wrapper {
+		width: 100%;
+		@include flexbox();
+		.review-header {
+			width: 30%;
+			height: 17vw;
+			@include flexbox();
+			@include flex-direction(column);
+			position: relative;
+			.review-header__subtitle {
+				font-size: 1.2rem;
+				font-family: 'oACYCZno';
+				color: $font-gray3;
+			}
+			.review-header__title {
+				font-size: 2rem;
+				line-height: 2.8rem;
+				font-family: 'oACYCZno';
+				font-weight: bold;
+				color: $font-gray1;
+				margin-top: 1rem;
+				width: 70%;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+			.review-header__more {
+				width: 80%;
+				height: 7.5rem;
+				border-radius: 7.5rem;
+				border: none;
+				background-color: $main-color;
+				position: absolute;
+				bottom: 4.5rem;
+				left: -3rem;
+				@include box-sizing(border-box);
+				padding-left: 3rem;
+				padding-right: 5rem;
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(space-between);
+				cursor: pointer;
+				&:hover {
+					span {
+						@include transform(translateX(10px));
+					}
+				}
+				p{
+					font-size: 1.6rem;
+					line-height: 1.8rem;
+					font-family: 'Do Hyeon';
+					color: $font-white;
+				}
+				span {
+					width: 2.5rem;
+					height: 1.8rem;
+					@include flexbox();
+					@include align-items(center);
+					@include transition(all 0.5s ease);
+					img {
+						width: 100%;
+					}
+				}				
+			}
+		}
+		.review-content {
+			width: 70%;
+			height: 17vw;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			position: relative;
+			.review-content-wrapper {
+				width: calc(92vw + 8rem);
+				height: 17vw;
+				@include flexbox();
+				@include flex-wrap(nowrap);
+				-webkit-overflow-scrolling: touch;
+				.review-card {
+					@include flexbox();
+					@include flex-direction(column);
+					@include flex(0 0 auto);
+					width: 23vw;
+					margin-right: 2rem;
+					float: left;
+					&:hover {
+						.review-card__card {
+							border: 3px solid $main-color;
+						}
+					}
+					.review-card__num {
+						padding-left: 3%;
+						font-size: 1rem;
+						color: $main-color;
+						margin-bottom: 1rem;
+						width: 100%;
+						font-family: 'Do Hyeon';
+					}
+					.review-card__card {
+						width: 100%;					
+						height: 12.5vw;
+						border-radius: 1.2rem;
+						background-color: $card-bg;
+						@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+						border: 3px solid transparent;
+						@include box-sizing(border-box);
+						@include transition(all 0.5s ease);
+						cursor: pointer;
+						padding: 5% 7%;
+						@include flexbox();
+						@include align-items(center);
+						@include justify-content(space-between);
+						.card-profile {
+							width: 30%;
+							margin-left: 4%;
+							.card-profile__pic {
+								width: 10rem;
+								height: 10rem;
+								border-radius: 50%;
+								background-color: white;
+								overflow: hidden;
+								@include flexbox();
+								@include justify-content(center);
+								@include align-items(center);
+								img {
+									width: 100%;
+								}
+							}
+						}
+						.card-content {
+							width: 55%;
+							@include flexbox();
+							@include flex-direction(column);
+							.card-content__eval {
+								width: 100%;
+								@include flexbox();
+								@include justify-content(flex-end);
+								img {
+									width: 1.5rem;
+									height: 1.5rem;
+									margin-right: 0.7rem;
+								}
+							}
+							.card-content__text {
+								margin-top: 1.5rem;
+								width: 100%;
+								word-break: keep-all;
+								word-wrap: break-word;
+								font-family: 'oACYCZno';
+								color: $font-gray2;
+								font-size: 1.2rem;
+								line-height: 2.2rem;
+								height: 6.6rem;
+								white-space: normal;
+			                    overflow: hidden;
+			                    display: -webkit-box;
+			                    -webkit-line-clamp: 3; 
+			                    -webkit-box-orient: vertical;
+			                    text-overflow: ellipsis;
+							}
+							.card-content__name {
+								font-family: 'oACYCZno';
+								margin-top: 1.5rem;
+								width: 100%;
+								color: $font-gray2;
+								font-size: 1rem;
+								text-align: right;
+								padding-right: 0.7rem;
+								@include box-sizing(border-box);
+							}
+						}
+					}
+				}
+			}			
+		}
+	}
+}
+.lesson {
+	margin-top: 8rem;
+	width: 100%;
+	height: 47vw;
+	position: relative;
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	.lesson-bg {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	.lesson-header {
+		width: 40%;
+		position: absolute;
+		top: 0;
+		background-color: $white;
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+		border-bottom: 3px solid $main-color;
+		.lesson-header__subtitle {
+			width: 100%;
+			text-align: center;
+			font-size: 1.2rem;
+			font-family: 'oACYCZno';
+			color: $font-gray3;
+			margin-top: 3rem;
+		}
+		.lesson-header__title {
+			width: 100%;
+			text-align: center;
+			font-size: 2rem;
+			line-height: 2.8rem;
+			font-family: 'oACYCZno';
+			font-weight: bold;
+			color: $font-gray1;
+			margin-top: 1rem;
+			margin-bottom: 4rem;
+		}
+	}
+	.lesson-content {
+		@include box-sizing(border-box);
+		padding: 0 14%;
+		width: 100%;
+		@include flexbox();
+		position: absolute;
+		top: 23%;
+		.lesson-content__type {
+			width: calc(92% / 3);
+			margin-left: 4%;
+			position: relative;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			.lesson-card {
+				position: relative;
+				width: 100%;
+				background-color: $white-900;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+				cursor: pointer;
+				&:hover {
+					.lesson-card__title {
+						color: $main-color;
+						border: 2px solid $main-color;
+						letter-spacing: 0.2rem;
+					}
+				}
+				.lesson-card__title {
+					color: $font-gray2;
+					font-family: 'Do Hyeon';
+					font-size: 1.8rem;
+					width: 70%;
+					text-align: center;
+					border: 2px solid $font-gray2;
+					padding: 2rem 3rem;
+					@include box-sizing(border-box);
+					border-radius: 6rem;
+					margin-top: 5.5rem;
+					@include transition(all 0.5s ease);
+				}
+				.lesson-card__desc {
+					color: $font-gray2;
+					font-family: 'oACYCZno'; 
+					width: 55%;
+					height: 12rem;
+					font-size: 1.2rem;
+					line-height: 2.2rem;
+					word-break: keep-all;
+					word-wrap: break-word;
+					margin-top: 4.5rem;
+					text-align: center;
+				}
+				.lesson-card__teacher {
+					color: $font-gray1;
+					font-family: 'oACYCZno';
+					font-weight: bold;
+					text-align: center;
+					font-size: 1.4rem;
+					width: 100%;
+					margin-top: 2rem;
+					cursor: default;
+				}
+				.lesson-card__teacher-profile {
+					margin-top: 2rem;
+					@include flexbox();
+					@include justify-content(center);
+					@include box-sizing(border-box);
+					padding: 0 10%;
+					height: 5rem;
+					width: 100%;
+					margin-bottom: 10rem;
+					cursor: default;
+					.teacher-profile {
+						width: 5rem;
+						height: 5rem;
+						border-radius: 50%;
+						overflow: hidden;
+						background-color: $white;
+						border: 2px solid $main-color;
+						@include flexbox();
+						@include justify-content(center);
+						@include align-items(center);
+						cursor: pointer;
+						position: relative;
+						margin-left: 7%;
+						cursor: pointer;
+						&:nth-of-type(1) {
+							margin-left: 0;
+						}
+						img {
+							position: absolute;
+							top: 5%;
+							width: 100%;
+						}
+					}
+				}
+
+			}
+			.lesson-button {
+				position: absolute;
+				z-index: 2;
+				width: 70%;
+				height: 10rem;
+				bottom: -4rem;
+				overflow: hidden;
+				cursor: pointer;
+				@include transition(all 0.5s ease);
+				&:hover {
+					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+					.lesson-button__submit {
+						letter-spacing: 0.4rem;
+					}
+				}
+				img {
+					position: absolute;
+					width: 100%;
+					top: 0;
+					left: 0;
+				}
+				.lesson-button__submit {
+					width: 100%;
+					position: absolute;
+					color: $font-white;
+					bottom: 4rem;
+					font-size: 1.2rem;
+					font-family: 'oACYCZno';
+					font-weight: bold;
+					text-align: center;
+					letter-spacing: 0.2rem;
+					@include transition(all 0.5s ease);
+				}
+			}
+		}
+	}
+}
+.safety {
+	width: 100%;
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	margin-top: 12rem;
+	position: relative;
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	.safety-indicator {
+		width: 7%;
+		img {
+			width: 100%;
+		}
+	}
+	.safety-title {
+		font-size: 2rem;
+		font-family: 'oACYCZno';
+		font-weight: bold;
+		color: $main-color;
+		margin-top: 5rem;
+		text-align: center;
+		width: 100%;
+	}
+	.safety-text {
+		font-family: 'oACYCZno';
+		font-size: 1.2rem;
+		line-height: 2.4rem;
+		margin-top: 3.5rem;
+		color: $font-gray2;
+		text-align: center;
+		width: 45%;
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
+	.safety-button-wrapper {
+		margin-top: 4rem;
+		width: 100%;
+		@include flexbox();
+		@include box-sizing(border-box);
+		padding: 0 24%;
+		.safety-button {
+			margin-left: 10%;
+			width: calc(90% / 2);
+			height: 7.5rem;
+			border-radius: 7.5rem;
+			border: 2px solid #78bcff;
+			@include flexbox();
+			background-color: transparent;
+			padding-left: 3rem;
+			padding-right: 5rem;
+			@include align-items(center);
+			@include justify-content(space-between);
+			cursor: pointer;
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			&:hover {
+				span {
+					@include transform(translateX(10px));
+				}
+			}
+			&.orange {
+				border: 2px solid #ff5f45;
+			}
+			p {
+				font-size: 1.6rem;
+				line-height: 1.8rem;
+				font-family: 'Do Hyeon';
+				color: $font-gray2;
+			}
+			span {
+				width: 2.5rem;
+				height: 1.8rem;
+				@include flexbox();
+				@include align-items(center);
+				@include transition(all 0.5s ease);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.snap {
+	margin-top: 12rem;
+	width: 100%;
+	height: 40vw;
+	position: relative;
+	.snap-bg {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			bottom: -35%;
+		}
+	}
+	.snap-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40vw;
+		.snap-content__header {
+			@include flexbox();
+			@include flex-direction(column);
+			width: 50%;
+			height: 17rem;
+			background-color: $white;
+			.snap-content__header-subtitle {
+				margin-left: 24%;
+				margin-top: 5rem;
+				font-size: 1.2rem;
+				font-family: 'oACYCZno'; 
+				color: $font-gray3;
+			}
+			.snap-content__header-title {
+				font-size: 2rem;
+				line-height: 2.8rem;
+				font-family: 'oACYCZno';
+				font-weight: bold;
+				color: $font-gray1;
+				margin-top: 1rem;
+				margin-left: 24%;
+			}
+		}
+		.snap-content__gallery {
+			width: calc((76% - 0.036%) / 4);
+			@include flexbox();
+			@include flex-direction(column);
+			margin-right: 12%;
+			position: absolute;
+			right: 0;
+			bottom: 10%;
+			.gallery-tab {
+				width: 100%;
+				height: 9vw;
+				margin-top: 2rem;
+				overflow: hidden;
+				position: relative;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+				cursor: pointer;
+				&:hover {
+					.gallery-filter {
+						opacity: 0;
+					}
+				}
+				img {
+					width: 100%;
+				}
+				.gallery-filter {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: $main-color-500;
+					@include transition(all 0.5s ease);
+				}
+				.gallery-title {
+					width: 100%;
+					position: absolute;
+					padding-left: 5%;
+					@include box-sizing(border-box);
+					color: $font-white;
+					font-size: 1.4rem;
+					font-family: 'oACYCZno'; 
+					text-align: left;
+					bottom: 2rem;
+				}
+			}
+		}
+		.snap-content__more {
+			position: absolute;
+			bottom: 10%;
+			margin-left: 12%;
+			width: calc((76% - 0.036%) / 4);
+			height: 7.5rem;
+			border-radius: 7.5rem;
+			border: none;
+			background-color: $main-color;
+			@include box-sizing(border-box);
+			padding-left: 3rem;
+			padding-right: 3rem;
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+			cursor: pointer;
+			&:hover {
+				span {
+					@include transform(translateX(10px));
+				}
+			}
+			p{
+				font-size: 1.6rem;
+				line-height: 1.8rem;
+				font-family: 'Do Hyeon';
+				color: $font-white;
+			}
+			span {
+				width: 2.5rem;
+				height: 1.8rem;
+				@include flexbox();
+				@include align-items(center);
+				@include transition(all 0.5s ease);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.rent {
+	margin-top: 12rem;
+	width: 100%;
+	height: 35vw;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	@include flexbox();
+	@include align-items(center);
+	.rent-image {
+		width: 80%;
+		height: 35vw;
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 100%;
+			position: absolute;
+			bottom: -20%;
+		}
+	}
+	.rent-content {
+		position: absolute;
+		width: 25%;
+		height: 30vw;
+		right: 12%;
+		@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+		.rent-content__bg {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			img {
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		.rent-conent__text {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(flex-end);
+			@include justify-content(center);
+			@include box-sizing(border-box);
+			padding-right: 10%;
+			.rent-content__subtitle {
+				font-size: 1.2rem;
+				font-family: 'oACYCZno';
+				color: $font-gray3;
+				text-align: right;
+			}
+			.rent-content__title {
+				width: 80%;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				font-family: 'oACYCZno';
+				font-weight: bold;
+				color: $font-gray1;
+				margin-top: 1rem;
+				text-align: right;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+			.rent-content__desc {
+				width: 80%;
+				text-align: right;
+				word-break: keep-all;
+				word-wrap: break-word;
+				font-family: 'oACYCZno';
+				color: $font-gray2;
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+				margin-top: 5rem;
+			}
+			.rent-content__more {
+				width: 80%;
+				height: 7.5rem;
+				border-radius: 7.5rem;
+				border: none;
+				background-color: $main-color;
+				@include box-sizing(border-box);
+				padding-left: 3rem;
+				padding-right: 3rem;
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(space-between);
+				cursor: pointer;
+				margin-top: 5rem;
+				&:hover {
+					span {
+						@include transform(translateX(10px));
+					}
+				}
+				p{
+					font-size: 1.6rem;
+					line-height: 1.8rem;
+					font-family: 'Do Hyeon';
+					color: $font-white;
+				}
+				span {
+					width: 2.5rem;
+					height: 1.8rem;
+					@include flexbox();
+					@include align-items(center);
+					@include transition(all 0.5s ease);
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+	}
+}
