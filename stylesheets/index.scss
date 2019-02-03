@@ -19,10 +19,14 @@ body {
 	position: relative;
 	.slider-wrapper {
 		width: 100%;
+		position: absolute;
 		.slide {
 			position: relative;
 			width: 100%;
 			height: 50vh;
+			display: inline-block;
+			float: left;
+			&.active {}
 			.slide-image {
 				position: relative;
 				width: 100%;
@@ -37,7 +41,7 @@ body {
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background-color: $main-color-500;
+				background-color: $main-color-700;
 				top: 0;
 				left: 0;
 			}
@@ -49,6 +53,21 @@ body {
 				left: 0;
 				margin-right: 3%;
 				background-color: $white-500;
+				.sideblur-text {
+					width: 42vh;
+					height: 7vw;
+					color:  $main-color;
+					font-size: 1.6rem;
+					line-height: 2.8rem;
+					font-family: 'Do Hyeon'; 
+					@include transform(rotate(-90deg));
+					@include transform-origin(bottom center);
+					position: absolute;
+					top: -10%;
+					left: -2rem;
+					@include flexbox();
+					@include align-items(center);
+				}
 			}
 			.slide-content {
 				position: absolute;
@@ -84,11 +103,14 @@ body {
 						margin-top: 1.8rem;
 						width: 60%;
 						word-break: keep-all;
-						word-wrap: break-word;
+						word-wrap: break-word;			
 					}
 				}
 				.content-img {
 					width: 34%;
+					height: 100%;
+					@include flexbox();
+					@include align-items(center);
 					img {
 						width: 100%;
 					}
@@ -106,15 +128,16 @@ body {
 		@include align-items(flex-end);
 		@include justify-content(space-between);
 		.control-navigation {
-			width: 10%;
+			width: 8%;
 			@include flexbox();
 			@include justify-content(space-between);
+			margin-bottom: 2rem;
 			.navigation-dot {
-				width: 2rem;
-				height: 2rem;
+				width: 1rem;
+				height: 1rem;
 				background-color: $font-gray4;
 				cursor: pointer;
-				&.active {
+				&.current {
 					background-color: $sub-red;
 				}
 			}
@@ -123,17 +146,7 @@ body {
 			width: 25%;
 			@include flexbox();
 			@include align-items(flex-end);
-			.control-arrow__prev {
-				width: 50%;
-				img {
-					width: 70%;
-					cursor: pointer;
-					&:hover {
-						opacity: 0.7;
-					}
-				}
-			}
-			.control-arrow__next {
+			.control-arrow-btn {
 				width: 50%;
 				img {
 					width: 70%;
@@ -404,11 +417,15 @@ body {
 						border: 2px solid $main-color;
 						letter-spacing: 0.2rem;
 					}
+					.lesson-card__desc {
+						font-weight: bold;
+						color: $main-color;
+					}
 				}
 				.lesson-card__title {
 					color: $font-gray2;
 					font-family: 'Do Hyeon';
-					font-size: 1.8rem;
+					font-size: 2.5rem;
 					width: 70%;
 					text-align: center;
 					border: 2px solid $font-gray2;
@@ -488,7 +505,7 @@ body {
 				&:hover {
 					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
 					.lesson-button__submit {
-						letter-spacing: 0.4rem;
+						letter-spacing: 0.3rem;
 					}
 				}
 				img {
@@ -502,11 +519,10 @@ body {
 					position: absolute;
 					color: $font-white;
 					bottom: 4rem;
-					font-size: 1.2rem;
+					font-size: 1.6rem;
 					font-family: 'oACYCZno';
-					font-weight: bold;
 					text-align: center;
-					letter-spacing: 0.2rem;
+					letter-spacing: 0.1rem;
 					@include transition(all 0.5s ease);
 				}
 			}
@@ -577,12 +593,15 @@ body {
 			}
 			&.orange {
 				border: 2px solid #ff5f45;
+				p {
+					color: #ff5f45;
+				}
 			}
 			p {
-				font-size: 1.6rem;
+				font-size: 1.8rem;
 				line-height: 1.8rem;
 				font-family: 'Do Hyeon';
-				color: $font-gray2;
+				color: #78bcff;
 			}
 			span {
 				width: 2.5rem;
@@ -713,7 +732,7 @@ body {
 				}
 			}
 			p{
-				font-size: 1.6rem;
+				font-size: 1.8rem;
 				line-height: 1.8rem;
 				font-family: 'Do Hyeon';
 				color: $font-white;
@@ -732,7 +751,7 @@ body {
 	}
 }
 .rent {
-	margin-top: 12rem;
+	margin-top: 16rem;
 	width: 100%;
 	height: 35vw;
 	position: relative;
@@ -780,7 +799,7 @@ body {
 			@include align-items(flex-end);
 			@include justify-content(center);
 			@include box-sizing(border-box);
-			padding-right: 10%;
+			padding-right: 13%;
 			.rent-content__subtitle {
 				font-size: 1.2rem;
 				font-family: 'oACYCZno';
@@ -830,7 +849,7 @@ body {
 					}
 				}
 				p{
-					font-size: 1.6rem;
+					font-size: 1.8rem;
 					line-height: 1.8rem;
 					font-family: 'Do Hyeon';
 					color: $font-white;

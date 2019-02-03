@@ -9,3 +9,258 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+.location {
+	position: relative;
+	width: 100%;
+	height: 65vh;
+	.location-map {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: $ocean;
+		position: relative;
+		img {
+			width: 90%;
+			position: absolute;
+			bottom: -0.3rem;
+			left: -5%;
+		}
+	}
+	.location-content {
+		position: absolute;
+		width: 100%;
+		margin-top: 6%;
+		@include box-sizing(border-box);
+		padding: 0 12%;
+		top: 0;
+		left: 0;
+		.location-content__header {
+			position: relative;
+			width: 25%;
+			@include flexbox();
+			@include flex-direction(column);
+			.content-header__subtitle {
+				width: 100%;
+				font-size: 1.2rem;
+				font-family: 'oACYCZno';
+				color: $font-gray3;
+				text-align: left;
+			}
+			.content-header__title {
+				width: 100%;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				font-family: 'oACYCZno';
+				font-weight: bold;
+				color: $font-gray1;
+				margin-top: 1rem;
+				text-align: left;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+		}
+		.location-content__link {
+			position: relative;
+			width: 25%;
+			margin-top: 8rem;
+			.content-link__btn {
+				width: 80%;
+				height: 7.5rem;
+				border-radius: 7.5rem;
+				border: none;
+				background-color: $main-color;				
+				margin-left: -3rem;
+				@include box-sizing(border-box);
+				padding-left: 3rem;
+				padding-right: 5rem;
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(space-between);
+				cursor: pointer;
+				margin-top: 2rem;
+				&:hover {
+					span {
+						@include transform(translateX(10px));
+					}
+				}
+				p{
+					font-size: 1.8rem;
+					line-height: 1.8rem;
+					font-family: 'Do Hyeon';
+					color: $font-white;
+				}
+				span {
+					width: 2.5rem;
+					height: 1.8rem;
+					@include flexbox();
+					@include align-items(center);
+					@include transition(all 0.5s ease);
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.location-info {
+	margin-top: 4rem;
+	@include flexbox();
+	@include justify-content(space-between);
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	position: relative;
+	.info-tab-wrapper {
+		@include flexbox();
+		width: 50%;
+		margin-right: 25%;
+		.info-tab {
+			@include flexbox();
+			@include flex-direction(column);
+			width: 50%;
+			@include box-sizing(border-box);
+			padding-right: 7%;
+			position: relative;
+			.info-tab__header {
+				width: 100%;
+				@include flexbox();
+				@include align-items(center);
+				.tab-header-icon {
+					width: 20%;
+					margin-right: 5%;
+					img {
+						width: 100%;
+					}
+				}
+				.tab-header__title {
+					width: 65%;
+					font-size: 1.6rem;
+					font-family: 'oACYCZno';
+					font-weight: bold;
+					color: $font-gray1;				
+				}
+			}
+			.info-tab__content {
+				width: 100%;
+				margin-top: 2rem;
+				line-height: 2.2rem;
+				font-family: 'oACYCZno';
+				font-size: 1.4rem;
+			}
+		}
+	}	
+	.info-book {
+		width: 25%;
+		@include box-sizing(border-box);
+		padding-left: 7%;
+		&:hover {
+			.info-tab__book {
+				letter-spacing: 0.3rem;
+			}
+		}
+		.info-tab__book {
+			width: 100%;
+			height: 7.5rem;
+			border-radius: 7.5rem;
+			border: none;
+			background-color: $main-color;
+			font-size: 1.6rem;
+			font-family: 'Do Hyeon';
+			color: $font-white;
+			cursor: pointer;
+			letter-spacing: 0.1rem;
+			@include transition(all 0.5s ease);
+		}
+	}
+}
+.ad {
+	margin-top: 12rem;
+	@include flexbox();
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	.ad-tab {
+		width: calc(100% / 3);
+		height: 15vw;
+		position: relative;
+		cursor: pointer;
+		&:hover {
+			.ad-tab__img {
+				img {
+					@include transform(scale(1));
+				}
+			}
+			.ad-tab__text {
+				span {
+					@include transform(translateX(10px));
+				}
+			}
+		}
+		&:nth-of-type(1) {
+			.ad-tab__img {
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(center);
+				img {
+					width: unset;
+					height: 100%;
+				}
+			}
+		}
+		.ad-tab__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			img {
+				width: 100%;
+				@include transform(scale(1.05));
+				@include transition(all 0.5s ease);
+			}
+		}
+		.ad-tab__filter {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $main-color-700;
+			&.red {
+				background-color: $red-500;
+			}
+			&.green {
+				background-color: $green-500;
+			}
+		}
+		.ad-tab__text {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(center);
+			@include box-sizing(border-box);
+			padding: 5% 10%;
+			.text-title {
+				width: 100%;
+				text-align: center;
+				font-size: 1.8rem;
+				color: $font-white;
+				font-family: 'Do Hyeon';
+			}
+			span {
+				margin-top: 2rem;
+				width: 40%;
+				height: 1.8rem;
+				@include flexbox();
+				@include justify-content(center);
+				@include transition(all 0.5s ease);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

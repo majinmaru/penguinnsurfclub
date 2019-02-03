@@ -15,5 +15,181 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
+	<header class="header">
+		<div class="header-left">
+			<div class="header__logo">
+				<a href="index.html" title="메인으로"><img src="images/common/logo-new.svg" alt="펭귄서프클럽 로고"></a>
+			</div>
+			<div class="header__brand"><a href="index.html" title="메인으로">PENGUINN<br>SURF CLUB</a></div>
+		</div>
+		<div class="header-right">
+			<div class="header__weather">
+				<div class="waether-tab">
+					<div class="waether-tab__name">지역</div>
+					<div class="waether-tab__content">
+						<p class="content-location">속초</p>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">날씨</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-clowdy.svg" alt="조금 흐림">
+						</div>
+						<div class="content-text">
+							<p class="content-text__max">25<span>℃</span></p>
+							<p class="content-text__min">19<span>℃</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">파고</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-wave.svg" alt="파고높이">
+						</div>
+						<div class="content-text">
+							<p class="content-text__max">3.5<span>m</span></p>
+							<p class="content-text__min">1.5<span>m</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">서핑</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-surfing-man.svg" alt="서핑기준">
+						</div>
+						<div class="content-text">
+							<p class="content-text__surf">BEST</p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-dir">
+					<div class="dir-up">
+						<img src="images/common/triangle-arrow.svg" alt="위로">
+					</div>
+					<div class="dir-down">
+						<img src="images/common/triangle-arrow.svg" alt="아래로">
+					</div>
+				</div>
+			</div>
+			<div class="header__nav">
+				<a href="location.html" title="위치" class="nav-tab"><p>위치</p></a>
+				<a href="class.html" title="수업" class="nav-tab"><p>수업</p></a>
+				<a href="rent.html" title="대여" class="nav-tab"><p>대여</p></a>
+			</div>
+		</div>
+	</header>
+	<div class="mobile-menu"></div>
+	<section class="location">
+		<div class="location-map">
+			<img src="images/location/map.png" alt="펭귄서프클럽위치">
+		</div>
+		<div class="location-content">
+			<div class="location-content__header">
+				<div class="content-header__subtitle">설연휴와 추석연휴 빼고 연중무휴!</div>
+				<h1 class="content-header__title">펭귄서프클럽에 오신 것을 환영합니다</h1>
+			</div>
+			<div class="location-content__link">
+				<button class="content-link__btn kakao">
+					<p>카카오네비로 연결</p>
+					<span>
+						<img src="images/common/arrow-white.svg" alt="이동">
+					</span>
+				</button>
+				<button class="content-link__btn google">
+					<p>구글맵으로 연결</p>
+					<span>
+						<img src="images/common/arrow-white.svg" alt="이동">
+					</span>
+				</button>
+			</div>
+		</div>
+	</section>
+	<section class="location-info">
+		<div class="info-tab-wrapper">
+			<div class="info-tab">
+				<div class="info-tab__header">
+					<span class="tab-header-icon">
+						<img src="images/common/wave-blue.svg" alt="주소">
+					</span>
+					<p class="tab-header__title">주소</p>
+				</div>
+				<div class="info-tab__content">강원도 동해시 대진항길 123-1</div>
+			</div>
+			<div class="info-tab">
+				<div class="info-tab__header">
+					<span class="tab-header-icon">
+						<img src="images/common/wave-blue.svg" alt="전화">
+					</span>
+					<p class="tab-header__title">전화</p>
+				</div>
+				<div class="info-tab__content">000-0000-0000</div>
+			</div>
+		</div>
+		<div class="info-book">
+			<button class="info-tab__book">방문예약하기</button>
+		</div>
+	</section>
+	<section class="ad">
+		<div class="ad-tab">
+			<div class="ad-tab__img">
+				<img src="images/index/snap-02.jpg" alt="다녀간 사람들 후기">
+			</div>
+			<div class="ad-tab__filter red"></div>
+			<div class="ad-tab__text">
+				<p class="text-title">다녀간 사람들의 생생한 후기</p>
+				<span>
+					<img src="images/common/arrow-white.svg" alt="이동">
+				</span>
+			</div>
+		</div>
+		<div class="ad-tab">
+			<div class="ad-tab__img">
+				<img src="images/index/surf-06.jpg" alt="서핑보드 대여">
+			</div>
+			<div class="ad-tab__filter"></div>
+			<div class="ad-tab__text">
+				<p class="text-title">개성 다양한 서핑보드 구경하기</p>
+				<span>
+					<img src="images/common/arrow-white.svg" alt="이동">
+				</span>
+			</div>
+		</div>
+		<div class="ad-tab">
+			<div class="ad-tab__img">
+				<img src="images/index/surf-15.jpg" alt="맞춤형클래스">
+			</div>
+			<div class="ad-tab__filter green"></div>
+			<div class="ad-tab__text">
+				<p class="text-title">재방문 하고 싶어지는 서핑 클래스</p>
+				<span>
+					<img src="images/common/arrow-white.svg" alt="이동">
+				</span>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer-logo">
+			<img src="images/common/logo-full-white.svg" alt="펭귄서프클럽">
+		</div>
+		<div class="footer-sns">
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
+				<div class="sns-tab__tooltip">팔로우</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
+				<div class="sns-tab__tooltip">페이지</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
+				<div class="sns-tab__tooltip">소식보기</div>
+			</div>
+		</div>
+		<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
+	</footer>
 </body>
+<script type="text/javascript" src="javascripts/common.js"></script>
 </html>

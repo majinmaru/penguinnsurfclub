@@ -20,9 +20,9 @@
 	<header class="header">
 		<div class="header-left">
 			<div class="header__logo">
-				<a href="index.html"><img src="images/common/logo-new.svg" alt="펭귄서프클럽 로고"></a>
+				<a href="index.html" title="메인으로"><img src="images/common/logo-new.svg" alt="펭귄서프클럽 로고"></a>
 			</div>
-			<div class="header__brand"><a href="index.html">PENGUINN<br>SURF CLUB</a></div>
+			<div class="header__brand"><a href="index.html" title="메인으로">PENGUINN<br>SURF CLUB</a></div>
 		</div>
 		<div class="header-right">
 			<div class="header__weather">
@@ -77,20 +77,23 @@
 				</div>
 			</div>
 			<div class="header__nav">
-				<div class="nav-tab"><a href="location.html">위치</a></div>
-				<div class="nav-tab"><a href="location.html">수업</a></div>
-				<div class="nav-tab"><a href="location.html">대여</a></div>
+				<a href="location.html" title="위치" class="nav-tab"><p>위치</p></a>
+				<a href="class.html" title="수업" class="nav-tab"><p>수업</p></a>
+				<a href="rent.html" title="대여" class="nav-tab"><p>대여</p></a>
 			</div>
 		</div>
 	</header>
+	<div class="mobile-menu"></div>
 	<section class="slider">
 		<div class="slider-wrapper">
-			<div class="slide">
+			<div class="slide active">
 				<div class="slide-image">
 					<img src="images/index/slide-01.jpg" alt="첫번째 슬라이드">
 				</div>
 				<div class="slide-filter"></div>
-				<div class="slide-sideblur"></div>
+				<div class="slide-sideblur">
+					<p class="sideblur-text">0 1 / 0 3</p>
+				</div>
 				<div class="slide-content">
 					<div class="content-text">
 						<div class="content-text__title">서핑 수업 오픈</div>
@@ -102,14 +105,52 @@
 					</div>
 				</div>
 			</div>
+			<div class="slide">
+				<div class="slide-image">
+					<img src="images/index/slide-02.jpg" alt="두번째 슬라이드">
+				</div>
+				<div class="slide-filter"></div>
+				<div class="slide-sideblur">
+					<p class="sideblur-text">0 2 / 0 3</p>
+				</div>
+				<div class="slide-content">
+					<div class="content-text">
+						<div class="content-text__title">서핑 보드 대여</div>
+						<div class="content-text__subtitle">체형뿐만 아니라 취향도 맞는 보드로 고르세요!</div>
+						<div class="content-text__desc">총 100여개의 보드를 보유하고 있는 펭귄서프클럽은 선택장애가 있는 분들을 위해 전문가도 상주하고 있습니다</div>
+					</div>				
+					<div class="content-img">
+						<img src="images/index/slide-img-02.png" alt="서핑 수업 오픈">
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="slide-image">
+					<img src="images/index/slide-03.jpg" alt="세번째 슬라이드">
+				</div>
+				<div class="slide-filter"></div>
+				<div class="slide-sideblur">
+					<p class="sideblur-text">0 3 / 0 3</p>
+				</div>
+				<div class="slide-content">
+					<div class="content-text">
+						<div class="content-text__title">펭귄 첫 돌 이벤트</div>
+						<div class="content-text__subtitle">펭귄서프클럽을 첫 돌을 맞이했습니다</div>
+						<div class="content-text__desc">고객분들에게 깊고 진한 감사의 인사를 드리고자 개인 클래스의 수강료를 5%할인 행사하고 있습니다.</div>
+					</div>				
+					<div class="content-img">
+						<img src="images/index/slide-img-03.png" alt="서핑 수업 오픈">
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="slider-control">
 			<div class="control-navigation"></div>
 			<div class="control-arrow">
-				<div class="control-arrow__prev">
+				<div class="control-arrow-btn prev">
 					<img src="images/index/prev.svg" alt="이전">
 				</div>
-				<div class="control-arrow__next">
+				<div class="control-arrow-btn next">
 					<img src="images/index/next.svg" alt="다음">
 				</div>
 			</div>
@@ -373,7 +414,26 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<div class="footer-logo">
+			<img src="images/common/logo-full-white.svg" alt="펭귄서프클럽">
+		</div>
+		<div class="footer-sns">
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
+				<div class="sns-tab__tooltip">팔로우</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
+				<div class="sns-tab__tooltip">페이지</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
+				<div class="sns-tab__tooltip">소식보기</div>
+			</div>
+		</div>
+		<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
+	</footer>
 </body>
 	<script type="text/javascript" src="javascripts/common.js"></script>
 	<script type="text/javascript" src="javascripts/index.js"></script>

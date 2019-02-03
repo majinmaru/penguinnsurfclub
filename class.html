@@ -15,5 +15,297 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
+	<header class="header">
+		<div class="header-left">
+			<div class="header__logo">
+				<a href="index.html" title="메인으로"><img src="images/common/logo-new.svg" alt="펭귄서프클럽 로고"></a>
+			</div>
+			<div class="header__brand"><a href="index.html" title="메인으로">PENGUINN<br>SURF CLUB</a></div>
+		</div>
+		<div class="header-right">
+			<div class="header__weather">
+				<div class="waether-tab">
+					<div class="waether-tab__name">지역</div>
+					<div class="waether-tab__content">
+						<p class="content-location">속초</p>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">날씨</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-clowdy.svg" alt="조금 흐림">
+						</div>
+						<div class="content-text">
+							<p class="content-text__max">25<span>℃</span></p>
+							<p class="content-text__min">19<span>℃</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">파고</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-wave.svg" alt="파고높이">
+						</div>
+						<div class="content-text">
+							<p class="content-text__max">3.5<span>m</span></p>
+							<p class="content-text__min">1.5<span>m</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-tab">
+					<div class="waether-tab__name">서핑</div>
+					<div class="waether-tab__content">
+						<div class="content-icon">
+							<img src="images/common/weather-icon-surfing-man.svg" alt="서핑기준">
+						</div>
+						<div class="content-text">
+							<p class="content-text__surf">BEST</p>
+						</div>
+					</div>
+				</div>
+				<div class="waether-dir">
+					<div class="dir-up">
+						<img src="images/common/triangle-arrow.svg" alt="위로">
+					</div>
+					<div class="dir-down">
+						<img src="images/common/triangle-arrow.svg" alt="아래로">
+					</div>
+				</div>
+			</div>
+			<div class="header__nav">
+				<a href="location.html" title="위치" class="nav-tab"><p>위치</p></a>
+				<a href="class.html" title="수업" class="nav-tab"><p>수업</p></a>
+				<a href="rent.html" title="대여" class="nav-tab"><p>대여</p></a>
+			</div>
+		</div>
+	</header>
+	<div class="mobile-menu"></div>
+	<section class="lesson">
+		<div class="lesson-header">
+			<div class="lesson-header__bg">
+				<img src="images/class/surf-23.jpg" alt="펭귄서프클럽 클래스 안내">
+			</div>
+			<div class="lesson-header__filter"></div>
+			<div class="lesson-header__text">
+				<div class="lesson-header__subtitle">들어올 땐 초보자 나갈 땐 마스터</div>
+				<div class="lesson-header__title">서핑은 처음이시라구요? 걱정마세요!</div>
+			</div>
+		</div>
+		<div class="lesson-content">
+			<div class="lesson-content__type">
+				<div class="lesson-card">
+					<div class="lesson-card__title">개인클래스는?</div>
+					<div class="lesson-card__desc">초보자 코스는 물론 중급자, 고급자 코스까지 마련되어 있습니다. 또한 1:1 맞춤으로 진행하기 때문에 월등하게 실력이 향상되는 과정을 느끼실 수 있습니다.</div>
+					<div class="lesson-card__price">&#8361;50,000 ~</div>
+					<div class="lesson-card__price-desc">(일일 강의 시간 및 기간에 따라 가격은 상이합니다)</div>
+					<div class="lesson-card__teacher">강사진</div>
+					<div class="lesson-card__teacher-profile">
+						<div class="teacher-profile">
+							<img src="images/class/teacher-01.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-05.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-08.svg" alt="강사">
+						</div>
+					</div>
+				</div>
+				<div class="lesson-button">
+					<img src="images/index/wave-box-blue.svg" alt="신청하기">
+					<p class="lesson-button__submit">개인클래스 신청하기</p>
+				</div>
+			</div>
+			<div class="lesson-content__type">
+				<div class="lesson-card">
+					<div class="lesson-card__title">그룹클래스는?</div>
+					<div class="lesson-card__desc">2인 이상은 그룹클래스로 신청할 수 있으며 인원수에 따라 강사진들의 수가 추가될 수 있습니다. 마찬가지로 초보자 - 고급자 코스까지 커리큘럼이 있습니다.</div>
+					<div class="lesson-card__price">&#8361;100,000 ~</div>
+					<div class="lesson-card__price-desc">(일일 강의 시간 및 기간, 인원수에 따라 가격은 상이합니다)</div>
+					<div class="lesson-card__teacher">강사진</div>
+					<div class="lesson-card__teacher-profile">
+						<div class="teacher-profile">
+							<img src="images/class/teacher-02.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-03.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-05.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-07.svg" alt="강사">
+						</div>
+					</div>
+				</div>
+				<div class="lesson-button">
+					<img src="images/index/wave-box-blue.svg" alt="신청하기">
+					<p class="lesson-button__submit">그룹클래스 신청하기</p>
+				</div>
+			</div>
+			<div class="lesson-content__type">
+				<div class="lesson-card">
+					<div class="lesson-card__title">원데이클래스는?</div>
+					<div class="lesson-card__desc">원데이클래스는 말 그대로 하루동안 신청하시는 시간만큼 진행하며, 완벽하게 마스터하기는 어려울 수 있으나 대부분의 수강생분들은 도움없이 타는 법을 터득하셨습니다.</div>
+					<div class="lesson-card__price">&#8361;30,000 ~</div>
+					<div class="lesson-card__price-desc">(일일 강의 시간 및 인원수에 따라 가격은 상이합니다)</div>
+					<div class="lesson-card__teacher">강사진</div>
+					<div class="lesson-card__teacher-profile">
+						<div class="teacher-profile">
+							<img src="images/class/teacher-04.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-06.svg" alt="강사">
+						</div>
+						<div class="teacher-profile">
+							<img src="images/class/teacher-08.svg" alt="강사">
+						</div>
+					</div>
+				</div>
+				<div class="lesson-button">
+					<img src="images/index/wave-box-blue.svg" alt="신청하기">
+					<p class="lesson-button__submit">원데이클래스 신청하기</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="teacher">
+		<div class="teacher-wrapper">
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-01.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">김티처</div>
+				<div class="teacher-profile__character">+ 서핑대회 3회 연속 우승자<br>+ 지적 따스함의 소유자</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-02.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">이은혜</div>
+				<div class="teacher-profile__character">+ 서핑대회 1회 우승자<br>+ 서핑경력 8년차 베테랑</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-03.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">최승우</div>
+				<div class="teacher-profile__character">+ 해외 서핑대회 다수 출전 및 수상<br>+ 밝은 미소가 매력적</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-04.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">신티처</div>
+				<div class="teacher-profile__character">+ 걸음마때부터 서핑시작<br>+ 인어 뺨치는 수영실력</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-05.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">박예진</div>
+				<div class="teacher-profile__character">+ 서핑경력 10년차 베테랑<br>+ 자칭 속초 최고 미녀</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-06.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">제이슨</div>
+				<div class="teacher-profile__character">+ 해외 서핑 클래스 5년차<br>+ 노하우 전수가 장난아님</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-07.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">김별</div>
+				<div class="teacher-profile__character">+ 서핑하는 맛에 사는 사람<br>+ 서핑계의 떠오르는 별</div>
+			</div>
+			<div class="teacher-profile">
+				<div class="teacher-profile__pic">
+					<img src="images/class/teacher-08.svg" alt="강사 프로필">
+				</div>
+				<div class="teacher-profile__name">도재진</div>
+				<div class="teacher-profile__character">+ 서핑경력 10년차 베테랑<br>+ 해외서핑 클래스 1년차</div>
+			</div>
+		</div>
+	</section>
+	<section class="safety">
+		<span class="safety-indicator">
+			<img src="images/common/wave-blue.svg" alt="안전">
+		</span>
+		<h1 class="safety-title">안전하게 즐거울 수 있도록</h1>
+		<div class="safety-text">펭귄서퍼클럽의 제 1원칙은 안전이며 이를 지키기 위해 전문적으로 배운 안전요원들이 항상 상주해 있습니다. 또한 비상상황이 발생하더라도 재빠르게 대처할 수 있는 각종 매뉴얼을 구성해 놓았으며 언제 어디서라도 작동할 수 있는 장비들을 준비해놓고 있습니다.</div>
+		<div class="safety-button-wrapper">
+			<button class="safety-button">
+				<p>안전요원 안내</p>
+				<span>
+					<img src="images/common/arrow-skyblue.svg" alt="이동">
+				</span>
+			</button>
+			<button class="safety-button orange">
+				<p>안전수칙 안내</p>
+				<span>
+					<img src="images/common/arrow-orange.svg" alt="이동">
+				</span>
+			</button>
+		</div>
+	</section>
+	<section class="snap">
+		<div class="snap-bg">
+			<img src="images/index/snap.jpg" alt="스냅촬영">
+		</div>		
+		<div class="snap-content">
+			<div class="snap-content__header">
+				<div class="snap-content__header-subtitle">이런 색다른 경험 스냅사진으로 남겨놓자!</div>
+				<div class="snap-content__header-title">수업을 받으면서 멋진 인생<br>화보까지 찍어보세요</div>
+			</div>
+			<div class="snap-content__gallery">
+				<div class="gallery-tab">
+					<img src="images/index/snap-01.jpg" alt="개인스냅">
+					<div class="gallery-filter"></div>
+					<p class="gallery-title">개인스냅</p>
+				</div>
+				<div class="gallery-tab">
+					<img src="images/index/snap-02.jpg" alt="우정&연인스냅">
+					<div class="gallery-filter"></div>
+					<p class="gallery-title">우정&연인스냅</p>
+				</div>
+				<div class="gallery-tab">
+					<img src="images/index/snap-03.jpg" alt="가족스냅">
+					<div class="gallery-filter"></div>
+					<p class="gallery-title">가족스냅</p>
+				</div>
+			</div>
+			<button class="snap-content__more">
+				<p>스냅촬영 예약하기</p>
+				<span>
+					<img src="images/common/arrow-white.svg" alt="이동">
+				</span>
+			</button>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer-logo">
+			<img src="images/common/logo-full-white.svg" alt="펭귄서프클럽">
+		</div>
+		<div class="footer-sns">
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
+				<div class="sns-tab__tooltip">팔로우</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
+				<div class="sns-tab__tooltip">페이지</div>
+			</div>
+			<div class="sns-tab">
+				<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
+				<div class="sns-tab__tooltip">소식보기</div>
+			</div>
+		</div>
+		<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
+	</footer>
 </body>
+<script type="text/javascript" src="javascripts/common.js"></script>
 </html>
