@@ -948,7 +948,7 @@ body {
 		margin-top: 6rem;
 		.review-wrapper {
 			.review-header {
-				width: 35%;
+				width: 40%;
 				height: unset;
 				margin-left: 5%;
 				.review-header__subtitle {
@@ -962,7 +962,7 @@ body {
 					position: relative;
 				}
 				.review-header__more {
-					width: 100%;
+					width: 90%;
 					height: 4.5rem;
 					left: -1rem;
 					bottom: 3rem;
@@ -984,14 +984,14 @@ body {
 				}
 			}
 			.review-content {
-				width: 60%;
+				width: 55%;
 				height: 73vw;
 				position: relative;
 				.review-content-wrapper {
 					width: 100%;
 					height: 73vw;
 					.review-card {
-						width: 48vw;
+						width: 38vw;
 						margin-right: 2rem;
 						&:hover {
 							.review-card__card {
@@ -1046,6 +1046,7 @@ body {
 									font-size: 1rem;
 									line-height: 1.8rem;
 									height: 5.4rem;
+									word-break: break-all;
 								}
 								.card-content__name {
 									text-align: center;
@@ -1087,8 +1088,8 @@ body {
 				margin-left: 0;
 				margin-top: 9rem;
 				.lesson-card {
-					@include lesson-card-bg();
-					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+					//@include lesson-card-bg();
+					@include box-shadow(0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5));
 					&:hover {
 						.lesson-card__title {
 							color: $main-color;
@@ -1238,13 +1239,13 @@ body {
 	}
 	.rent {
 		margin-top: 8rem;
-		height: 120vw;
+		height: 134vw;
 		padding: 0 12%;
 		@include flex-direction(column);
 		@include align-items(center);
 		.rent-image {
 			width: 100%;
-			height: 35vw;
+			height: 40vw;
 			overflow: hidden;
 			position: relative;
 			img {
@@ -1259,11 +1260,11 @@ body {
 			width: 76%;
 			height: unset;
 			right: unset;
-			padding-top: 26%;
-			@include box-shadow(0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5));
+			padding-top: 33%;
+			@include box-shadow(0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5));
 			.rent-content__bg {
 				width: 100%;
-				height: 102vw;
+				height: 100vw;
 				@include flexbox();
 				@include justify-content(center);
 				img {
@@ -1279,7 +1280,7 @@ body {
 				top: 0;
 				left: 0;
 				padding-right: 0;
-				padding-top: 37%;
+				padding-top: 48%;
 				@include align-items(center);
 				.rent-content__subtitle {
 					font-size: 1rem;

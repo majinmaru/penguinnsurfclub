@@ -264,3 +264,133 @@ body {
 		}
 	}
 }
+@media screen and (min-width: 320px) and (max-width: 800px) {
+.location {
+	height: 80vh;
+	.location-map {
+		width: 100%;
+		height: 100%;
+		img {
+			width: unset;
+			height: 110%;
+			position: absolute;
+			bottom: -10%;
+			left: unset;
+			right: -20%;
+		}
+	}
+	.location-content {
+		position: absolute;
+		width: 100%;
+		margin-top: 10%;
+		@include box-sizing(border-box);
+		padding: 0 7%;
+		top: 0;
+		left: 0;
+		.location-content__header {
+			width: 70%;
+			.content-header__subtitle {
+				font-size: 1rem;
+			}
+			.content-header__title {
+				width: 100%;
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				margin-top: 1rem;
+			}
+		}
+		.location-content__link {
+			position: relative;
+			width: 48%;
+			margin-top: 4rem;
+			.content-link__btn {
+				width: 100%;
+				height: 4.5rem;
+				border-radius: 4.5rem;		
+				margin-left: -1rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				margin-top: 1rem;
+				p{
+					font-size: 1.2rem;
+				}
+				span {
+					width: 1.8rem;
+				}
+			}
+		}
+	}
+}
+.location-info {
+	margin-top: 0rem;
+	@include flex-direction(column);
+	padding: 0 7%;
+	.info-tab-wrapper {
+		@include flex-direction(column);
+		width: 100%;
+		margin-right: 0;
+		.info-tab {
+			width: 100%;
+			padding-right: 0;
+			margin-top: 4rem;
+			.info-tab__header {
+				@include flex-direction(column);
+				.tab-header-icon {
+					width: 10%;
+					margin-right: 0;
+				}
+				.tab-header__title {
+					width: unset;
+					font-size: 1.6rem;
+					font-family: 'oACYCZno';
+					font-weight: bold;
+					color: $font-gray1;
+					margin-top: 1rem;			
+				}
+			}
+			.info-tab__content {
+				margin-top: 1rem;
+				font-size: 1.2rem;
+				text-align: center;
+			}
+		}
+	}	
+	.info-book {
+		width: 55%;
+		padding-left: 0;
+		margin-top: 3rem;
+		margin-left: calc(45% / 2);
+		.info-tab__book {
+			width: 100%;
+			height: 4.5rem;
+			border-radius: 4.5rem;
+			font-size: 1.2rem;
+		}
+	}
+}
+.ad {
+	margin-top: 8rem;
+	padding: 0 3%;
+	.ad-tab {
+		height: 40vw;		
+		.ad-tab__img {
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+			img {
+				width: unset;
+				height: 100%;
+				@include transform(scale(1.05));
+			}
+		}		
+		.ad-tab__text {
+			.text-title {
+				font-size: 1.4rem;
+			}
+			span {
+				height: 1.5rem;
+			}
+		}
+	}
+}	
+}
