@@ -9,3 +9,334 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+.rent {
+	width: 100%;
+	height: 65vh;
+	position: relative;
+	.rent-bg {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		@include flexbox();
+		@include align-items(center);
+		img {
+			width: 100%;
+		}
+	}
+	.rent-filter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $main-color-500;
+	}
+	.rent-content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box-sizing(border-box);
+		padding: 6% 12%;
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(space-between);
+		.rent-content__header {
+			width: 25%;
+			@include flexbox();
+			@include flex-direction(column);
+			position: relative;
+			.header-subtitle {
+				width: 100%;
+				font-size: 1.2rem;
+				font-family: 'oACYCZno';
+				color: $font-white;
+				text-align: left;
+				text-shadow: 1px 5px 7px $main-color;
+			}
+			.header-title {
+				width: 100%;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				font-family: 'oACYCZno';
+				font-weight: bold;
+				color: $font-white;
+				margin-top: 1rem;
+				text-align: left;
+				word-break: keep-all;
+				word-wrap: break-word;
+				text-shadow: 1px 3px 7px $main-color;
+			}
+			.header-desc {
+				font-family: 'oACYCZno'; 
+				width: 80%;
+				height: 14rem;
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+				word-break: keep-all;
+				word-wrap: break-word;
+				margin-top: 4.5rem;
+				text-align: left;
+				color: $font-white;
+				text-shadow: 1px 5px 7px $main-color;
+			}
+		}
+	}
+	.rent-button {
+		width: 100%;
+		position: relative;
+		.rent-button__more {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 25%;
+			height: 7.5rem;
+			border-radius: 7.5rem;
+			background-color: $main-color;
+			border: none;
+			@include box-sizing(border-box);
+			padding-left: 3rem;
+			padding-right: 5rem;
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+			cursor: pointer;
+			@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+			&:hover {
+				span {
+					@include transform(translateX(10px));
+				}
+			}
+			p{
+				font-size: 1.8rem;
+				line-height: 1.8rem;
+				font-family: 'Do Hyeon';
+				color: $font-white;
+			}
+			span {
+				width: 2.5rem;
+				height: 1.8rem;
+				@include flexbox();
+				@include align-items(center);
+				@include transition(all 0.5s ease);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.rent-fee {
+	margin-top: 12rem;
+	width: 100%;
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	@include flexbox();
+	.rent-fee__text {
+		width: calc(92% / 3);
+		@include flexbox();
+		@include flex-direction(column);
+		@include box-sizing(border-box);
+		padding-right: 5%;
+		.fee-text__subtitle {
+			width: 100%;
+			font-size: 1.2rem;
+			font-family: 'oACYCZno';
+			color: $font-gray3;
+		}
+		.fee-text__title {
+			width: 100%;
+			font-size: 2rem;
+			line-height: 2.8rem;
+			font-family: 'oACYCZno';
+			font-weight: bold;
+			color: $font-gray1;
+			margin-top: 1rem;
+			word-break: keep-all;
+			word-wrap: break-word;
+		}
+		.fee-text__desc {
+			margin-top: 4.5rem;
+			word-break: keep-all;
+			word-wrap: break-word;
+			font-family: 'oACYCZno';
+			color: $font-gray1;
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2.2rem;
+		}
+	}
+	.rent-fee__card {
+		width: calc(92% / 3);
+		height: 25vw;
+		margin-left: 4%;
+		position: relative;
+		@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+		.card-bg {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			@include flexbox();
+			@include justify-content(center);
+			@include align-items(center);
+			img {
+				height: 100%;
+			}
+		}
+		.card-filter {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $main-color-500;
+			&.orange {
+				background-color: $orange-500;
+			}
+		}
+		.card-content {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(space-between);
+			@include box-sizing(border-box);
+			padding: 15% 0;
+			.card-title {
+				color: $font-white;
+				font-family: 'Do Hyeon';
+				font-size: 2.2rem;
+				width: 70%;
+				text-align: center;
+				border: 2px solid $font-white;
+				padding: 2rem 3rem;
+				@include box-sizing(border-box);
+				border-radius: 6rem;
+			}
+			.card-subtitle {
+				color: $font-white;
+				font-family: 'oACYCZno';
+				font-size: 1.6rem;
+				margin-top: 2rem;
+				width: 100%;
+				text-align: center;
+			}
+			.card-desc {
+				color: $font-white;
+				font-family: 'oACYCZno';
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+				word-break: keep-all;
+				word-wrap: break-word;
+				margin-top: 4rem;
+				text-align: center;
+				width: 60%;
+			}
+			.card-price {
+				color: $font-white;
+				font-family: 'Do Hyeon';
+				font-size: 2rem;
+				letter-spacing: 0.1rem;
+				text-align: center;
+				width: 100%;
+				margin-top: 4rem;
+			}
+		}
+	}
+}
+.ad {
+	margin-top: 12rem;
+	@include flexbox();
+	@include box-sizing(border-box);
+	padding: 0 12%;
+	.ad-tab {
+		width: calc(100% / 3);
+		height: 15vw;
+		position: relative;
+		cursor: pointer;
+		&:hover {
+			.ad-tab__img {
+				img {
+					@include transform(scale(1));
+				}
+			}
+			.ad-tab__text {
+				span {
+					@include transform(translateX(10px));
+				}
+			}
+		}
+		&:nth-of-type(1), &:nth-of-type(2) {
+			.ad-tab__img {
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(center);
+				img {
+					width: unset;
+					height: 100%;
+				}
+			}
+		}
+		.ad-tab__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			img {
+				width: 100%;
+				@include transform(scale(1.05));
+				@include transition(all 0.5s ease);
+			}
+		}
+		.ad-tab__filter {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $main-color-700;
+			&.red {
+				background-color: $red-500;
+			}
+			&.green {
+				background-color: $green-500;
+			}
+		}
+		.ad-tab__text {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(center);
+			@include box-sizing(border-box);
+			padding: 5% 10%;
+			.text-title {
+				width: 100%;
+				text-align: center;
+				font-size: 1.8rem;
+				color: $font-white;
+				font-family: 'Do Hyeon';
+			}
+			span {
+				margin-top: 2rem;
+				width: 40%;
+				height: 1.8rem;
+				@include flexbox();
+				@include justify-content(center);
+				@include transition(all 0.5s ease);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

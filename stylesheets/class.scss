@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	.lesson-header {
 		width: 100%;
-		height: 45vh;
+		height: 50vh;
 		position: relative;
 		.lesson-header__bg {
 			width: 100%;
@@ -79,7 +79,7 @@ body {
 			.lesson-card {
 				position: relative;
 				width: 100%;
-				background-color: $white-900;
+				@include lesson-card-bg();
 				@include flexbox();
 				@include flex-direction(column);
 				@include justify-content(center);
@@ -130,10 +130,10 @@ body {
 					text-align: center;
 				}
 				.lesson-card__price-desc {
-					width: 40%;
+					width: 55%;
 					color: $font-gray3;
 					font-family: 'oACYCZno';
-					font-size: 1rem;
+					font-size: 1.2rem;
 					line-height: 1.8rem;
 					word-break: keep-all;
 					word-wrap: break-word;

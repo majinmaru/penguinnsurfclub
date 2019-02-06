@@ -425,7 +425,7 @@ body {
 				.lesson-card__title {
 					color: $font-gray2;
 					font-family: 'Do Hyeon';
-					font-size: 2.5rem;
+					font-size: 2rem;
 					width: 70%;
 					text-align: center;
 					border: 2px solid $font-gray2;
@@ -519,7 +519,7 @@ body {
 					position: absolute;
 					color: $font-white;
 					bottom: 4rem;
-					font-size: 1.6rem;
+					font-size: 1.4rem;
 					font-family: 'oACYCZno';
 					text-align: center;
 					letter-spacing: 0.1rem;
@@ -867,5 +867,456 @@ body {
 			}
 		}
 		
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 800px) {
+	.slider {
+		width: 100%;
+		height: 50vh;
+		.slider-wrapper {
+			.slide {
+				width: 100%;
+				height: 50vh;
+				&.active {}
+				.slide-image {
+					width: 100%;
+					height: 50vh;
+					@include flexbox();
+					@include justify-content(center);
+					@include align-items(center);
+					img {
+						width: unset;
+						height: 100%;
+					}
+				}
+				.slide-sideblur {
+					display: none;					
+				}
+				.slide-content {
+					@include flexbox();
+					@include justify-content(space-between);
+					@include align-items(center);
+					width: 80%;
+					margin-left: 5%;
+					.content-text {
+						width: 100%;
+						height: 100%;
+						padding-top: 20%;
+						.content-text__title {
+							font-size: 6rem;
+						}
+						.content-text__subtitle {
+							font-size: 1.4rem;
+							font-weight: bold;
+							margin-top: 2.5rem;
+						}
+						.content-text__desc {					
+							font-size: 1rem;
+							line-height: 2rem;
+							margin-top: 1.8rem;
+							width: 65%;		
+						}
+					}
+					.content-img {
+						display: none;
+					}
+				}
+			}
+		}
+		.slider-control {
+			width: 100%;
+			bottom: 3%;
+			padding-left: 5%;
+			.control-navigation {
+				width: 8%;
+				margin-bottom: 1rem;
+				.navigation-dot {
+					width: 0.5rem;
+					height: 0.5rem;
+					&.current {
+						background-color: $sub-red;
+					}
+				}
+			}
+			.control-arrow {
+				width: 35%;				
+			}
+		}
+	}
+	.review {
+		padding: 0 0%;
+		margin-top: 6rem;
+		.review-wrapper {
+			.review-header {
+				width: 35%;
+				height: unset;
+				margin-left: 5%;
+				.review-header__subtitle {
+					font-size: 1rem;
+				}
+				.review-header__title {
+					width: 100%;
+					font-size: 1.6rem;
+					line-height: 2.4rem;
+					margin-top: 1rem;
+					position: relative;
+				}
+				.review-header__more {
+					width: 100%;
+					height: 4.5rem;
+					left: -1rem;
+					bottom: 3rem;
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+					&:hover {
+						span {
+							@include transform(translateX(10px));
+						}
+					}
+					p{
+						font-size: 1rem;
+						line-height: 1.4rem;
+					}
+					span {
+						width: 1.8rem;
+						height: 1.4rem;
+					}				
+				}
+			}
+			.review-content {
+				width: 60%;
+				height: 73vw;
+				position: relative;
+				.review-content-wrapper {
+					width: 100%;
+					height: 73vw;
+					.review-card {
+						width: 48vw;
+						margin-right: 2rem;
+						&:hover {
+							.review-card__card {
+								border: 2px solid $main-color;
+							}
+						}
+						.review-card__num {
+							padding-left: 3%;
+							font-size: 1rem;
+							color: $main-color;
+							margin-bottom: 1rem;
+							width: 100%;
+							font-family: 'Do Hyeon';
+						}
+						.review-card__card {
+							width: 100%;					
+							height: 60vw;
+							border-radius: 1.2rem;
+							@include box-shadow(0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5));
+							border: 2px solid transparent;
+							padding: 10% 2%;
+							@include flex-direction(column);
+							.card-profile {
+								width: 50%;
+								margin-left: 0%;
+								@include flexbox();
+								@include justify-content(center);
+								@include align-items(center);
+								.card-profile__pic {
+									width: 6.5rem;
+									height: 6.5rem;
+									img {
+										width: 100%;
+									}
+								}
+							}
+							.card-content {
+								width: 80%;
+								@include align-items(center);
+								.card-content__eval {
+									width: unset;
+									@include justify-content(center);
+									img {
+										width: 1rem;
+										height: 1rem;
+										margin-right: 0.5rem;
+									}
+								}
+								.card-content__text {
+									margin-top: 1.5rem;
+									width: 100%;
+									font-size: 1rem;
+									line-height: 1.8rem;
+									height: 5.4rem;
+								}
+								.card-content__name {
+									text-align: center;
+									padding-right: 0;
+								}
+							}
+						}
+					}
+				}			
+			}
+		}
+	}
+	.lesson {
+		margin-top: 8rem;
+		height: unset;
+		.lesson-bg {
+		}
+		.lesson-header {
+			width: 55%;
+			border-bottom: 2px solid $main-color;
+			.lesson-header__subtitle {				
+				font-size: 1rem;
+			}
+			.lesson-header__title {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				margin-top: 1rem;
+				margin-bottom: 3rem;
+			}
+		}
+		.lesson-content {
+			padding: 0 14%;
+			@include flex-direction(column);
+			top: unset;
+			position: relative;
+			margin-top: -47%;
+			.lesson-content__type {
+				width: 100%;
+				margin-left: 0;
+				margin-top: 9rem;
+				.lesson-card {
+					@include lesson-card-bg();
+					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+					&:hover {
+						.lesson-card__title {
+							color: $main-color;
+							border: 2px solid $main-color;
+						}
+						.lesson-card__desc {
+							font-weight: bold;
+							color: $main-color;
+						}
+					}
+					.lesson-card__title {
+						color: $font-gray2;
+						font-size: 1.4rem;
+						width: 70%;
+						border: 2px solid $font-gray2;
+						padding: 1.5rem 3rem;
+						margin-top: 3.5rem;
+					}
+					.lesson-card__desc {
+						width: 70%;
+						height: 12rem;
+						font-size: 1.2rem;
+						line-height: 2.2rem;
+						margin-top: 3.5rem;
+					}
+					.lesson-card__teacher {						
+						font-size: 1.4rem;
+					}
+					.lesson-card__teacher-profile {
+						padding: 0 5%;
+						height: 4.5rem;
+						margin-bottom: 9rem;
+						.teacher-profile {
+							width: 4.5rem;
+							height: 4.5rem;
+							img {
+								top: 10%;
+							}
+						}
+					}
+
+				}
+				.lesson-button {
+					width: 100%;
+					.lesson-button__submit {
+						width: 100%;
+						bottom: 4rem;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+	.safety {
+		padding: 0 5%;
+		.safety-indicator {
+			width: 15%;
+		}
+		.safety-title {
+			font-size: 1.6rem;
+			margin-top: 3rem;
+		}
+		.safety-text {
+			margin-top: 2rem;
+			width: 80%;
+		}
+		.safety-button-wrapper {
+			margin-top: 1rem;		
+			padding: 0 18%;
+			@include flex-direction(column);
+			.safety-button {
+				margin-left: 0;
+				width: 100%;
+				height: 6rem;
+				margin-top: 3rem;
+				border-radius: 6rem;
+				padding-right: 3rem;
+				p {
+					font-size: 1.4rem;
+					line-height: 1.8rem;
+				}				
+			}
+		}
+	}
+	.snap {
+		height: 130vw;
+		.snap-bg {
+			img {
+				width: unset;
+				height: 100%;
+				bottom: unset;
+				left: -61%;
+			}
+		}
+		.snap-content {
+			height: 130vw;
+			.snap-content__header {
+				width: 70%;
+				height: 14rem;
+				.snap-content__header-subtitle {
+					margin-left: 12%;
+					margin-top: 3rem;
+					font-size: 1rem;
+				}
+				.snap-content__header-title {
+					font-size: 1.6rem;
+					line-height: 2.4rem;
+					margin-top: 1rem;
+					margin-left: 12%;
+					word-break: keep-all;
+					word-wrap: break-word;
+				}
+			}
+			.snap-content__gallery {
+				width: 30%;
+				margin-right: 5%;
+				right: 0;
+				bottom: 10%;
+				.gallery-tab {
+					height: 17vw;
+					margin-top: 2rem;
+					@include box-shadow(0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5));
+					.gallery-title {
+						padding-left: 5%;
+						font-size: 1rem;
+						bottom: 1rem;
+					}
+				}
+			}
+			.snap-content__more {
+				bottom: 10%;
+				margin-left: 5%;
+				width: 40%;
+				height: 6rem;
+				border-radius: 6rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				p{
+					font-size: 1.2rem;
+					line-height: 1.8rem;
+				}
+				span {
+					width: 1.8rem;
+				}
+			}
+		}
+	}
+	.rent {
+		margin-top: 8rem;
+		height: 120vw;
+		padding: 0 12%;
+		@include flex-direction(column);
+		@include align-items(center);
+		.rent-image {
+			width: 100%;
+			height: 35vw;
+			overflow: hidden;
+			position: relative;
+			img {
+				width: 100%;
+				position: absolute;
+				bottom: -20%;
+			}
+		}
+		.rent-content {
+			@include box-sizing(border-box);
+			position: absolute;
+			width: 76%;
+			height: unset;
+			right: unset;
+			padding-top: 26%;
+			@include box-shadow(0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5));
+			.rent-content__bg {
+				width: 100%;
+				height: 102vw;
+				@include flexbox();
+				@include justify-content(center);
+				img {
+					height: unset;
+					width: 120%;
+					top: 7%;
+					left: unset;
+					@include transform(rotate(90deg));
+				}
+			}
+			.rent-conent__text {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding-right: 0;
+				padding-top: 37%;
+				@include align-items(center);
+				.rent-content__subtitle {
+					font-size: 1rem;
+					text-align: center;
+				}
+				.rent-content__title {
+					width: 70%;
+					font-size: 1.6rem;
+					line-height: 2.4rem;
+					margin-top: 1rem;
+					text-align: center;
+				}
+				.rent-content__desc {
+					width: 70%;
+					font-size: 1rem;
+					line-height: 2rem;
+					margin-top: 3rem;
+					text-align: center;
+				}
+				.rent-content__more {
+					width: 65%;
+					height: 6rem;
+					border-radius: 6rem;
+					padding-left: 3rem;
+					padding-right: 3rem;
+					margin-top: 3.5rem;
+					p{
+						font-size: 1.2rem;
+						line-height: 1.8rem;
+					}
+					span {
+						width: 1.8rem;
+						height: 1.8rem;
+					}
+				}
+			}
+			
+		}
 	}
 }

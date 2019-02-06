@@ -9,6 +9,87 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+
+@-webkit-keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
 .header {
 	width: 100%;
 	@include flexbox();
@@ -63,97 +144,129 @@ body {
 		@include flexbox();
 		@include flex-direction(column);
 		@include box-sizing(border-box);
-		.header__weather {
-			width: 100%;
-			height: 70%;
+		.header__weather-wrapper {
 			@include flexbox();
-			@include box-sizing(border-box);
-			border-bottom: 3px solid $main-color;
-			padding-left: 5%;
-			padding-right: 15%;
-			padding-top: 2%;
-			padding-bottom: 2%;
-			.waether-tab {
-				width: calc(97% / 4);
+			width: 100%;
+			height: 60%;
+			position: relative;
+			.header-weather {
+				width: 100%;
 				height: 100%;
-				@include flexbox();
-				@include flex-direction(column);
 				@include box-sizing(border-box);
-				.waether-tab__name {
+				border-bottom: 3px solid $main-color;
+				position: relative;
+				.weather {
 					width: 100%;
-					height: 30%;
-					color: $font-gray4;					
-				}
-				.waether-tab__content {
-					width: 100%;
-					height: 70%;
-					@include flexbox();
-					@include align-items(center);
-					.content-location {
+					height: 100%;
+					position: relative;
+					display: none;
+					&.current {
+						@include flexbox();
+					}
+					.weather-bg {
 						width: 100%;
 						height: 100%;
-						@include box-sizing(border-box);
-						font-family: 'oACYCZno';
-						font-weight: bold;
-						color: $font-gray2;
-						font-size: 1.5rem;
+						overflow: hidden;
+						position: relative;
 						@include flexbox();
+						@include justify-content(center);
 						@include align-items(center);
+						img {
+							width: 100%;
+							position: absolute;
+							top: 0;
+						}
 					}
-					.content-icon {
-						width: 40%;
+					.weather-content {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 80%;
 						height: 100%;
 						@include flexbox();
-						@include align-items(flex-end);
-						img {
-							height: 80%;
-						}
-					}
-					.content-text {
-						width: 60%;
-						@include flexbox();
-						@include flex-direction(column);
 						@include justify-content(space-between);
-						font-family: 'oACYCZno'; 
-						padding-top: 3%;
-						@include box-sizing(border-box);
-						.content-text__max {							
-							color: $sub-red;
-							font-size: 1.8rem;
-							@include flexbox();
-							@include align-items(flex-end);
-							span {
-								color: $font-gray3;
-								font-size: 1.4rem;
-								margin-left: 0.7rem;
-							}
-						}
-						.content-text__min {
-							margin-top: 0.7rem;
-							color: #97b5ff;
-							font-size: 1.8rem;
-							@include flexbox();
-							@include align-items(flex-end);
-							span {
-								color: $font-gray3;
-								font-size: 1.4rem;
-								margin-left: 0.7rem;
-							}
-						}
-						.content-text__surf {
-							color: $main-color;
-							font-size: 1.8rem;
+						@include align-items(center);
+						.weather-content__time {
+							width: 5%;
+							background-color: $white-250;
+							border-radius: 7rem;
+							color: $font-white;
 							font-family: 'oACYCZno';
-							font-weight: bold;
-							margin-left: -1.5rem;
+							font-size: 1.4rem;
+							padding: 1.5rem 2.5rem;
+							margin-left: 5%;
+							text-align: center;
+							opacity: 0;
+							&.show-up {
+								@include animation(bounceInUp 0.5s ease);
+								opacity: 1;
+							}
 						}
-					}
+						.weather-content__info {
+							width: 55%;
+							@include flexbox();
+							.info-tab {
+								@include box-sizing(border-box);
+								width: calc(85% / 3);
+								height: 6rem;
+								margin-right: 5%;
+								@include flexbox();
+								@include justify-content(center);
+								@include align-items(center);
+								background-color: $white-250;
+								border-radius: 7rem;
+								@include transition(all 0.5s ease);
+								opacity: 0;
+								&.show-up {
+									@include animation(bounceInUp 0.5s ease);
+									opacity: 1;
+								}
+								&:hover {
+									background-color: $main-color-500;
+								}
+								&:nth-of-type(2) {
+									&.show-up {
+										@include animation(bounceInUp 0.5s ease 0.1s);
+										opacity: 1;
+									}
+								}
+								&:nth-of-type(3) {
+									.info-tab__icon {
+										width: 20%;
+									}
+									&.show-up {
+										@include animation(bounceInUp 0.5s ease 0.2s);
+										opacity: 1;
+									}
+								}
+								.info-tab__icon {
+									width: 30%;
+									margin-right: 10%;
+									@include flexbox();
+									@include align-items(center);
+									img {
+										width: 100%;
+									}
+								}
+								.info-tab__text {
+									width: 20%;
+									font-size: 1.2rem;
+									color: $font-white;
+									font-family: 'oACYCZno';
+								}
+							}
+						}
+					}								
 				}
 			}
-			.waether-dir {
-				margin-top: 0.5rem;
-				width: 3%;
-				height: 100%;
+			.header-waether-dir {
+				position: absolute;
+				right: 0;
+				top: 15%;
+				width: 20%;
+				height: 70%;
+				@include box-sizing(border-box);
+				padding-right: 15%;
 				@include flexbox();
 				@include flex-direction(column);
 				.dir-up {
@@ -161,9 +274,16 @@ body {
 					height: 50%;
 					@include flexbox();
 					@include align-items(center);
+					@include transition(all 0.5s ease);
+					opacity: 0.6;
+					&:hover {
+						@include transform(translateY(-10px));
+						opacity: 1;
+					}
 					img {
-						width: 60%;
+						height: 50%;
 						cursor: pointer;
+						@include transform(rotate(-90deg));
 					}
 				}
 				.dir-down {
@@ -171,10 +291,16 @@ body {
 					height: 50%;
 					@include flexbox();
 					@include align-items(center);
+					@include transition(all 0.5s ease);
+					opacity: 0.6;
+					&:hover {
+						@include transform(translateY(10px));
+						opacity: 1;
+					}
 					img {
 						cursor: pointer;
-						width: 60%;
-						@include transform(rotate(180deg));
+						height: 50%;
+						@include transform(rotate(90deg));
 					}
 				}
 			}
@@ -182,7 +308,7 @@ body {
 		.header__nav {
 			@include flexbox();
 			width: 100%;
-			height: 30%;
+			height: 40%;
 			@include box-sizing(border-box);
 			padding-right: 18%;
 			.nav-tab {
@@ -196,15 +322,15 @@ body {
 				&.active {
 					width: calc(100% / 3);
 					height: 100%;
-					background: url('../../images/common/wave-red.svg');
-					background-size: 20%;
-					background-position: center center;
-					background-repeat: no-repeat;
+					background: $sub-red;
+					p {
+						color: $font-white;
+					}
 				}
 				p {	
 					font-family: 'Do Hyeon', sans-serif;
 					color: $main-color;
-					font-size: 1.8rem;
+					font-size: 2rem;
 				}
 			}
 		}
@@ -250,7 +376,7 @@ body {
 		.header-right {
 			width: 100%;
 			height: auto;
-			.header__weather {
+			.header__weather-wrapper {
 				display: none;
 			}
 			.header__nav {				
@@ -258,7 +384,7 @@ body {
 				@include box-sizing(border-box);
 				padding-right: 0;
 				.nav-tab {
-					a {						
+					p {						
 						font-size: 1.6rem;
 					}
 				}
