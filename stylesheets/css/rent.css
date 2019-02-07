@@ -55,4 +55,35 @@ body { width: 100%; overflow-x: hidden; }
 .ad .ad-tab .ad-tab__text span { margin-top: 2rem; width: 40%; height: 1.8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .ad .ad-tab .ad-tab__text span img { width: 100%; }
 
+@media screen and (min-width: 320px) and (max-width: 800px) { .rent { height: 110vw; }
+  .rent .rent-bg { -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+  .rent .rent-bg img { width: unset; height: 100%; }
+  .rent .rent-content { padding: 15% 7% 10% 7%; }
+  .rent .rent-content .rent-content__header { width: 100%; }
+  .rent .rent-content .rent-content__header .header-subtitle { font-size: 1rem; text-shadow: 1px 3px 7px #1338d1; }
+  .rent .rent-content .rent-content__header .header-title { font-size: 1.6rem; line-height: 2.4rem; text-shadow: 1px 3px 7px #1338d1; }
+  .rent .rent-content .rent-content__header .header-desc { width: 80%; height: 14rem; font-size: 1.2rem; line-height: 2.2rem; margin-top: 4.5rem; text-shadow: 1px 3px 7px #1338d1; }
+  .rent .rent-button { width: 100%; position: relative; }
+  .rent .rent-button .rent-button__more { position: absolute; right: 0; bottom: 0; width: 50%; height: 7.5rem; border-radius: 7.5rem; padding-left: 3rem; padding-right: 3rem; -webkit-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); }
+  .rent .rent-button .rent-button__more p { font-size: 1.6rem; line-height: 2rem; width: 50%; }
+  .rent .rent-button .rent-button__more span { width: 2.5rem; height: 2rem; }
+  .ad { margin-top: 8rem; padding: 0 3%; }
+  .ad .ad-tab { height: 40vw; }
+  .ad .ad-tab .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+  .ad .ad-tab .ad-tab__img img { width: unset; height: 100%; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+  .ad .ad-tab .ad-tab__text .text-title { font-size: 1.4rem; word-break: keep-all; word-wrap: break-word; }
+  .ad .ad-tab .ad-tab__text span { height: 1.5rem; }
+  .rent-fee { margin-top: 8rem; padding: 0 6%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
+  .rent-fee .rent-fee__text { width: 100%; padding-right: 1%; padding-left: 1%; }
+  .rent-fee .rent-fee__text .fee-text__subtitle { font-size: 1rem; }
+  .rent-fee .rent-fee__text .fee-text__title { width: 100%; font-size: 1.6rem; line-height: 2.4rem; margin-top: 1rem; }
+  .rent-fee .rent-fee__text .fee-text__desc { margin-top: 3.5rem; width: 100%; font-size: 1.2rem; line-height: 2.2rem; }
+  .rent-fee .rent-fee__card { width: 100%; margin-top: 4rem; height: unset; margin-left: 0; -webkit-box-shadow: 0.1rem 0.4rem 3rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 0.1rem 0.4rem 3rem rgba(76, 76, 76, 0.5); box-shadow: 0.1rem 0.4rem 3rem rgba(76, 76, 76, 0.5); }
+  .rent-fee .rent-fee__card .card-bg { height: 82vw; }
+  .rent-fee .rent-fee__card .card-content { height: unset; padding: 12% 0; }
+  .rent-fee .rent-fee__card .card-content .card-title { font-size: 1.6rem; width: 60%; padding: 1rem 3rem; border-radius: 6rem; }
+  .rent-fee .rent-fee__card .card-content .card-subtitle { font-size: 1.2rem; margin-top: 2rem; width: 100%; }
+  .rent-fee .rent-fee__card .card-content .card-desc { font-size: 1.2rem; line-height: 1.8rem; margin-top: 4rem; width: 60%; }
+  .rent-fee .rent-fee__card .card-content .card-price { color: white; font-family: 'Do Hyeon'; font-size: 2rem; letter-spacing: 0.1rem; text-align: center; width: 100%; margin-top: 4rem; } }
+
 /*# sourceMappingURL=rent.css.map */

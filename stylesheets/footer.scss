@@ -97,7 +97,11 @@ body {
 				}	
 				.sns-tab__tooltip {					
 					font-size: 1.2rem;					
-					margin-top: 0.3rem;					
+					margin-top: 0.3rem;
+					&:before {
+						width: 0.2rem;
+						height: 0.2rem;
+					}			
 				}
 			}
 		}

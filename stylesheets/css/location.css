@@ -49,13 +49,13 @@ body { width: 100%; overflow-x: hidden; }
 .ad .ad-tab .ad-tab__text span { margin-top: 2rem; width: 40%; height: 1.8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .ad .ad-tab .ad-tab__text span img { width: 100%; }
 
-@media screen and (min-width: 320px) and (max-width: 800px) { .location { height: 80vh; }
+@media screen and (min-width: 320px) and (max-width: 800px) { .location { height: 145vw; }
   .location .location-map { width: 100%; height: 100%; }
   .location .location-map img { width: unset; height: 110%; position: absolute; bottom: -10%; left: unset; right: -20%; }
   .location .location-content { position: absolute; width: 100%; margin-top: 10%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 7%; top: 0; left: 0; }
   .location .location-content .location-content__header { width: 70%; }
   .location .location-content .location-content__header .content-header__subtitle { font-size: 1rem; }
-  .location .location-content .location-content__header .content-header__title { width: 100%; font-size: 1.6rem; line-height: 2.4rem; margin-top: 1rem; }
+  .location .location-content .location-content__header .content-header__title { width: 100%; font-size: 1.8rem; line-height: 2.6rem; margin-top: 1rem; }
   .location .location-content .location-content__link { position: relative; width: 48%; margin-top: 4rem; }
   .location .location-content .location-content__link .content-link__btn { width: 100%; height: 4.5rem; border-radius: 4.5rem; margin-left: -1rem; padding-left: 2rem; padding-right: 2rem; margin-top: 1rem; }
   .location .location-content .location-content__link .content-link__btn p { font-size: 1.2rem; }
@@ -73,7 +73,7 @@ body { width: 100%; overflow-x: hidden; }
   .ad .ad-tab { height: 40vw; }
   .ad .ad-tab .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
   .ad .ad-tab .ad-tab__img img { width: unset; height: 100%; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
-  .ad .ad-tab .ad-tab__text .text-title { font-size: 1.4rem; }
+  .ad .ad-tab .ad-tab__text .text-title { font-size: 1.4rem; word-break: keep-all; word-wrap: break-word; }
   .ad .ad-tab .ad-tab__text span { height: 1.5rem; } }
 
 /*# sourceMappingURL=location.css.map */

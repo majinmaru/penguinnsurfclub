@@ -340,3 +340,154 @@ body {
 		}
 	}
 }
+@media screen and (min-width: 320px) and (max-width: 800px) {
+.rent {
+	height: 110vw;
+	.rent-bg {		
+		@include justify-content(center);
+		img {
+			width: unset;
+			height: 100%;
+		}
+	}
+	.rent-content {
+		padding: 15% 7% 10% 7%;
+		.rent-content__header {
+			width: 100%;
+			.header-subtitle {
+				font-size: 1rem;
+				text-shadow: 1px 3px 7px $main-color;
+			}
+			.header-title {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				text-shadow: 1px 3px 7px $main-color;
+			}
+			.header-desc {
+				width: 80%;
+				height: 14rem;
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+				margin-top: 4.5rem;
+				text-shadow: 1px 3px 7px $main-color;
+			}
+		}
+	}
+	.rent-button {
+		width: 100%;
+		position: relative;
+		.rent-button__more {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 50%;
+			height: 7.5rem;
+			border-radius: 7.5rem;
+			padding-left: 3rem;
+			padding-right: 3rem;
+			@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+			p{
+				font-size: 1.6rem;
+				line-height: 2rem;
+				width: 50%;
+			}
+			span {
+				width: 2.5rem;
+				height: 2rem;
+			}
+		}
+	}
+}
+.ad {
+	margin-top: 8rem;
+	padding: 0 3%;
+	.ad-tab {
+		height: 40vw;		
+		.ad-tab__img {
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+			img {
+				width: unset;
+				height: 100%;
+				@include transform(scale(1.05));
+			}
+		}		
+		.ad-tab__text {
+			.text-title {
+				font-size: 1.4rem;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+			span {
+				height: 1.5rem;
+			}
+		}
+	}
+}
+.rent-fee {
+	margin-top: 8rem;
+	padding: 0 6%;
+	@include flex-direction(column);
+	.rent-fee__text {
+		width: 100%;
+		padding-right: 1%;
+		padding-left: 1%;
+		.fee-text__subtitle {
+			font-size: 1rem;
+		}
+		.fee-text__title {
+			width: 100%;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-top: 1rem;
+		}
+		.fee-text__desc {
+			margin-top: 3.5rem;
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2.2rem;
+		}
+	}
+	.rent-fee__card {
+		width: 100%;
+		margin-top: 4rem;
+		height: unset;
+		margin-left: 0;
+		@include box-shadow(0.1rem 0.4rem 3rem rgba(76, 76, 76, 0.5));
+		.card-bg {
+			height: 82vw;
+		}
+		.card-content {
+			height: unset;			
+			padding: 12% 0;
+			.card-title {
+				font-size: 1.6rem;
+				width: 60%;
+				padding: 1rem 3rem;
+				border-radius: 6rem;
+			}
+			.card-subtitle {
+				font-size: 1.2rem;
+				margin-top: 2rem;
+				width: 100%;
+			}
+			.card-desc {
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+				margin-top: 4rem;
+				width: 60%;
+			}
+			.card-price {
+				color: $font-white;
+				font-family: 'Do Hyeon';
+				font-size: 2rem;
+				letter-spacing: 0.1rem;
+				text-align: center;
+				width: 100%;
+				margin-top: 4rem;
+			}
+		}
+	}
+}
+}

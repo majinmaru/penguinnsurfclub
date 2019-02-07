@@ -23,6 +23,7 @@ body { width: 100%; overflow-x: hidden; }
   .footer .footer-sns .sns-tab { width: 7rem; }
   .footer .footer-sns .sns-tab .sns-tab__icon { width: 3rem; height: 3rem; }
   .footer .footer-sns .sns-tab .sns-tab__tooltip { font-size: 1.2rem; margin-top: 0.3rem; }
+  .footer .footer-sns .sns-tab .sns-tab__tooltip:before { width: 0.2rem; height: 0.2rem; }
   .footer .footer-rights { font-size: 0.9rem; } }
 
 /*# sourceMappingURL=footer.css.map */
