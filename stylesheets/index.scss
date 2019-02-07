@@ -14,7 +14,7 @@ body {
 }
 .slider {
 	width: 100%;
-	height: 50vh;
+	height: 55vh;
 	overflow: hidden;
 	position: relative;
 	.slider-wrapper {
@@ -23,14 +23,14 @@ body {
 		.slide {
 			position: relative;
 			width: 100%;
-			height: 50vh;
+			height: 55vh;
 			display: inline-block;
 			float: left;
 			&.active {}
 			.slide-image {
 				position: relative;
 				width: 100%;
-				height: 50vh;
+				height: 55vh;
 				overflow: hidden;
 				img {
 					position: absolute;
@@ -54,7 +54,7 @@ body {
 				margin-right: 3%;
 				background-color: $white-500;
 				.sideblur-text {
-					width: 42vh;
+					width: 55vh;
 					height: 7vw;
 					color:  $main-color;
 					font-size: 1.6rem;
@@ -63,8 +63,8 @@ body {
 					@include transform(rotate(-90deg));
 					@include transform-origin(bottom center);
 					position: absolute;
-					top: -10%;
-					left: -2rem;
+					top: -16%;
+					left: -8rem;
 					@include flexbox();
 					@include align-items(center);
 				}
@@ -86,9 +86,10 @@ body {
 					@include box-sizing(border-box);
 					padding-top: 5%;
 					.content-text__title {
-						font-size: 9rem;
+						font-size: 10rem;
 						font-family: 'OTEnjoystoriesBA'; 
 						font-weight: bolder;
+						word-spacing: -0.7rem;
 					}
 					.content-text__subtitle {
 						font-size: 1.8rem;
@@ -97,8 +98,8 @@ body {
 						margin-top: 2.5rem;
 					}
 					.content-text__desc {					
-						font-size: 1.2rem;
-						line-height: 2.4rem;
+						font-size: 1.4rem;
+						line-height: 1.5;
 						font-family: 'oACYCZno'; 
 						margin-top: 1.8rem;
 						width: 60%;
@@ -174,17 +175,17 @@ body {
 			@include flex-direction(column);
 			position: relative;
 			.review-header__subtitle {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				font-family: 'oACYCZno';
 				color: $font-gray3;
 			}
 			.review-header__title {
-				font-size: 2rem;
-				line-height: 2.8rem;
+				font-size: 2.5rem;
+				line-height: 1.5;
 				font-family: 'oACYCZno';
 				font-weight: bold;
 				color: $font-gray1;
-				margin-top: 1rem;
+				margin-top: 1.5rem;
 				width: 70%;
 				word-break: keep-all;
 				word-wrap: break-word;
@@ -196,11 +197,11 @@ body {
 				border: none;
 				background-color: $main-color;
 				position: absolute;
-				bottom: 4.5rem;
+				bottom: 1rem;
 				left: -3rem;
 				@include box-sizing(border-box);
 				padding-left: 3rem;
-				padding-right: 5rem;
+				padding-right: 3rem;
 				@include flexbox();
 				@include align-items(center);
 				@include justify-content(space-between);
@@ -211,14 +212,16 @@ body {
 					}
 				}
 				p{
-					font-size: 1.6rem;
-					line-height: 1.8rem;
+					font-size: 2rem;
+					line-height: 1.3;
 					font-family: 'Do Hyeon';
 					color: $font-white;
+					width: 65%;
+					text-align: left;
 				}
 				span {
 					width: 2.5rem;
-					height: 1.8rem;
+					height: 2rem;
 					@include flexbox();
 					@include align-items(center);
 					@include transition(all 0.5s ease);
@@ -270,7 +273,7 @@ body {
 						@include box-sizing(border-box);
 						@include transition(all 0.5s ease);
 						cursor: pointer;
-						padding: 5% 7%;
+						padding: 3% 7%;
 						@include flexbox();
 						@include align-items(center);
 						@include justify-content(space-between);
@@ -278,8 +281,8 @@ body {
 							width: 30%;
 							margin-left: 4%;
 							.card-profile__pic {
-								width: 10rem;
-								height: 10rem;
+								width: 6vw;
+								height: 6vw;
 								border-radius: 50%;
 								background-color: white;
 								overflow: hidden;
@@ -306,15 +309,14 @@ body {
 								}
 							}
 							.card-content__text {
-								margin-top: 1.5rem;
+								margin-top: 1.8rem;
 								width: 100%;
-								word-break: keep-all;
 								word-wrap: break-word;
 								font-family: 'oACYCZno';
 								color: $font-gray2;
-								font-size: 1.2rem;
-								line-height: 2.2rem;
-								height: 6.6rem;
+								font-size: 1.4rem;
+								line-height: 1.5;
+								height: 6.3rem;
 								white-space: normal;
 			                    overflow: hidden;
 			                    display: -webkit-box;
@@ -324,7 +326,7 @@ body {
 							}
 							.card-content__name {
 								font-family: 'oACYCZno';
-								margin-top: 1.5rem;
+								margin-top: 1.8rem;
 								width: 100%;
 								color: $font-gray2;
 								font-size: 1rem;
@@ -342,7 +344,7 @@ body {
 .lesson {
 	margin-top: 8rem;
 	width: 100%;
-	height: 47vw;
+	height: 50vw;
 	position: relative;
 	@include flexbox();
 	@include flex-direction(column);
@@ -368,7 +370,7 @@ body {
 		.lesson-header__subtitle {
 			width: 100%;
 			text-align: center;
-			font-size: 1.2rem;
+			font-size: 1.6rem;
 			font-family: 'oACYCZno';
 			color: $font-gray3;
 			margin-top: 3rem;
@@ -376,8 +378,8 @@ body {
 		.lesson-header__title {
 			width: 100%;
 			text-align: center;
-			font-size: 2rem;
-			line-height: 2.8rem;
+			font-size: 2.5rem;
+			line-height: 1.5;
 			font-family: 'oACYCZno';
 			font-weight: bold;
 			color: $font-gray1;
@@ -418,7 +420,6 @@ body {
 						letter-spacing: 0.2rem;
 					}
 					.lesson-card__desc {
-						font-weight: bold;
 						color: $main-color;
 					}
 				}
@@ -438,10 +439,10 @@ body {
 				.lesson-card__desc {
 					color: $font-gray2;
 					font-family: 'oACYCZno'; 
-					width: 55%;
-					height: 12rem;
-					font-size: 1.2rem;
-					line-height: 2.2rem;
+					width: 65%;
+					height: 15rem;
+					font-size: 1.4rem;
+					line-height: 1.8;
 					word-break: keep-all;
 					word-wrap: break-word;
 					margin-top: 4.5rem;
@@ -502,8 +503,7 @@ body {
 				overflow: hidden;
 				cursor: pointer;
 				@include transition(all 0.5s ease);
-				&:hover {
-					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
+				&:hover {					
 					.lesson-button__submit {
 						letter-spacing: 0.3rem;
 					}
@@ -545,7 +545,7 @@ body {
 		}
 	}
 	.safety-title {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-family: 'oACYCZno';
 		font-weight: bold;
 		color: $main-color;
@@ -555,12 +555,12 @@ body {
 	}
 	.safety-text {
 		font-family: 'oACYCZno';
-		font-size: 1.2rem;
-		line-height: 2.4rem;
+		font-size: 1.6rem;
+		line-height: 1.8;
 		margin-top: 3.5rem;
 		color: $font-gray2;
 		text-align: center;
-		width: 45%;
+		width: 50%;
 		word-break: keep-all;
 		word-wrap: break-word;
 	}
@@ -579,7 +579,7 @@ body {
 			@include flexbox();
 			background-color: transparent;
 			padding-left: 3rem;
-			padding-right: 5rem;
+			padding-right: 3rem;
 			@include align-items(center);
 			@include justify-content(space-between);
 			cursor: pointer;
@@ -598,14 +598,14 @@ body {
 				}
 			}
 			p {
-				font-size: 1.8rem;
-				line-height: 1.8rem;
+				font-size: 2rem;
+				line-height: 1.5;
 				font-family: 'Do Hyeon';
 				color: #78bcff;
 			}
 			span {
 				width: 2.5rem;
-				height: 1.8rem;
+				height: 2rem;
 				@include flexbox();
 				@include align-items(center);
 				@include transition(all 0.5s ease);
@@ -643,21 +643,20 @@ body {
 			@include flex-direction(column);
 			width: 50%;
 			height: 17rem;
-			background-color: $white;
 			.snap-content__header-subtitle {
 				margin-left: 24%;
 				margin-top: 5rem;
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				font-family: 'oACYCZno'; 
 				color: $font-gray3;
 			}
 			.snap-content__header-title {
-				font-size: 2rem;
-				line-height: 2.8rem;
+				font-size: 2.5rem;
+				line-height: 1.5;
 				font-family: 'oACYCZno';
 				font-weight: bold;
 				color: $font-gray1;
-				margin-top: 1rem;
+				margin-top: 1.5rem;
 				margin-left: 24%;
 			}
 		}
@@ -732,14 +731,14 @@ body {
 				}
 			}
 			p{
-				font-size: 1.8rem;
-				line-height: 1.8rem;
+				font-size: 2rem;
+				line-height: 2rem;
 				font-family: 'Do Hyeon';
 				color: $font-white;
 			}
 			span {
 				width: 2.5rem;
-				height: 1.8rem;
+				height: 2rem;
 				@include flexbox();
 				@include align-items(center);
 				@include transition(all 0.5s ease);
@@ -801,15 +800,15 @@ body {
 			@include box-sizing(border-box);
 			padding-right: 13%;
 			.rent-content__subtitle {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				font-family: 'oACYCZno';
 				color: $font-gray3;
 				text-align: right;
 			}
 			.rent-content__title {
-				width: 80%;
-				font-size: 2rem;
-				line-height: 2.8rem;
+				width: 100%;
+				font-size: 2.5rem;
+				line-height: 1.5;
 				font-family: 'oACYCZno';
 				font-weight: bold;
 				color: $font-gray1;
@@ -825,8 +824,8 @@ body {
 				word-wrap: break-word;
 				font-family: 'oACYCZno';
 				color: $font-gray2;
-				font-size: 1.2rem;
-				line-height: 2.2rem;
+				font-size: 1.4rem;
+				line-height: 1.8;
 				margin-top: 5rem;
 			}
 			.rent-content__more {
@@ -849,14 +848,14 @@ body {
 					}
 				}
 				p{
-					font-size: 1.8rem;
-					line-height: 1.8rem;
+					font-size: 2rem;
+					line-height: 2rem;
 					font-family: 'Do Hyeon';
 					color: $font-white;
 				}
 				span {
 					width: 2.5rem;
-					height: 1.8rem;
+					height: 2rem;
 					@include flexbox();
 					@include align-items(center);
 					@include transition(all 0.5s ease);
@@ -917,7 +916,7 @@ body {
 		}
 	}
 	.review {
-		padding: 0 10%;
+		padding: 0 6%;
 		margin-top: 6rem;
 		.review-wrapper {
 			.review-header {
@@ -1046,6 +1045,9 @@ body {
 	}
 	.safety {
 		padding: 0 10%;
+		.safety-text {
+			width: 60%;
+		}
 		.safety-button-wrapper {
 			padding: 0 14%;
 			.safety-button {
@@ -1075,24 +1077,26 @@ body {
 		}
 	}
 	.rent {
-		height: 44vw;
+		height: 47vw;
 		padding: 0 10%;
 		.rent-image {
-			height: 44vw;
+			height: 47vw;
 			img {
 				width: 100%;
 				position: absolute;
-				bottom: -20%;
+				bottom: unset;
+				top: 0;
 			}
 		}
 		.rent-content {
-			width: 33%;
-			height: 38vw;
+			width: 38%;
+			height: 41vw;
 			right: 10%;
 			@include box-shadow(1.4rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5));
 			.rent-content__bg {		
 			}
 			.rent-conent__text {
+				padding-right: 7%;
 				.rent-content__subtitle {
 				}
 				.rent-content__title {
@@ -1359,8 +1363,11 @@ body {
 						font-size: 1.4rem;
 					}
 					.lesson-card__teacher-profile {
-						margin-left: 7%;
+						padding: 0 5%;
 						.teacher-profile {
+							width: 4.5rem;
+							height: 4.5rem;
+							margin-left: 5%;
 							img {
 								top: 10%;
 							}

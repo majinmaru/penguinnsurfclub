@@ -43,13 +43,13 @@ body {
 			left: 0;
 			padding-top: 7%;
 			.lesson-header__subtitle {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				font-family: 'oACYCZno';
 				color: $font-white;
 			}
 			.lesson-header__title {
-				font-size: 2rem;
-				line-height: 2.8rem;
+				font-size: 2.5rem;
+				line-height: 1.5;
 				font-family: 'oACYCZno';
 				font-weight: bold;
 				color: $font-white;
@@ -114,7 +114,7 @@ body {
 					width: 60%;
 					height: 14rem;
 					font-size: 1.4rem;
-					line-height: 2.6rem;
+					line-height: 1.8;
 					word-break: keep-all;
 					word-wrap: break-word;
 					margin-top: 4.5rem;
@@ -195,7 +195,6 @@ body {
 				cursor: pointer;
 				@include transition(all 0.5s ease);
 				&:hover {
-					@include box-shadow(1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5));
 					.lesson-button__submit {
 						letter-spacing: 0.3rem;
 					}
@@ -291,7 +290,7 @@ body {
 		}
 	}
 	.safety-title {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-family: 'oACYCZno';
 		font-weight: bold;
 		color: $main-color;
@@ -301,12 +300,12 @@ body {
 	}
 	.safety-text {
 		font-family: 'oACYCZno';
-		font-size: 1.2rem;
-		line-height: 2.4rem;
+		font-size: 1.6rem;
+		line-height: 1.8;
 		margin-top: 3.5rem;
 		color: $font-gray2;
 		text-align: center;
-		width: 45%;
+		width: 50%;
 		word-break: keep-all;
 		word-wrap: break-word;
 	}
@@ -325,7 +324,7 @@ body {
 			@include flexbox();
 			background-color: transparent;
 			padding-left: 3rem;
-			padding-right: 5rem;
+			padding-right: 3rem;
 			@include align-items(center);
 			@include justify-content(space-between);
 			cursor: pointer;
@@ -344,14 +343,14 @@ body {
 				}
 			}
 			p {
-				font-size: 1.8rem;
-				line-height: 1.8rem;
+				font-size: 2rem;
+				line-height: 1.5;
 				font-family: 'Do Hyeon';
 				color: #78bcff;
 			}
 			span {
 				width: 2.5rem;
-				height: 1.8rem;
+				height: 2rem;
 				@include flexbox();
 				@include align-items(center);
 				@include transition(all 0.5s ease);
@@ -389,17 +388,16 @@ body {
 			@include flex-direction(column);
 			width: 50%;
 			height: 17rem;
-			background-color: $white;
 			.snap-content__header-subtitle {
 				margin-left: 24%;
 				margin-top: 5rem;
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				font-family: 'oACYCZno'; 
 				color: $font-gray3;
 			}
 			.snap-content__header-title {
-				font-size: 2rem;
-				line-height: 2.8rem;
+				font-size: 2.5rem;
+				line-height: 1.5;
 				font-family: 'oACYCZno';
 				font-weight: bold;
 				color: $font-gray1;
@@ -478,14 +476,14 @@ body {
 				}
 			}
 			p{
-				font-size: 1.8rem;
-				line-height: 1.8rem;
+				font-size: 2rem;
+				line-height: 2rem;
 				font-family: 'Do Hyeon';
 				color: $font-white;
 			}
 			span {
 				width: 2.5rem;
-				height: 1.8rem;
+				height: 2rem;
 				@include flexbox();
 				@include align-items(center);
 				@include transition(all 0.5s ease);
@@ -513,7 +511,7 @@ body {
 			}
 		}
 		.lesson-content {
-			padding: 0 10%;
+			padding: 0 6%;
 			.lesson-content__type {
 				width: calc(94% / 3);
 				margin-left: 3%;
@@ -580,6 +578,9 @@ body {
 	}
 	.safety {
 		padding: 0 10%;
+		.safety-text {
+			width: 60%;
+		}
 		.safety-button-wrapper {
 			padding: 0 14%;
 			.safety-button {
