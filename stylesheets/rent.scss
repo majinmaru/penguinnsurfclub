@@ -340,7 +340,101 @@ body {
 		}
 	}
 }
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.rent {
+	height: 45vw;
+	.rent-bg {
+	}
+	.rent-content {
+		padding: 6% 10%;
+		.rent-content__header {
+			width: 35%;
+			.header-subtitle {
+			}
+			.header-title {
+			}
+			.header-desc {
+			}
+		}
+	}
+	.rent-button {
+		.rent-button__more {
+			width: 28%;
+			height: 6.5rem;
+			border-radius: 6.5rem;
+			padding-right: 3rem;
+		}
+	}
+}
+.rent-fee {
+	margin-top: 12rem;
+	padding: 0 10%;
+	.rent-fee__text {
+		width: calc(92% / 3);
+		padding-right: 5%;
+		.fee-text__subtitle {
+			width: 100%;
+			font-size: 1.2rem;
+			font-family: 'oACYCZno';
+			color: $font-gray3;
+		}
+		.fee-text__title {
+			width: 100%;
+			font-size: 2rem;
+			line-height: 2.8rem;
+			font-family: 'oACYCZno';
+			font-weight: bold;
+			color: $font-gray1;
+			margin-top: 1rem;
+			word-break: keep-all;
+			word-wrap: break-word;
+		}
+		.fee-text__desc {
+			margin-top: 4.5rem;
+			word-break: keep-all;
+			word-wrap: break-word;
+			font-family: 'oACYCZno';
+			color: $font-gray1;
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2.2rem;
+		}
+	}
+	.rent-fee__card {
+		height: 33vw;
+		.card-bg {
+		}
+		.card-content {
+			.card-title {
+				font-size: 1.6rem;
+				width: 70%;
+				padding: 1.5rem 3rem;
+			}
+			.card-subtitle {
+				font-size: 1.4rem;
+			}
+			.card-desc {
+			}
+			.card-price {
+			}
+		}
+	}
+}
+.ad {
+	margin-top: 12rem;
+	padding: 0 10%;
+	.ad-tab {
+		.ad-tab__text {
+			.text-title {
+				width: 80%;
+				word-break: keep-all;
+				word-wrap: break-word;;
+			}			
+		}
+	}
+}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
 .rent {
 	height: 110vw;
 	.rent-bg {		

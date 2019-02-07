@@ -17,7 +17,7 @@ body { width: 100%; overflow-x: hidden; }
 .footer .footer-sns .sns-tab .sns-tab__tooltip:before { content: ''; width: 0.6rem; height: 0.6rem; display: block; border-top: 10px solid #ff5059; border-left: 10px solid #ff5059; border-radius: 0.5rem; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: -0.5rem; }
 .footer .footer-rights { text-align: center; color: white; font-size: 1.2rem; font-family: 'oACYCZno'; }
 
-@media screen and (min-width: 320px) and (max-width: 800px) { .footer { margin-top: 8rem; padding-top: 7%; padding-bottom: 7%; }
+@media screen and (min-width: 320px) and (max-width: 767px) { .footer { margin-top: 8rem; padding-top: 7%; padding-bottom: 7%; }
   .footer .footer-logo { width: 18%; }
   .footer .footer-sns { height: 6rem; }
   .footer .footer-sns .sns-tab { width: 7rem; }
