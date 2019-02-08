@@ -71,11 +71,11 @@ body { width: 100%; overflow-x: hidden; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__title { color: #606060; font-family: 'Do Hyeon'; font-size: 2rem; width: 70%; text-align: center; border: 2px solid #606060; padding: 2rem 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-radius: 6rem; margin-top: 5.5rem; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__desc { color: #606060; font-family: 'oACYCZno'; width: 65%; height: 15rem; font-size: 1.4rem; line-height: 1.8; word-break: keep-all; word-wrap: break-word; margin-top: 4.5rem; text-align: center; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher { color: #2b2b2b; font-family: 'oACYCZno'; font-weight: bold; text-align: center; font-size: 1.4rem; width: 100%; margin-top: 2rem; cursor: default; }
-.lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile { margin-top: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; height: 5rem; width: 100%; margin-bottom: 10rem; cursor: default; }
+.lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile { margin-top: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; height: 5rem; width: 100%; margin-bottom: 15rem; cursor: default; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile { width: 5rem; height: 5rem; border-radius: 50%; overflow: hidden; background-color: white; border: 2px solid #1338d1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; position: relative; margin-left: 7%; cursor: pointer; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile:nth-of-type(1) { margin-left: 0; }
 .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile img { position: absolute; top: 5%; width: 100%; }
-.lesson .lesson-content .lesson-content__type .lesson-button { position: absolute; z-index: 2; width: 100%; height: 10rem; bottom: -4rem; overflow: hidden; cursor: pointer; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.lesson .lesson-content .lesson-content__type .lesson-button { position: absolute; z-index: 2; width: 100%; height: 10rem; bottom: 0; overflow: hidden; cursor: pointer; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .lesson .lesson-content .lesson-content__type .lesson-button:hover .lesson-button__submit { letter-spacing: 0.3rem; }
 .lesson .lesson-content .lesson-content__type .lesson-button img { position: absolute; width: 100%; top: 0; left: 0; }
 .lesson .lesson-content .lesson-content__type .lesson-button .lesson-button__submit { width: 100%; position: absolute; color: white; bottom: 4rem; font-size: 1.4rem; font-family: 'oACYCZno'; text-align: center; letter-spacing: 0.1rem; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
@@ -161,7 +161,7 @@ body { width: 100%; overflow-x: hidden; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__title { font-size: 1.6rem; border: 2px solid #606060; padding: 1.5rem 3rem; margin-top: 3.5rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__desc { width: 65%; height: 13.2rem; margin-top: 3.5rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher { margin-top: 4rem; }
-  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile { padding: 0 5%; height: 4rem; margin-bottom: 9rem; }
+  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile { padding: 0 5%; height: 4rem; margin-bottom: 13rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile { margin-left: 4%; width: 4rem; height: 4rem; }
   .safety { padding: 0 10%; }
   .safety .safety-text { width: 60%; }
@@ -183,26 +183,26 @@ body { width: 100%; overflow-x: hidden; }
   .slider .slider-wrapper .slide .slide-image { width: 100%; height: 90vw; }
   .slider .slider-wrapper .slide .slide-image img { width: unset; height: 100%; }
   .slider .slider-wrapper .slide .slide-sideblur { display: none; }
-  .slider .slider-wrapper .slide .slide-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-between; -ms-flex-pack: space-between; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 80%; margin-left: 5%; }
+  .slider .slider-wrapper .slide .slide-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-between; -ms-flex-pack: space-between; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 80%; margin-left: 6%; }
   .slider .slider-wrapper .slide .slide-content .content-text { width: 100%; height: 100%; padding-top: 20%; }
-  .slider .slider-wrapper .slide .slide-content .content-text .content-text__title { font-size: 6rem; }
+  .slider .slider-wrapper .slide .slide-content .content-text .content-text__title { font-size: 6rem; word-spacing: -1.5rem; }
   .slider .slider-wrapper .slide .slide-content .content-text .content-text__subtitle { font-size: 1.4rem; font-weight: bold; margin-top: 2.5rem; }
-  .slider .slider-wrapper .slide .slide-content .content-text .content-text__desc { font-size: 1rem; line-height: 2rem; margin-top: 1.8rem; width: 65%; }
+  .slider .slider-wrapper .slide .slide-content .content-text .content-text__desc { font-size: 1.2rem; line-height: 2rem; margin-top: 1.8rem; width: 70%; }
   .slider .slider-wrapper .slide .slide-content .content-img { display: none; }
-  .slider .slider-control { width: 100%; bottom: 3%; padding-left: 5%; }
+  .slider .slider-control { width: 100%; bottom: 3%; padding-left: 6%; }
   .slider .slider-control .control-navigation { width: 8%; margin-bottom: 1rem; }
   .slider .slider-control .control-navigation .navigation-dot { width: 0.5rem; height: 0.5rem; }
   .slider .slider-control .control-navigation .navigation-dot.current { background-color: #ff5059; }
   .slider .slider-control .control-arrow { width: 35%; }
   .review { padding: 0 0%; margin-top: 6rem; }
-  .review .review-wrapper .review-header { width: 40%; height: unset; margin-left: 5%; }
+  .review .review-wrapper .review-header { width: 40%; height: unset; margin-left: 6%; margin-right: 4%; }
   .review .review-wrapper .review-header .review-header__subtitle { font-size: 1rem; }
-  .review .review-wrapper .review-header .review-header__title { width: 100%; font-size: 1.8rem; line-height: 2.6rem; margin-top: 1rem; position: relative; }
+  .review .review-wrapper .review-header .review-header__title { width: 100%; font-size: 2rem; line-height: 2.6rem; margin-top: 1rem; position: relative; }
   .review .review-wrapper .review-header .review-header__more { width: 90%; height: 6rem; left: -1rem; bottom: 3rem; padding-left: 2.5rem; padding-right: 2.5rem; }
   .review .review-wrapper .review-header .review-header__more:hover span { -webkit-transform: translateX(10px); -ms-transform: translateX(10px); transform: translateX(10px); }
   .review .review-wrapper .review-header .review-header__more p { font-size: 1.4rem; line-height: 1.6rem; width: 65%; text-align: left; word-wrap: break-word; word-break: keep-all; }
   .review .review-wrapper .review-header .review-header__more span { width: 1.8rem; height: 1.6rem; }
-  .review .review-wrapper .review-content { width: 55%; height: 73vw; position: relative; }
+  .review .review-wrapper .review-content { width: 50%; height: 73vw; position: relative; }
   .review .review-wrapper .review-content .review-content-wrapper { width: 100%; height: 73vw; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card { width: 38vw; margin-right: 2rem; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card:hover .review-card__card { border: 2px solid #1338d1; }
@@ -214,26 +214,26 @@ body { width: 100%; overflow-x: hidden; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content { width: 80%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content .card-content__eval { width: unset; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content .card-content__eval img { width: 1rem; height: 1rem; margin-right: 0.5rem; }
-  .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content .card-content__text { margin-top: 1.5rem; width: 100%; font-size: 1rem; line-height: 1.8rem; height: 5.4rem; word-break: break-all; }
+  .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content .card-content__text { margin-top: 1rem; width: 100%; font-size: 1.2rem; line-height: 1.8rem; height: 5.4rem; word-break: break-all; }
   .review .review-wrapper .review-content .review-content-wrapper .review-card .review-card__card .card-content .card-content__name { text-align: center; padding-right: 0; }
   .lesson { margin-top: 8rem; height: unset; }
-  .lesson .lesson-header { width: 65%; border-bottom: 2px solid #1338d1; }
+  .lesson .lesson-header { width: 80%; border-bottom: 2px solid #1338d1; }
   .lesson .lesson-header .lesson-header__subtitle { font-size: 1rem; }
-  .lesson .lesson-header .lesson-header__title { font-size: 1.8rem; line-height: 2.6rem; margin-top: 1rem; margin-bottom: 3rem; }
-  .lesson .lesson-content { padding: 0 14%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; top: unset; position: relative; margin-top: -47%; }
+  .lesson .lesson-header .lesson-header__title { font-size: 2rem; line-height: 2.6rem; margin-top: 1rem; margin-bottom: 3rem; }
+  .lesson .lesson-content { padding: 0 10%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; top: unset; position: relative; margin-top: -47%; }
   .lesson .lesson-content .lesson-content__type { width: 100%; margin-left: 0; margin-top: 9rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card { -webkit-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); }
   .lesson .lesson-content .lesson-content__type .lesson-card:hover .lesson-card__title { color: #1338d1; border: 2px solid #1338d1; }
   .lesson .lesson-content .lesson-content__type .lesson-card:hover .lesson-card__desc { font-weight: bold; color: #1338d1; }
-  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__title { color: #606060; font-size: 1.4rem; width: 70%; border: 2px solid #606060; padding: 1.5rem 3rem; margin-top: 3.5rem; }
+  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__title { font-size: 1.6rem; width: 70%; padding: 1.5rem 3rem; margin-top: 3.5rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__desc { width: 70%; height: 12rem; font-size: 1.2rem; line-height: 2.2rem; margin-top: 3.5rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher { font-size: 1.4rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile { padding: 0 5%; }
-  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile { width: 4.5rem; height: 4.5rem; margin-left: 5%; }
+  .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile { width: 4.5rem; height: 4.5rem; margin-left: 5%; margin-bottom: 13rem; }
   .lesson .lesson-content .lesson-content__type .lesson-card .lesson-card__teacher-profile .teacher-profile img { top: 10%; }
   .lesson .lesson-content .lesson-content__type .lesson-button { width: 100%; }
   .lesson .lesson-content .lesson-content__type .lesson-button:hover { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
-  .lesson .lesson-content .lesson-content__type .lesson-button .lesson-button__submit { width: 100%; bottom: 4rem; font-size: 1.2rem; }
+  .lesson .lesson-content .lesson-content__type .lesson-button .lesson-button__submit { width: 100%; bottom: 4rem; font-size: 1.4rem; }
   .safety { padding: 0 5%; }
   .safety .safety-indicator { width: 15%; }
   .safety .safety-title { font-size: 1.6rem; margin-top: 3rem; }
@@ -244,25 +244,25 @@ body { width: 100%; overflow-x: hidden; }
   .snap { height: 130vw; }
   .snap .snap-bg img { width: unset; height: 100%; bottom: unset; left: -61%; }
   .snap .snap-content { height: 130vw; }
-  .snap .snap-content .snap-content__header { width: 70%; height: 14rem; }
-  .snap .snap-content .snap-content__header .snap-content__header-subtitle { margin-left: 12%; margin-top: 3rem; font-size: 1rem; }
-  .snap .snap-content .snap-content__header .snap-content__header-title { font-size: 1.6rem; line-height: 2.4rem; margin-top: 1rem; margin-left: 12%; word-break: keep-all; word-wrap: break-word; }
+  .snap .snap-content .snap-content__header { width: 100%; height: 14rem; }
+  .snap .snap-content .snap-content__header .snap-content__header-subtitle { margin-left: 6%; margin-top: 3rem; font-size: 1rem; }
+  .snap .snap-content .snap-content__header .snap-content__header-title { font-size: 2rem; line-height: 1.5; margin-top: 1rem; margin-left: 6%; word-break: keep-all; word-wrap: break-word; }
   .snap .snap-content .snap-content__gallery { width: 30%; margin-right: 5%; right: 0; bottom: 10%; }
   .snap .snap-content .snap-content__gallery .gallery-tab { height: 17vw; margin-top: 2rem; -webkit-box-shadow: 0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5); box-shadow: 0.6rem 0.8rem 2.5rem rgba(76, 76, 76, 0.5); }
   .snap .snap-content .snap-content__gallery .gallery-tab .gallery-title { padding-left: 0; padding-right: 5%; font-size: 1.2rem; bottom: 0.5rem; text-align: right; }
   .snap .snap-content .snap-content__more { bottom: 10%; margin-left: 5%; width: 40%; height: 6rem; border-radius: 6rem; padding-left: 2.5rem; padding-right: 2.5rem; }
   .snap .snap-content .snap-content__more p { font-size: 1.4rem; line-height: 1.6rem; width: 65%; text-align: left; word-wrap: break-word; word-break: keep-all; }
   .snap .snap-content .snap-content__more span { width: 1.8rem; }
-  .rent { margin-top: 8rem; height: 134vw; padding: 0 12%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  .rent { margin-top: 8rem; height: 134vw; padding: 0 8%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   .rent .rent-image { width: 100%; height: 40vw; overflow: hidden; position: relative; }
   .rent .rent-image img { width: 100%; position: absolute; bottom: -20%; }
-  .rent .rent-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; width: 76%; height: unset; right: unset; padding-top: 33%; -webkit-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); }
+  .rent .rent-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; width: 84%; height: unset; right: unset; padding-top: 33%; -webkit-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); box-shadow: 0.1rem 0.8rem 3.5rem rgba(76, 76, 76, 0.5); }
   .rent .rent-content .rent-content__bg { width: 100%; height: 100vw; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .rent .rent-content .rent-content__bg img { height: unset; width: 120%; top: 7%; left: unset; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
   .rent .rent-content .rent-conent__text { position: absolute; top: 0; left: 0; padding-right: 0; padding-top: 48%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   .rent .rent-content .rent-conent__text .rent-content__subtitle { font-size: 1rem; text-align: center; }
-  .rent .rent-content .rent-conent__text .rent-content__title { width: 70%; font-size: 1.6rem; line-height: 2.4rem; margin-top: 1rem; text-align: center; }
-  .rent .rent-content .rent-conent__text .rent-content__desc { width: 70%; font-size: 1rem; line-height: 2rem; margin-top: 3rem; text-align: center; }
+  .rent .rent-content .rent-conent__text .rent-content__title { width: 85%; font-size: 2rem; line-height: 1.5; margin-top: 1rem; text-align: center; }
+  .rent .rent-content .rent-conent__text .rent-content__desc { width: 67%; font-size: 1.2rem; line-height: 2rem; margin-top: 2rem; text-align: center; }
   .rent .rent-content .rent-conent__text .rent-content__more { width: 65%; height: 6rem; border-radius: 6rem; padding-left: 3rem; padding-right: 3rem; margin-top: 3.5rem; }
   .rent .rent-content .rent-conent__text .rent-content__more p { font-size: 1.4rem; line-height: 1.6rem; width: 65%; text-align: left; word-wrap: break-word; word-break: keep-all; }
   .rent .rent-content .rent-conent__text .rent-content__more span { width: 1.8rem; height: 1.8rem; } }

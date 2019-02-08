@@ -466,7 +466,7 @@ body {
 					padding: 0 10%;
 					height: 5rem;
 					width: 100%;
-					margin-bottom: 10rem;
+					margin-bottom: 15rem;
 					cursor: default;
 					.teacher-profile {
 						width: 5rem;
@@ -499,7 +499,7 @@ body {
 				z-index: 2;
 				width: 100%;
 				height: 10rem;
-				bottom: -4rem;
+				bottom: 0;
 				overflow: hidden;
 				cursor: pointer;
 				@include transition(all 0.5s ease);
@@ -1031,7 +1031,7 @@ body {
 					.lesson-card__teacher-profile {
 						padding: 0 5%;
 						height: 4rem;
-						margin-bottom: 9rem;
+						margin-bottom: 13rem;
 						.teacher-profile {
 							margin-left: 4%;
 							width: 4rem;
@@ -1137,13 +1137,14 @@ body {
 					@include justify-content(space-between);
 					@include align-items(center);
 					width: 80%;
-					margin-left: 5%;
+					margin-left: 6%;
 					.content-text {
 						width: 100%;
 						height: 100%;
 						padding-top: 20%;
 						.content-text__title {
 							font-size: 6rem;
+							word-spacing: -1.5rem;
 						}
 						.content-text__subtitle {
 							font-size: 1.4rem;
@@ -1151,10 +1152,10 @@ body {
 							margin-top: 2.5rem;
 						}
 						.content-text__desc {					
-							font-size: 1rem;
+							font-size: 1.2rem;
 							line-height: 2rem;
 							margin-top: 1.8rem;
-							width: 65%;		
+							width: 70%;		
 						}
 					}
 					.content-img {
@@ -1166,7 +1167,7 @@ body {
 		.slider-control {
 			width: 100%;
 			bottom: 3%;
-			padding-left: 5%;
+			padding-left: 6%;
 			.control-navigation {
 				width: 8%;
 				margin-bottom: 1rem;
@@ -1190,13 +1191,14 @@ body {
 			.review-header {
 				width: 40%;
 				height: unset;
-				margin-left: 5%;
+				margin-left: 6%;
+				margin-right: 4%;
 				.review-header__subtitle {
 					font-size: 1rem;
 				}
 				.review-header__title {
 					width: 100%;
-					font-size: 1.8rem;
+					font-size: 2rem;
 					line-height: 2.6rem;
 					margin-top: 1rem;
 					position: relative;
@@ -1228,7 +1230,7 @@ body {
 				}
 			}
 			.review-content {
-				width: 55%;
+				width: 50%;
 				height: 73vw;
 				position: relative;
 				.review-content-wrapper {
@@ -1285,9 +1287,9 @@ body {
 									}
 								}
 								.card-content__text {
-									margin-top: 1.5rem;
+									margin-top: 1rem;
 									width: 100%;
-									font-size: 1rem;
+									font-size: 1.2rem;
 									line-height: 1.8rem;
 									height: 5.4rem;
 									word-break: break-all;
@@ -1309,20 +1311,20 @@ body {
 		.lesson-bg {
 		}
 		.lesson-header {
-			width: 65%;
+			width: 80%;
 			border-bottom: 2px solid $main-color;
 			.lesson-header__subtitle {				
 				font-size: 1rem;
 			}
 			.lesson-header__title {
-				font-size: 1.8rem;
+				font-size: 2rem;
 				line-height: 2.6rem;
 				margin-top: 1rem;
 				margin-bottom: 3rem;
 			}
 		}
 		.lesson-content {
-			padding: 0 14%;
+			padding: 0 10%;
 			@include flex-direction(column);
 			top: unset;
 			position: relative;
@@ -1345,10 +1347,8 @@ body {
 						}
 					}
 					.lesson-card__title {
-						color: $font-gray2;
-						font-size: 1.4rem;
+						font-size: 1.6rem;
 						width: 70%;
-						border: 2px solid $font-gray2;
 						padding: 1.5rem 3rem;
 						margin-top: 3.5rem;
 					}
@@ -1368,6 +1368,7 @@ body {
 							width: 4.5rem;
 							height: 4.5rem;
 							margin-left: 5%;
+							margin-bottom: 13rem;
 							img {
 								top: 10%;
 							}
@@ -1383,7 +1384,7 @@ body {
 					.lesson-button__submit {
 						width: 100%;
 						bottom: 4rem;
-						font-size: 1.2rem;
+						font-size: 1.4rem;
 					}
 				}
 			}
@@ -1433,18 +1434,18 @@ body {
 		.snap-content {
 			height: 130vw;
 			.snap-content__header {
-				width: 70%;
+				width: 100%;
 				height: 14rem;
 				.snap-content__header-subtitle {
-					margin-left: 12%;
+					margin-left: 6%;
 					margin-top: 3rem;
 					font-size: 1rem;
 				}
 				.snap-content__header-title {
-					font-size: 1.6rem;
-					line-height: 2.4rem;
+					font-size: 2rem;
+					line-height: 1.5;
 					margin-top: 1rem;
-					margin-left: 12%;
+					margin-left: 6%;
 					word-break: keep-all;
 					word-wrap: break-word;
 				}
@@ -1492,7 +1493,7 @@ body {
 	.rent {
 		margin-top: 8rem;
 		height: 134vw;
-		padding: 0 12%;
+		padding: 0 8%;
 		@include flex-direction(column);
 		@include align-items(center);
 		.rent-image {
@@ -1509,7 +1510,7 @@ body {
 		.rent-content {
 			@include box-sizing(border-box);
 			position: absolute;
-			width: 76%;
+			width: 84%;
 			height: unset;
 			right: unset;
 			padding-top: 33%;
@@ -1539,17 +1540,17 @@ body {
 					text-align: center;
 				}
 				.rent-content__title {
-					width: 70%;
-					font-size: 1.6rem;
-					line-height: 2.4rem;
+					width: 85%;
+					font-size: 2rem;
+					line-height: 1.5;
 					margin-top: 1rem;
 					text-align: center;
 				}
 				.rent-content__desc {
-					width: 70%;
-					font-size: 1rem;
+					width: 67%;
+					font-size: 1.2rem;
 					line-height: 2rem;
-					margin-top: 3rem;
+					margin-top: 2rem;
 					text-align: center;
 				}
 				.rent-content__more {

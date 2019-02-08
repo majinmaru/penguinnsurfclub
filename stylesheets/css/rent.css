@@ -8,19 +8,19 @@ html { font-size: 10px; }
 body { width: 100%; overflow-x: hidden; }
 
 .rent { width: 100%; height: 65vh; position: relative; }
-.rent .rent-bg { position: relative; width: 100%; height: 100%; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
+.rent .rent-bg { position: relative; width: 100%; height: 100%; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .rent .rent-bg img { width: 100%; }
 .rent .rent-filter { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(19, 56, 209, 0.7); }
-.rent .rent-content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 6% 12%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; }
+.rent .rent-content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 6% 12%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: space-between; -ms-flex-pack: space-between; justify-content: space-between; }
 .rent .rent-content .rent-content__header { width: 30%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; position: relative; }
 .rent .rent-content .rent-content__header .header-subtitle { width: 100%; font-size: 1.6rem; font-family: 'oACYCZno'; color: white; text-align: left; }
 .rent .rent-content .rent-content__header .header-title { width: 100%; font-size: 2.5rem; line-height: 1.5; font-family: 'oACYCZno'; font-weight: bold; color: white; margin-top: 1rem; text-align: left; word-break: keep-all; word-wrap: break-word; }
 .rent .rent-content .rent-content__header .header-desc { font-family: 'oACYCZno'; width: 80%; height: 14rem; font-size: 1.4rem; line-height: 1.8; word-break: keep-all; word-wrap: break-word; margin-top: 4.5rem; text-align: left; color: white; }
 .rent .rent-button { width: 100%; position: relative; }
-.rent .rent-button .rent-button__more { position: absolute; right: 0; bottom: 0; width: 25%; height: 7.5rem; border-radius: 7.5rem; background-color: #1338d1; border: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 3rem; padding-right: 3rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; cursor: pointer; -webkit-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); }
+.rent .rent-button .rent-button__more { position: absolute; right: 0; bottom: 0; width: 25%; height: 7.5rem; border-radius: 7.5rem; background-color: #1338d1; border: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 3rem; padding-right: 3rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: space-between; -ms-flex-pack: space-between; justify-content: space-between; cursor: pointer; -webkit-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); }
 .rent .rent-button .rent-button__more:hover span { -webkit-transform: translateX(10px); -ms-transform: translateX(10px); transform: translateX(10px); }
 .rent .rent-button .rent-button__more p { font-size: 2rem; line-height: 2rem; font-family: 'Do Hyeon'; color: white; }
-.rent .rent-button .rent-button__more span { width: 2.5rem; height: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.rent .rent-button .rent-button__more span { width: 2.5rem; height: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .rent .rent-button .rent-button__more span img { width: 100%; }
 
 .rent-fee { margin-top: 12rem; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12%; display: -webkit-box; display: -ms-flexbox; display: flex; }
@@ -29,11 +29,11 @@ body { width: 100%; overflow-x: hidden; }
 .rent-fee .rent-fee__text .fee-text__title { width: 100%; font-size: 2.5rem; line-height: 1.5; font-family: 'oACYCZno'; font-weight: bold; color: #2b2b2b; margin-top: 1rem; word-break: keep-all; word-wrap: break-word; }
 .rent-fee .rent-fee__text .fee-text__desc { margin-top: 4.5rem; word-break: keep-all; word-wrap: break-word; font-family: 'oACYCZno'; color: #2b2b2b; width: 100%; font-size: 1.4rem; line-height: 1.8; }
 .rent-fee .rent-fee__card { width: calc(92% / 3); height: 28vw; margin-left: 4%; position: relative; -webkit-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); }
-.rent-fee .rent-fee__card .card-bg { width: 100%; height: 100%; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
+.rent-fee .rent-fee__card .card-bg { width: 100%; height: 100%; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .rent-fee .rent-fee__card .card-bg img { height: 100%; }
 .rent-fee .rent-fee__card .card-filter { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(19, 56, 209, 0.5); }
 .rent-fee .rent-fee__card .card-filter.orange { background-color: rgba(195, 96, 66, 0.5); }
-.rent-fee .rent-fee__card .card-content { position: absolute; top: 0; width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 15% 0; }
+.rent-fee .rent-fee__card .card-content { position: absolute; top: 0; width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: space-between; -ms-flex-pack: space-between; justify-content: space-between; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 15% 0; }
 .rent-fee .rent-fee__card .card-content .card-title { color: white; font-family: 'Do Hyeon'; font-size: 2.2rem; width: 70%; text-align: center; border: 2px solid white; padding: 2rem 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-radius: 6rem; }
 .rent-fee .rent-fee__card .card-content .card-subtitle { color: white; font-family: 'oACYCZno'; font-size: 1.6rem; margin-top: 2rem; width: 100%; text-align: center; }
 .rent-fee .rent-fee__card .card-content .card-desc { color: white; font-family: 'oACYCZno'; font-size: 1.6rem; line-height: 1.8; word-break: keep-all; word-wrap: break-word; margin-top: 3rem; text-align: center; width: 60%; }
@@ -43,16 +43,16 @@ body { width: 100%; overflow-x: hidden; }
 .ad .ad-tab { width: calc(100% / 3); height: 15vw; position: relative; cursor: pointer; }
 .ad .ad-tab:hover .ad-tab__img img { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 .ad .ad-tab:hover .ad-tab__text span { -webkit-transform: translateX(10px); -ms-transform: translateX(10px); transform: translateX(10px); }
-.ad .ad-tab:nth-of-type(1) .ad-tab__img, .ad .ad-tab:nth-of-type(2) .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+.ad .ad-tab:nth-of-type(1) .ad-tab__img, .ad .ad-tab:nth-of-type(2) .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 .ad .ad-tab:nth-of-type(1) .ad-tab__img img, .ad .ad-tab:nth-of-type(2) .ad-tab__img img { width: unset; height: 100%; }
 .ad .ad-tab .ad-tab__img { width: 100%; height: 100%; position: relative; overflow: hidden; }
 .ad .ad-tab .ad-tab__img img { width: 100%; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .ad .ad-tab .ad-tab__filter { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(19, 56, 209, 0.7); }
 .ad .ad-tab .ad-tab__filter.red { background-color: rgba(255, 80, 89, 0.7); }
 .ad .ad-tab .ad-tab__filter.green { background-color: rgba(80, 234, 197, 0.7); }
-.ad .ad-tab .ad-tab__text { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5% 10%; }
+.ad .ad-tab .ad-tab__text { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5% 10%; }
 .ad .ad-tab .ad-tab__text .text-title { width: 100%; text-align: center; font-size: 2.2rem; color: white; font-family: 'Do Hyeon'; }
-.ad .ad-tab .ad-tab__text span { margin-top: 2rem; width: 40%; height: 1.8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.ad .ad-tab .ad-tab__text span { margin-top: 2rem; width: 40%; height: 1.8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .ad .ad-tab .ad-tab__text span img { width: 100%; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) { .rent { height: 45vw; }
@@ -70,12 +70,12 @@ body { width: 100%; overflow-x: hidden; }
   .ad { margin-top: 12rem; padding: 0 10%; }
   .ad .ad-tab .ad-tab__text .text-title { width: 80%; word-break: keep-all; word-wrap: break-word; } }
 @media screen and (min-width: 320px) and (max-width: 767px) { .rent { height: 110vw; }
-  .rent .rent-bg { -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+  .rent .rent-bg { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .rent .rent-bg img { width: unset; height: 100%; }
   .rent .rent-content { padding: 15% 7% 10% 7%; }
   .rent .rent-content .rent-content__header { width: 100%; }
   .rent .rent-content .rent-content__header .header-subtitle { font-size: 1rem; }
-  .rent .rent-content .rent-content__header .header-title { font-size: 1.6rem; line-height: 2.4rem; }
+  .rent .rent-content .rent-content__header .header-title { font-size: 2rem; line-height: 1.5; }
   .rent .rent-content .rent-content__header .header-desc { width: 80%; height: 14rem; font-size: 1.2rem; line-height: 2.2rem; margin-top: 4.5rem; }
   .rent .rent-button { width: 100%; position: relative; }
   .rent .rent-button .rent-button__more { position: absolute; right: 0; bottom: 0; width: 50%; height: 7.5rem; border-radius: 7.5rem; padding-left: 3rem; padding-right: 3rem; -webkit-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); -moz-box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); box-shadow: 1.6rem 1.2rem 4rem rgba(76, 76, 76, 0.5); }
@@ -83,7 +83,7 @@ body { width: 100%; overflow-x: hidden; }
   .rent .rent-button .rent-button__more span { width: 2.5rem; height: 2rem; }
   .ad { margin-top: 8rem; padding: 0 3%; }
   .ad .ad-tab { height: 40vw; }
-  .ad .ad-tab .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+  .ad .ad-tab .ad-tab__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .ad .ad-tab .ad-tab__img img { width: unset; height: 100%; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
   .ad .ad-tab .ad-tab__text .text-title { font-size: 1.4rem; word-break: keep-all; word-wrap: break-word; }
   .ad .ad-tab .ad-tab__text span { height: 1.5rem; }
@@ -97,7 +97,7 @@ body { width: 100%; overflow-x: hidden; }
   .rent-fee .rent-fee__card .card-content { height: unset; padding: 12% 0; }
   .rent-fee .rent-fee__card .card-content .card-title { font-size: 1.6rem; width: 60%; padding: 1rem 3rem; border-radius: 6rem; }
   .rent-fee .rent-fee__card .card-content .card-subtitle { font-size: 1.2rem; margin-top: 2rem; width: 100%; }
-  .rent-fee .rent-fee__card .card-content .card-desc { font-size: 1.2rem; line-height: 1.8rem; margin-top: 4rem; width: 60%; }
+  .rent-fee .rent-fee__card .card-content .card-desc { font-size: 1.4rem; line-height: 1.5; margin-top: 4rem; width: 60%; }
   .rent-fee .rent-fee__card .card-content .card-price { color: white; font-family: 'Do Hyeon'; font-size: 2rem; letter-spacing: 0.1rem; text-align: center; width: 100%; margin-top: 4rem; } }
 
 /*# sourceMappingURL=rent.css.map */
