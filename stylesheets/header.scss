@@ -1,434 +1,134 @@
 @import 'base/color.scss';
 @import 'base/font.scss';
 @import 'base/mixin.scss';
+@import 'base/variable.scss';
 
 html {
-	font-size: 10px;
+	font-size: 12px;
 }
 body {
 	width: 100%;
 	overflow-x: hidden;
 }
-
-@-webkit-keyframes bounceInUp {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-    transform: translate3d(0, 30px, 0);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(0, 5px, 0);
-    transform: translate3d(0, 5px, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes bounceInUp {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-    transform: translate3d(0, 30px, 0);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(0, 5px, 0);
-    transform: translate3d(0, 5px, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.bounceInUp {
-  -webkit-animation-name: bounceInUp;
-  animation-name: bounceInUp;
-}
 .header {
 	width: 100%;
-	@include flexbox();
-	@include box-sizing(border-box);
-	border-bottom: 3px solid $main-color;
-	.header-left {
-		width: calc((79.97% / 4) + 10%);
-		height: 15rem;
-		@include box-sizing(border-box);
-		border-right: 3px solid $main-color;
-		padding-left: 10%;
+	position: relative;
+	.gnb {
+		width: 100%;
+		height: $gnb-height;
+		background-color: $white;
+		position: relative;
 		@include flexbox();
-		@include flex-direction(column);
-		@include justify-content(center);
-		.header__logo {
-			width: 100%;
+		.gnb-list {
 			@include box-sizing(border-box);
-			padding-right: 50%;
-			a {
-				width: 100%;
-				margin-top: 0.5rem;
-				@include flexbox();
-				@include justify-content(center);
-				@include align-items(center);
-				img {
-					width: 70%;
-				}
-			}
-		}
-		.header__brand {
-			width: 100%;
-			@include box-sizing(border-box);
-			padding-right: 50%;
-			margin-top: 1rem;
-			a {
-				width: 100%;
-				text-decoration: none;
-				text-align: center;
-				color: $main-color;
-				font-size: 1.4rem;
-				line-height: 1.7rem;
-				font-family: 'Lachata';
-				font-weight: bold;
-				letter-spacing: 0.1rem;
-				display: block;
-			}
-		}
-	}
-	.header-right {
-		width: calc((79.97% * 0.75) + 10.03%);
-		height: 15rem;
-		@include flexbox();
-		@include flex-direction(column);
-		@include box-sizing(border-box);
-		.header__weather-wrapper {
+			margin-left: $margin;
+			width: calc(((100% - 170px) / 6)*5);
+			height: 100%;
 			@include flexbox();
-			width: 100%;
-			height: 60%;
-			position: relative;
-			.header-weather {
-				width: 100%;
-				height: 100%;
-				@include box-sizing(border-box);
-				border-bottom: 3px solid $main-color;
-				position: relative;
-				.weather {
-					width: 100%;
-					height: 100%;
-					position: relative;
-					display: none;
-					&.current {
-						@include flexbox();
-					}
-					.weather-bg {
-						width: 100%;
-						height: 100%;
-						overflow: hidden;
-						position: relative;
-						@include flexbox();
-						@include justify-content(center);
-						@include align-items(center);
-						img {
-							width: 100%;
-							position: absolute;
-							top: 0;
-						}
-					}
-					.weather-content {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 80%;
-						height: 100%;
-						@include flexbox();
-						@include justify-content(space-between);
-						@include align-items(center);
-						.weather-content__time {
-							width: 5%;
-							background-color: $white-250;
-							border-radius: 7rem;
-							color: $font-white;
-							font-family: 'oACYCZno';
-							font-size: 1.4rem;
-							padding: 1.5rem 2.5rem;
-							margin-left: 5%;
-							text-align: center;
-							opacity: 0;
-							&.show-up {
-								@include animation(bounceInUp 0.5s ease);
-								opacity: 1;
-							}
-						}
-						.weather-content__info {
-							width: 55%;
-							@include flexbox();
-							.info-tab {
-								@include box-sizing(border-box);
-								width: calc(85% / 3);
-								height: 6rem;
-								margin-right: 5%;
-								@include flexbox();
-								@include justify-content(center);
-								@include align-items(center);
-								background-color: $white-250;
-								border-radius: 7rem;
-								@include transition(all 0.5s ease);
-								opacity: 0;
-								&.show-up {
-									@include animation(bounceInUp 0.5s ease);
-									opacity: 1;
-								}
-								&:hover {
-									background-color: $main-color-500;
-								}
-								&:nth-of-type(2) {
-									&.show-up {
-										@include animation(bounceInUp 0.5s ease 0.1s);
-										opacity: 1;
-									}
-								}
-								&:nth-of-type(3) {
-									.info-tab__icon {
-										width: 20%;
-									}
-									&.show-up {
-										@include animation(bounceInUp 0.5s ease 0.2s);
-										opacity: 1;
-									}
-								}
-								.info-tab__icon {
-									width: 30%;
-									margin-right: 10%;
-									@include flexbox();
-									@include align-items(center);
-									img {
-										width: 100%;
-									}
-								}
-								.info-tab__text {
-									width: 20%;
-									font-size: 1.2rem;
-									color: $font-white;
-									font-family: 'oACYCZno';
-								}
-							}
-						}
-					}								
-				}
-			}
-			.header-waether-dir {
-				position: absolute;
-				right: 0;
-				top: 15%;
+			@include justify-content(flex-end);
+			.gnb-tab {
 				width: 20%;
-				height: 70%;
-				@include box-sizing(border-box);
-				padding-right: 15%;
-				@include flexbox();
-				@include flex-direction(column);
-				.dir-up {
-					width: 100%;
-					height: 50%;
-					@include flexbox();
-					@include align-items(center);
-					@include transition(all 0.5s ease);
-					opacity: 0.6;
-					&:hover {
-						@include transform(translateY(-10px));
-						opacity: 1;
-					}
-					img {
-						height: 50%;
-						cursor: pointer;
-						@include transform(rotate(-90deg));
+				height: 100%;
+				background-color: transparent;
+				&.current {
+					background-color: $blue;
+					a {
+						span {
+							color: $font-white;
+						}
 					}
 				}
-				.dir-down {
+				a {
 					width: 100%;
-					height: 50%;
+					height: 100%;
 					@include flexbox();
+					@include justify-content(center);
 					@include align-items(center);
-					@include transition(all 0.5s ease);
-					opacity: 0.6;
-					&:hover {
-						@include transform(translateY(10px));
-						opacity: 1;
-					}
-					img {
-						cursor: pointer;
-						height: 50%;
-						@include transform(rotate(90deg));
+					@include text-decoration(none);
+					span {
+						color: $gray3;
+						font-family: 'NanumSquare', sans-serif;
+						font-weight: 800;
+						font-size: $gnb;
+						letter-spacing: 0.1rem;
 					}
 				}
 			}
 		}
-		.header__nav {
-			@include flexbox();
-			width: 100%;
-			height: 40%;
-			@include box-sizing(border-box);
-			padding-right: 18%;
-			.nav-tab {
-				width: calc(100% / 3);
+		.wave-tab {
+			width: calc(((100% - 170px) / 6) + 85px);
+			height: 100%;
+			background-color: $gray1;
+			a {
+				width: 100%;
 				height: 100%;
 				@include flexbox();
 				@include justify-content(center);
 				@include align-items(center);
-				cursor: pointer;
-				text-decoration: none;
-				&.active {
-					width: calc(100% / 3);
-					height: 100%;
-					background: $sub-red;
-					p {
-						color: $font-white;
-					}
+				@include text-decoration(none);
+				@include transition(all 0.5s ease);
+				&:hover {
+					background-color: $gray2;
 				}
-				p {	
-					font-family: 'Do Hyeon', sans-serif;
-					color: $main-color;
-					font-size: 2rem;
+				span {
+					color: $font-white;
+					font-family: 'NanumSquare', sans-serif;
+					font-weight: 800;
+					font-size: $gnb;
+					letter-spacing: 0.1rem;
+				}
+				img {
+					height: 1.6rem;
+					width: auto;
+					margin-left: 7px;
 				}
 			}
 		}
 	}
-}
-.mobile-menu {
-	display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	.header {		
-		.header-right {
-			.header__weather-wrapper {
-				.header-weather {
-					.weather {						
-						.weather-bg {
-							img {
-								width: unset;
-								height: 100%;
-							}
-						}
-						.weather-content {
-							.weather-content__info {
-								width: 65%;
-								.info-tab {															
-								}
-							}
-						}								
-					}
-				}
-				.header-waether-dir {					
-					top: 15%;
-					width: 15%;			
-					padding-right: 10%;					
-				}
-			}
-			.header__nav {
-				@include flexbox();
-				width: 100%;
-				height: 40%;
-				@include box-sizing(border-box);
-				padding-right: 14%;				
-			}
-		}
-	}
-	.mobile-menu {
+	.nav-mobile {
 		display: none;
 	}
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-	.header {
-		width: 100%;
+	.logo {
+		position: absolute;
+		@include main-gradient();
+		width: $grid-1;
+		height: 170px;
+		@include flexbox();
 		@include flex-direction(column);
-		border-bottom: 2px solid $main-color;
-		.header-left {
+		top: 0;
+		left: $margin;
+		z-index: 9999;
+		@include transition(all 0.5s ease);
+		&:hover {
+			@include box-shadow(0 5px 15px $shadow);
+		}
+		.logo-symbol {
 			width: 100%;
-			height: 8.5rem;
-			border-right: none;
-			padding-left: 0;
+			height: 50%;
+			@include flexbox();
+			@include justify-content(center);
 			@include align-items(center);
-			border-bottom: 2px solid $main-color;
-			.header__logo {
-				width: 16%;
-				padding-right: 0;
-				a {
-					width: 100%;
-					margin-top: 0;
-					img {
-						width: 100%;
-					}
-				}
-			}
-			.header__brand {
-				width: 100%;
-				padding-right: 0;
-				margin-top: 0.6rem;
-				a {
-					width: 100%;
-					font-size: 1rem;
-					line-height: 1.2rem;
-				}
+			img {
+				width: 40%;
+				margin-top: 2.5rem;
 			}
 		}
-		.header-right {
+		.logo-title {
 			width: 100%;
-			height: auto;
-			.header__weather-wrapper {
-				display: none;
-			}
-			.header__nav {				
-				height: 3.5rem;
-				@include box-sizing(border-box);
-				padding-right: 0;
-				.nav-tab {
-					p {						
-						font-size: 1.6rem;
-					}
-				}
+			height: 50%;
+			@include flexbox();
+			@include justify-content(center);
+			@include align-items(center);
+			img {
+				width: 40%;
+				margin-bottom: 2.5rem;
 			}
 		}
 	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	
 }

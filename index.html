@@ -12,473 +12,96 @@
 	<link rel="stylesheet" type="text/css" href="lib/stylesheets/jquery.mCustomScrollbar.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/header.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/index.css" />
+	<!--
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/footer.css" />
+-->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="lib/javascripts/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
 <body>
 	<header class="header">
-		<div class="header-left">
-			<div class="header__logo">
-				<a href="index.html" title="메인으로"><img src="images/common/logo-new.svg" alt="펭귄서프클럽 로고"></a>
+		<nav class="gnb">
+			<ul class="gnb-list">
+				<li class="gnb-tab"><a href="location.html"><span>위치</span></a></li>
+				<li class="gnb-tab"><a href="class.html"><span>수업</span></a></li>
+				<li class="gnb-tab"><a href="rental.html"><span>대여</span></a></li>
+			</ul>
+			<div class="wave-tab"><a href="#"><span>속초 파도 LIVE</span>
+				<img src="images/common/dir.svg" alt="속초 파도 LIVE 보러가기">
+			</a></div>
+		</nav>
+		<div class="nav-mobile"></div>
+		<a href="index.html" class="logo">
+			<div class="logo-symbol">
+				<img src="images/common/logo-white.svg" alt="펭귄서프클럽"/>
 			</div>
-			<div class="header__brand"><a href="index.html" title="메인으로">PENGUINN<br>SURF CLUB</a></div>
-		</div>
-		<div class="header-right">
-			<div class="header__weather-wrapper">
-				<div class="header-weather">
-					<div class="weather current">
-						<div class="weather-bg">
-							<img src="images/common/weather-bg-01.png" alt="오전 날씨">
-						</div>
-						<div class="weather-content">
-							<div class="weather-content__time">오전</div>
-							<div class="weather-content__info">
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-clowdy.svg" alt="조금흐림">
-									</div>
-									<div class="info-tab__text">35℃</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-wave.svg" alt="파고">
-									</div>
-									<div class="info-tab__text">3.5m</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-surfing-man.svg" alt="서핑최적도">
-									</div>
-									<div class="info-tab__text">BEST</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="weather">
-						<div class="weather-bg">
-							<img src="images/common/weather-bg-02.png" alt="오후 날씨">
-						</div>
-						<div class="weather-content">
-							<div class="weather-content__time">오전</div>
-							<div class="weather-content__info">
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-sunny.svg" alt="맑음">
-									</div>
-									<div class="info-tab__text">25℃</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-wave.svg" alt="파고">
-									</div>
-									<div class="info-tab__text">2.8m</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-surfing-man.svg" alt="서핑최적도">
-									</div>
-									<div class="info-tab__text">GOOD</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="weather">
-						<div class="weather-bg">
-							<img src="images/common/weather-bg-03.png" alt="내일 날씨">
-						</div>
-						<div class="weather-content">
-							<div class="weather-content__time">내일</div>
-							<div class="weather-content__info">
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-rainy.svg" alt="비">
-									</div>
-									<div class="info-tab__text">24℃</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-wave.svg" alt="파고">
-									</div>
-									<div class="info-tab__text">3.7m</div>
-								</div>
-								<div class="info-tab">
-									<div class="info-tab__icon">
-										<img src="images/common/weather-icon-surfing-man.svg" alt="서핑최적도">
-									</div>
-									<div class="info-tab__text">NOPE</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header-waether-dir">
-					<div class="dir-up">
-						<img src="images/common/arrow-white.svg" alt="이동">
-					</div>
-					<div class="dir-down">
-						<img src="images/common/arrow-white.svg" alt="이동">
-					</div>
-				</div>
+			<div class="logo-title">
+				<img src="images/common/logoletter-white.svg" alt="펭귄서프클럽 로고" />
 			</div>
-			<div class="header__nav">
-				<a href="location.html" class="nav-tab"><p>위치</p></a>
-				<a href="class.html" class="nav-tab"><p>수업</p></a>
-				<a href="rent.html" class="nav-tab"><p>대여</p></a>
-			</div>
-		</div>
+		</a>
 	</header>
-	<div class="mobile-menu"></div>
-	<section class="slider">
-		<div class="slider-wrapper">
-			<div class="slide active">
-				<div class="slide-image">
-					<img src="images/index/slide-01.jpg" alt="첫번째 슬라이드">
+	<section class="visual">
+		<div id="visual-01" class="visual-container">
+			<div class="slide-main">
+				<div class="slide-main__bg">
+					<img src="images/index/slide-01.jpg" alt="펭귄서프클럽 수업 슬라이드" />
 				</div>
-				<div class="slide-filter"></div>
-				<div class="slide-sideblur">
-					<p class="sideblur-text">0 1 / 0 3</p>
+				<div class="slide-main__cont">
+					<div class="cont-title">서핑 수업 오픈</div>
+					<p class="cont-desc">완전 처음이라고 걱정은 NO! NO!</p>
+					<span class="cont-btn"><span class="cont-btn__name">수업 알아보기</span></span>
 				</div>
-				<div class="slide-content">
-					<div class="content-text">
-						<div class="content-text__title">서핑 수업 오픈</div>
-						<div class="content-text__subtitle">완전 처음이라고 걱정은 NO! NO!</div>
-						<div class="content-text__desc">친절한 초보자 코스부터 화려한 서핑을 위한 고급자 코스까지 재밌고 센스있는 수업들이 준비되어있습니다</div>
-					</div>				
-					<div class="content-img">
-						<img src="images/index/slide-img-01.png" alt="서핑 수업 오픈">
-					</div>
-				</div>
+				<div class="slide-num"><span>01</span></div>
 			</div>
-			<div class="slide">
-				<div class="slide-image">
-					<img src="images/index/slide-02.jpg" alt="두번째 슬라이드">
-				</div>
-				<div class="slide-filter"></div>
-				<div class="slide-sideblur">
-					<p class="sideblur-text">0 2 / 0 3</p>
-				</div>
-				<div class="slide-content">
-					<div class="content-text">
-						<div class="content-text__title">서핑 보드 대여</div>
-						<div class="content-text__subtitle">체형뿐만 아니라 취향도 맞는 보드로 고르세요!</div>
-						<div class="content-text__desc">총 100여개의 보드를 보유하고 있는 펭귄서프클럽은 선택장애가 있는 분들을 위해 전문가도 상주하고 있습니다</div>
-					</div>				
-					<div class="content-img">
-						<img src="images/index/slide-img-02.png" alt="서핑 수업 오픈">
-					</div>
-				</div>
-			</div>
-			<div class="slide">
-				<div class="slide-image">
-					<img src="images/index/slide-03.jpg" alt="세번째 슬라이드">
-				</div>
-				<div class="slide-filter"></div>
-				<div class="slide-sideblur">
-					<p class="sideblur-text">0 3 / 0 3</p>
-				</div>
-				<div class="slide-content">
-					<div class="content-text">
-						<div class="content-text__title">펭귄 첫 돌 이벤트</div>
-						<div class="content-text__subtitle">펭귄서프클럽을 첫 돌을 맞이했습니다</div>
-						<div class="content-text__desc">고객분들에게 깊고 진한 감사의 인사를 드리고자 개인 클래스의 수강료를 5%할인 행사하고 있습니다.</div>
-					</div>				
-					<div class="content-img">
-						<img src="images/index/slide-img-03.png" alt="서핑 수업 오픈">
-					</div>
-				</div>
+			<div class="slide-sub">
+				<img src="images/index/slide-02.jpg" alt="펭귄서프클럽 대여 슬라이드">
 			</div>
 		</div>
-		<div class="slider-control">
-			<div class="control-navigation"></div>
-			<div class="control-arrow">
-				<div class="control-arrow-btn prev">
-					<img src="images/index/prev.svg" alt="이전">
+		<div class="visual-dir">
+			<div class="dir-btn left">
+				<img src="images/common/dir.svg" alt="이전"/>
+				<span class="dir-btn__name">이전</span>
+			</div>
+			<div class="dir-btn right">
+				<img src="images/common/dir.svg" alt="다음"/>
+				<span class="dir-btn__name">다음</span>
+			</div>
+		</div>
+	</section>
+	<section class="container">
+		<div class="container-title">
+			<span class="title-line"></span>
+			<p class="title">올 여름 필.수.클래스</p>
+		</div>
+		<div class="container-content">
+			<div class="class-warpper">
+				<div class="class-type">
+					<div class="class-type__img">
+						<img src="images/index/class-01.jpg" alt="서핑 클래스" />
+					</div>
+					<p class="class-type__subtitle">시원하고 멋있는</p>
+					<p class="class-type__title">서핑 클래스</p>
+					<span class="class-type__btn">자세히</span>
 				</div>
-				<div class="control-arrow-btn next">
-					<img src="images/index/next.svg" alt="다음">
+				<div class="class-type">
+					<div class="class-type__img">
+						<img src="images/index/class-02.jpg" alt="패들보드 클래스" />
+					</div>
+					<p class="class-type__subtitle">여유를 즐길 줄 아는</p>
+					<p class="class-type__title">패들보드 클래스</p>
+					<span class="class-type__btn">자세히</span>
+				</div>
+				<div class="class-type">
+					<div class="class-type__img">
+						<img src="images/index/class-03.jpg" alt="수상스키 클래스" />
+					</div>
+					<p class="class-type__subtitle">스피디하고 액션 가득한</p>
+					<p class="class-type__title">수상스키 클래스</p>
+					<span class="class-type__btn">자세히</span>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="review">
-		<div class="review-wrapper">
-			<div class="review-header">
-				<div class="review-header__subtitle">100% 솔직 리뷰들!</div>
-				<h1 class="review-header__title">펭귄서프클럽을<br>다녀간 사람들</h1>
-				<button class="review-header__more">
-					<p>더 많은 리뷰 보기</p>
-					<span>
-						<img src="images/common/arrow-white.svg" alt="이동">
-					</span>
-				</button>
-			</div>
-			<div class="review-content">
-				<div class="review-content-wrapper">
-					<div class="review-card">
-						<div class="review-card__num">NO.136</div>
-						<div class="review-card__card">
-							<div class="card-profile">
-								<div class="card-profile__pic">
-									<img src="images/index/profile-01.jpg" alt="사진후기">
-								</div>
-							</div>
-							<div class="card-content">
-								<div class="card-content__eval">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-								</div>
-								<div class="card-content__text">강사님들 너무 잘 가르쳐주심!! 처음인데도 무서움 1도 모르고 재밌게 놀다 왔네요 ㅋㅋㅋ</div>
-								<div class="card-content__name">한ㅇㅇ님</div>
-							</div>
-						</div>
-					</div>
-					<div class="review-card">
-						<div class="review-card__num">NO.135</div>
-						<div class="review-card__card">
-							<div class="card-profile">
-								<div class="card-profile__pic">
-									<img src="images/index/profile-02.jpg" alt="사진후기">
-								</div>
-							</div>
-							<div class="card-content">
-								<div class="card-content__eval">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-half.svg" alt="별 반개">
-								</div>
-								<div class="card-content__text">바다에 관해 재밌는 얘기들은 물론 깊은 지식까지 배울 수 있어 좋았습니다. 또 올게요.</div>
-								<div class="card-content__name">최ㅇ님</div>
-							</div>
-						</div>
-					</div>	
-					<div class="review-card">
-						<div class="review-card__num">NO.134</div>
-						<div class="review-card__card">
-							<div class="card-profile">
-								<div class="card-profile__pic">
-									<img src="images/index/profile-03.jpg" alt="사진후기">
-								</div>
-							</div>
-							<div class="card-content">
-								<div class="card-content__eval">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-empty.svg" alt="별 없음">
-								</div>
-								<div class="card-content__text">강사님들 모두 너무 멋지세요!! 보드타실 때 카리스마 장난 아님 ㅠㅠ 수업도 존잼이네요!!</div>
-								<div class="card-content__name">이ㅇㅇ님</div>
-							</div>
-						</div>
-					</div>	
-					<div class="review-card">
-						<div class="review-card__num">NO.133</div>
-						<div class="review-card__card">
-							<div class="card-profile">
-								<div class="card-profile__pic">
-									<img src="images/index/profile-04.jpg" alt="사진후기">
-								</div>
-							</div>
-							<div class="card-content">
-								<div class="card-content__eval">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-									<img src="images/index/star-full.svg" alt="별 하나">
-								</div>
-								<div class="card-content__text">제가 소질이 있던건지 강사님 코치가 너무 좋았던건지 처음인데도 엄청 잘탔다고 주위에서 칭찬해줬어요 ㅎㅎㅎ</div>
-								<div class="card-content__name">이ㅇㅇ님</div>
-							</div>
-						</div>
-					</div>	
-				</div>			
-			</div>
-		</div>
-	</section>
-	<section class="lesson">
-		<div class="lesson-bg">
-			<img src="images/index/lesson-bg.jpg" alt="수업 종류">
-		</div>
-		<div class="lesson-header">
-			<div class="lesson-header__subtitle">시작은 초보였지만 끝은 마스터로</div>
-			<h1 class="lesson-header__title">펭귄서프클럽 서핑클래스</h1>
-		</div>
-		<div class="lesson-content">
-			<div class="lesson-content__type">
-				<div class="lesson-card">
-					<div class="lesson-card__title">개인클래스는?</div>
-					<div class="lesson-card__desc">초보자 코스는 물론 중급자, 고급자 코스까지 마련되어 있습니다. 또한 1:1 맞춤으로 진행하기 때문에 월등하게 실력이 향상되는 과정을 느끼실 수 있습니다.</div>
-					<div class="lesson-card__teacher">강사진</div>
-					<div class="lesson-card__teacher-profile">
-						<div class="teacher-profile">
-							<img src="images/class/teacher-01.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-05.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-08.svg" alt="강사">
-						</div>
-					</div>
-				</div>
-				<div class="lesson-button">
-					<img src="images/index/wave-box-blue.svg" alt="신청하기">
-					<p class="lesson-button__submit">개인클래스 신청하기</p>
-				</div>
-			</div>
-			<div class="lesson-content__type">
-				<div class="lesson-card">
-					<div class="lesson-card__title">그룹클래스는?</div>
-					<div class="lesson-card__desc">2인 이상은 그룹클래스로 신청할 수 있으며 인원수에 따라 강사진들의 수가 추가될 수 있습니다. 마찬가지로 초보자 - 고급자 코스까지 커리큘럼이 있습니다.</div>
-					<div class="lesson-card__teacher">강사진</div>
-					<div class="lesson-card__teacher-profile">
-						<div class="teacher-profile">
-							<img src="images/class/teacher-02.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-03.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-05.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-07.svg" alt="강사">
-						</div>
-					</div>
-				</div>
-				<div class="lesson-button">
-					<img src="images/index/wave-box-blue.svg" alt="신청하기">
-					<p class="lesson-button__submit">그룹클래스 신청하기</p>
-				</div>
-			</div>
-			<div class="lesson-content__type">
-				<div class="lesson-card">
-					<div class="lesson-card__title">원데이클래스는?</div>
-					<div class="lesson-card__desc">원데이클래스는 말 그대로 하루동안 신청하시는 시간만큼 진행하며, 완벽하게 마스터하기는 어려울 수 있으나 대부분의 수강생분들은 도움없이 타는 법을 터득하셨습니다.</div>
-					<div class="lesson-card__teacher">강사진</div>
-					<div class="lesson-card__teacher-profile">
-						<div class="teacher-profile">
-							<img src="images/class/teacher-04.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-06.svg" alt="강사">
-						</div>
-						<div class="teacher-profile">
-							<img src="images/class/teacher-08.svg" alt="강사">
-						</div>
-					</div>
-				</div>
-				<div class="lesson-button">
-					<img src="images/index/wave-box-blue.svg" alt="신청하기">
-					<p class="lesson-button__submit">원데이클래스 신청하기</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="safety">
-		<span class="safety-indicator">
-			<img src="images/common/wave-blue.svg" alt="안전">
-		</span>
-		<h1 class="safety-title">안전하게 즐거울 수 있도록</h1>
-		<div class="safety-text">펭귄서퍼클럽의 제 1원칙은 안전이며 이를 지키기 위해 전문적으로 배운 안전요원들이 항상 상주해 있습니다. 또한 비상상황이 발생하더라도 재빠르게 대처할 수 있는 각종 매뉴얼을 구성해 놓았으며 언제 어디서라도 작동할 수 있는 장비들을 준비해놓고 있습니다.</div>
-		<div class="safety-button-wrapper">
-			<button class="safety-button">
-				<p>안전요원 안내</p>
-				<span>
-					<img src="images/common/arrow-skyblue.svg" alt="이동">
-				</span>
-			</button>
-			<button class="safety-button orange">
-				<p>안전수칙 안내</p>
-				<span>
-					<img src="images/common/arrow-orange.svg" alt="이동">
-				</span>
-			</button>
-		</div>
-	</section>
-	<section class="snap">
-		<div class="snap-bg">
-			<img src="images/index/snap.jpg" alt="스냅촬영">
-		</div>		
-		<div class="snap-content">
-			<div class="snap-content__header">
-				<div class="snap-content__header-subtitle">이런 색다른 경험 스냅사진으로 남겨놓자!</div>
-				<div class="snap-content__header-title">펭귄서프클럽에서<br>색다른 추억을 안겨드립니다</div>
-			</div>
-			<div class="snap-content__gallery">
-				<div class="gallery-tab">
-					<img src="images/index/snap-01.jpg" alt="개인스냅">
-					<div class="gallery-filter"></div>
-					<p class="gallery-title">개인스냅</p>
-				</div>
-				<div class="gallery-tab">
-					<img src="images/index/snap-02.jpg" alt="우정&연인스냅">
-					<div class="gallery-filter"></div>
-					<p class="gallery-title">우정&연인스냅</p>
-				</div>
-				<div class="gallery-tab">
-					<img src="images/index/snap-03.jpg" alt="가족스냅">
-					<div class="gallery-filter"></div>
-					<p class="gallery-title">가족스냅</p>
-				</div>
-			</div>
-			<button class="snap-content__more">
-				<p>스냅촬영 예약하기</p>
-				<span>
-					<img src="images/common/arrow-white.svg" alt="이동">
-				</span>
-			</button>
-		</div>
-	</section>
-	<section class="rent">
-		<div class="rent-image">
-			<img src="images/index/surf-06.jpg" alt="서핑보드 대여">
-		</div>
-		<div class="rent-content">
-			<div class="rent-content__bg">
-				<img src="images/index/wave-box-white.svg" alt="서핑보드 대여">
-			</div>
-			<div class="rent-conent__text">
-				<div class="rent-content__subtitle">이중에 취향 하나 있지 않겠어??</div>
-				<div class="rent-content__title">펭귄서프클럽에서 개인맞춤 서핑보드를 빌려드립니다</div>
-				<div class="rent-content__desc">펭귄서프클럽은 약 100여개의 디자인이 각각 다른 서핑보드를 보유하고 있습니다. 또한 전문가가 개인의 체형에 맞는 맞춤형보드를 추천해드리고 있습니다.</div>
-				<button class="rent-content__more">
-					<p>서핑보드 고르기</p>
-						<span>
-							<img src="images/common/arrow-white.svg" alt="이동">
-						</span>
-				</button>
-			</div>
-		</div>
-	</section>
-	<footer class="footer">
-		<div class="footer-logo">
-			<img src="images/common/logo-full-white.svg" alt="펭귄서프클럽">
-		</div>
-		<div class="footer-sns">
-			<div class="sns-tab">
-				<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
-				<div class="sns-tab__tooltip">팔로우</div>
-			</div>
-			<div class="sns-tab">
-				<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
-				<div class="sns-tab__tooltip">페이지</div>
-			</div>
-			<div class="sns-tab">
-				<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
-				<div class="sns-tab__tooltip">소식보기</div>
-			</div>
-		</div>
-		<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
-	</footer>
 </body>
 	<script type="text/javascript" src="javascripts/common.js"></script>
 	<script type="text/javascript" src="javascripts/index.js"></script>

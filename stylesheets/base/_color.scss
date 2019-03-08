@@ -1,14 +1,18 @@
-$main-color: #1338d1;
-$sub-red: #ff5059;
+$yellow: #f7ff5a;
+$blue: #2ac6ff;
 
-$main-color-500: rgba(19, 56, 209, 0.5);
-$main-color-700: rgba(19, 56, 209, 0.7);
+$gray1: #2b2b2b;
+$gray2: #606060;
+$gray3: #a5a5a5;
+$gray4: #eaeaea;
+
+$gray1-700: rgba(43, 43, 43, 0.7);
+$gray1-300: rgba(43, 43, 43, 0.3);
 
 $font-gray1: #2b2b2b;
 $font-gray2: #606060;
-$font-gray3: #999999;
-$font-gray4: #cccccc;
-$font-gray5: #eeeeee;
+$font-gray3: #a5a5a5;
+$font-gray4: #eaeaea;
 
 $font-white: rgb(255, 255, 255);
 
@@ -18,12 +22,4 @@ $white-500: rgba(255, 255, 255, 0.5);
 $white-250: rgba(255, 255, 255, 0.25);
 $white-100: rgba(255, 255, 255, 0.1);
 
-$card-bg: #eeeeee;
-
-$ocean: #cee4ef;
-
-$red-500: rgba(255, 80, 89, 0.7);
-$green-500: rgba(80, 234, 197, 0.7);
-$orange-500: rgba(195, 96, 66, 0.5);
-
-$teacher-bg: #efefef;
+$shadow: rgba(40, 40, 40, 0.7);
