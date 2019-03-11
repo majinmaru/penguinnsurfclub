@@ -9,105 +9,201 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
-.footer {
-	margin-top: 16rem;
+.img-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	@include flexbox();
-	@include flex-direction(column);
-	@include align-items(center);
-	@include justify-content(center);
-	@include box-sizing(border-box);
-	padding-top: 3%;
-	padding-bottom: 3%;
-	background-color: $main-color;
-	.footer-logo {
-		width: 6%;
-		img {
-			width: 100%;
-		}
-	}
-	.footer-sns {
-		margin-top: 3rem;
-		height: 8rem;
+	height: 100%;
+	background-color: $gray1-300;
+}
+.footer {
+	width: 100%;
+	position: relative;
+	margin-top: 15vw;
+	.footer-insta {
+		width: 100%;
+		position: relative;
 		@include flexbox();
-		@include justify-content(center);
-		.sns-tab {
+		.insta-part {
+			width: 60vw;
 			@include flexbox();
-			@include flex-direction(column);
-			@include align-items(center);
-			width: 10rem;
 			position: relative;
-			.sns-tab__icon {
-				width: 4rem;
-				height: 4rem;
-				cursor: pointer;				
-			}	
-			.sns-tab__tooltip {
+			.insta-tab {
 				position: relative;
-				width: 7rem;
-				padding: 7% 0;
-				color: $font-white;
-				font-family: 'Do Hyeon';
-				font-size: 1.4rem;
-				letter-spacing: 0.1rem;
-				text-align: center;
-				background-color: $sub-red;
-				border-radius: 0.5rem;
-				opacity: 0;
 				@include flexbox();
 				@include justify-content(center);
-				margin-top: 0.3rem;
-				&:before {
-					content: '';
-					width: 0.6rem;
-					height: 0.6rem;
-					display: block;
-					border-top: 10px solid $sub-red;
-					border-left: 10px solid $sub-red;
-					border-radius: 0.5rem;
-					@include transform(rotate(45deg));
-					position: absolute;
-					top: -0.5rem;
+				overflow: hidden;
+				&:hover {
+					img {
+						@include transform(scale(1.05));
+					}
 				}
+				img {
+					width: 100%;
+					height: auto;
+					position: relative;
+					@include transition(all 0.5s ease);
+				}
+				span {
+					position: absolute;
+					color: $font-white;
+					font-family: 'NanumSquare', sans-serif;
+					font-size: 1.35rem;
+					border: 1px solid $white;
+					padding: 1.5rem 4rem;
+					border-radius: 5rem;
+					text-align: center;
+					bottom: 0;
+					margin-bottom: 2rem; 
+					cursor: pointer;
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $white;
+						color: $blue;
+					}
+				}
+				&.pic1 {
+					width: 40vw;
+					height: 40vw;
+				}
+				&.pic2 {
+					width: 40vw;
+					height: 20vw;
+				}
+				&.pic3 {
+					width: 20vw;
+					height: 20vw;
+				}
+
+			}
+			.pic3-wrapper {
+				width: 20vw;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				position: relative;
+				overflow: hidden;
+				.pic3 {
+					width: 20vw;
+					height: 20vw;
+					position: relative;
+					@include flexbox();
+					@include justify-content(center);
+					overflow: hidden;
+					&:hover {
+						img {
+							@include transform(scale(1.05));
+						}
+					}
+					img {
+						width: 100%;
+						position: relative;
+						@include transition(all 0.5s ease);
+					}
+					span {
+						position: absolute;
+						color: $font-white;
+						font-family: 'NanumSquare', sans-serif;
+						font-size: 1.35rem;
+						border: 1px solid $white;
+						padding: 1.5rem 4rem;
+						border-radius: 5rem;
+						text-align: center;
+						bottom: 0;
+						margin-bottom: 2rem;
+						cursor: pointer;
+						@include transition(all 0.5s ease);
+						&:hover {
+							background-color: $white;
+							color: $blue;
+						}
+					}
+				}
+			}
+			&.small {
+				width: 40vw;
+				@include flex-wrap(wrap);
 			}
 		}
 	}
-	.footer-rights {
-		text-align: center;
-		color: $font-white;
-		font-size: 1.2rem;
-		font-family: 'oACYCZno'; 
-	}
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-	.footer {
-		margin-top: 8rem;
-		padding-top: 7%;
-		padding-bottom: 7%;
+	.footer-info {
+		width: 100%;
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(center);
+		@include box-sizing(border-box);
+		padding-top: 3%;
+		padding-bottom: 2%;
+		background-color: $blue;
 		.footer-logo {
-			width: 18%;
+			width: 6%;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			img {
+				width: 100%;
+				&:nth-of-type(1) {
+					margin-bottom: 1.5rem;
+				}
+			}
 		}
 		.footer-sns {
-			height: 6rem;
+			margin-top: 3rem;
+			height: 8rem;
+			@include flexbox();
+			@include justify-content(center);
 			.sns-tab {
-				width: 7rem;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				width: 9rem;
+				position: relative;
 				.sns-tab__icon {
-					width: 3rem;
-					height: 3rem;			
+					width: 3.5rem;
+					height: 3.5rem;
+					cursor: pointer;				
 				}	
-				.sns-tab__tooltip {					
-					font-size: 1.2rem;					
+				.sns-tab__tooltip {
+					position: relative;
+					width: 7rem;
+					padding: 7% 0;
+					color: $gray1;
+					font-family: 'NanumSquare', sans-serif;
+					font-size: 1.15rem;
+					font-weight: 800;
+					letter-spacing: 0.1rem;
+					text-align: center;
+					background-color: $yellow;
+					border-radius: 0.5rem;
+					opacity: 0;
+					@include flexbox();
+					@include justify-content(center);
 					margin-top: 0.3rem;
 					&:before {
-						width: 0.2rem;
-						height: 0.2rem;
-					}			
+						content: '';
+						width: 0.6rem;
+						height: 0.6rem;
+						display: block;
+						border-top: 10px solid $yellow;
+						border-left: 10px solid $yellow;
+						border-radius: 0.5rem;
+						@include transform(rotate(45deg));
+						position: absolute;
+						top: -0.5rem;
+					}
 				}
 			}
 		}
 		.footer-rights {
-			font-size: 0.9rem;
+			text-align: center;
+			color: $font-white;
+			font-size: 1.15rem;
+			font-family: 'NanumSquare', sans-serif;
 		}
 	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+@media screen and (min-width: 320px) and (max-width: 767px) {
 }

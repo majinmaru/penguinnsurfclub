@@ -2,6 +2,7 @@
 @import 'base/font.scss';
 @import 'base/mixin.scss';
 @import 'base/variable.scss';
+@import 'base/keyframes.scss';
 
 html {
 	font-size: $desktop;
@@ -21,105 +22,150 @@ body {
 	.visual-container {
 		width: 100%;
 		height: 100%;
-		@include flexbox();
-		.slide-main {
-			@include box-sizing(border-box);
-			width: calc(((100% - 170px) / 6)*5 + 85px);
+		position: relative;
+		.visual-slide {
+			display: none;
+			width: 100%;
 			height: 100%;
 			position: relative;
-			.slide-main__bg {
+			&.current {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
-				position: relative;
-				overflow: hidden;
 				@include flexbox();
-				@include align-items(center);
-				img {
-					height: 120%;
-					position: absolute;
-					right: 0;
-				}
-			}
-			.slide-main__cont {
-				width: 50%;
-				height: 100%;
-				@include dark-gradient();
-				position: absolute;
-				top: 0;
-				left: 0;
-				@include flexbox();
-				@include flex-direction(column);
-				@include justify-content(center);
-				font-family: 'NanumSquare', sans-serif;
-				.cont-title {
-					color: $font-white;
-					font-size: 4.2rem;
-					margin-left: $margin;
-					margin-top: 6rem;
-				}
-				.cont-desc {
-					color: $font-white;
-					font-size: 1.35rem;
-					margin-left: $margin;
-					margin-top: 2.2rem;
-					font-weight: 300;
-				}
-				.cont-btn {
-					margin-top: 6.5rem;					
-					margin-left: $margin;
-					display: inline-block;
-					width: 100%;
-					cursor: pointer;
-					&:hover {
-						.cont-btn__name {
-							color: $blue;
-							background-color: $white;
+				.slide-main {
+					.slide-main__bg {
+						img {
+							@include animation(slide-main-appear 1s ease);
+							opacity: 1;
 						}
 					}
-					.cont-btn__name {
-						color: $font-white;
-						font-size: 1.35rem;
-						font-weight: 700;
-						border: 1px solid $white;
-						padding: 1.5rem 5rem;
-						border-radius: 2.5rem;
-						@include transition(all 0.5s ease);
+					.slide-main__cont {
+						.cont-title {
+							@include animation(leter-appear 0.5s ease);
+							opacity: 1;
+						}
+						.cont-desc {
+							@include animation(leter-appear 0.5s ease);
+							opacity: 1;
+						}
+						.cont-btn {
+							@include animation(leter-appear 0.5s ease);
+							opacity: 1;
+						}
+					}
+				}
+				.slide-sub {
+					img {
+						@include animation(slide-sub-appear 1s ease);
 					}
 				}
 			}
-			.slide-num {
-				width: 10rem;
-				height: 10rem;
-				background-color: $white;
-				top: 0;
-				right: 0;
-				position: absolute;
-				z-index: 2;
-				@include transform(translate(50%, 50%));
-				@include flexbox();
-				@include justify-content(center);
-				@include align-items(center);
-				span {
-					font-size: 4.5rem;
-					color: $gray1;
-					text-align: center;
-					font-family: 'Teko', sans-serif;
-					margin-top: 0.5rem;
+			.slide-main {
+				@include box-sizing(border-box);
+				width: calc(((100% - 170px) / 6)*5 + 85px);
+				height: 100%;
+				position: relative;
+				.slide-main__bg {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					overflow: hidden;
+					@include flexbox();
+					@include align-items(center);
+					img {
+						height: 120%;
+						position: absolute;
+						right: 0;
+					}
+				}
+				.slide-main__cont {
+					width: 50%;
+					height: 100%;
+					@include dark-gradient();
+					position: absolute;
+					top: 0;
+					left: 0;
+					@include flexbox();
+					@include flex-direction(column);
+					@include justify-content(center);
+					font-family: 'NanumSquare', sans-serif;
+					.cont-title {
+						color: $font-white;
+						font-size: 4.2rem;
+						margin-left: $margin;
+						margin-top: 6rem;
+						@include animation(letter-appear 1.5s ease);
+					}
+					.cont-desc {
+						color: $font-white;
+						font-size: 1.35rem;
+						margin-left: $margin;
+						margin-top: 2.2rem;
+						font-weight: 300;
+						@include animation(letter-appear 1.5s ease);
+					}
+					.cont-btn {
+						margin-top: 6.5rem;					
+						margin-left: $margin;
+						display: inline-block;
+						width: 100%;
+						cursor: pointer;
+						@include animation(letter-appear 1.5s ease);
+						&:hover {
+							.cont-btn__name {
+								color: $blue;
+								background-color: $white;
+							}
+						}
+						.cont-btn__name {
+							color: $font-white;
+							font-size: 1.35rem;
+							font-weight: 700;
+							border: 1px solid $white;
+							padding: 1.5rem 5rem;
+							border-radius: 2.5rem;
+							@include transition(all 0.5s ease);
+						}
+					}
+				}
+				.slide-num {
+					width: 10rem;
+					height: 10rem;
+					background-color: $white;
+					top: 0;
+					right: 0;
+					position: absolute;
+					z-index: 2;
+					@include transform(translate(50%, 50%));
+					@include flexbox();
+					@include justify-content(center);
+					@include align-items(center);
+					span {
+						font-size: 4.5rem;
+						color: $gray1;
+						text-align: center;
+						font-family: 'Teko', sans-serif;
+						margin-top: 0.5rem;
+					}
 				}
 			}
-		}
-		.slide-sub {
-			width: calc(((100% - 170px) / 6) + 85px);
-			height: 70%;
-			position: relative;
-			img {
-				height: 100%;
-				width: auto;
-				position: absolute;
-				top: 0;
-				left: 0;
+			.slide-sub {
+				width: calc(((100% - 170px) / 6) + 85px);
+				height: 70%;
+				position: relative;
+				img {
+					height: 100%;
+					width: auto;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
-		}
+		}		
 	}
 	.visual-dir {
 		width: calc(((100% - 170px) / 6) + 85px);
@@ -127,7 +173,9 @@ body {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		background-color: $gray1;
 		@include flexbox();
+		@include animation(dir-appear 1s ease);
 		.dir-btn {
 			width: 50%;
 			height: 100%;
@@ -150,15 +198,26 @@ body {
 				font-size: 1.35rem;
 				margin-top: 1.35rem;
 				text-align: center;
+				@include animation(dir-appear 1.5s ease);
 			}
-			&.left {
-				@include box-sizing(border-box);
-				border-right: 1px solid $gray2;
+			&.prev {
 				img {
 					@include transform(rotate(180deg));
+					@include animation(dir-icon-appear 1.5s ease);
 				}
 			}
-			&.right {}
+			&.next {
+				img {
+					@include animation(dir-appear 1.5s ease);
+				}
+			}
+		}
+		.dir-line {
+			width: 1px;
+			height: 100%;
+			background-color: $gray2;
+			@include transform-origin(100%, 100%);
+			@include animation(dir-line 1.5s ease);
 		}
 	}
 }
@@ -200,8 +259,16 @@ body {
 				@include flexbox();
 				@include flex-direction(column);
 				@include align-items(center);
+				&:hover {
+					.class-type__img {
+						img {
+							@include transform(scale(1.05));
+						}
+					}
+				}
 				.class-type__img {
 					width: 100%;
+					overflow: hidden;
 					img {
 						width: 100%;
 						@include transition(all 0.5s ease);
@@ -331,23 +398,46 @@ body {
 		}
 		.rental-wrapper {
 			width: 100%;
+			height: 40rem;
+			overflow: hidden;
 			position: relative;
-			.rental-slide {
-				width: 100%;
-				height: 38rem;
+			.rental-slide-list {
 				position: relative;
-				overflow: hidden;
-				@include flexbox();
-				@include justify-content(center);
-				@include align-items(center);
-				img {
+				width: 100%;
+				.rental-slide {
+					position: relative;
 					width: 100%;
+					height: 40rem;
+					overflow: hidden;
+					@include justify-content(center);
+					@include align-items(center);
+					display: none;
+					img {
+						width: 100%;
+					}
+					p {
+						position: absolute;
+						right: 0;
+						text-align: right;
+						font-size: 7.16rem;
+						color: $yellow;
+						font-family: 'TmonMonsori'; 
+						line-height: 1.15;
+						margin-right: 10%;
+					}
+					&.active {
+						@include flexbox();
+						@include animation(rental-slide 0.5s ease);
+						p {
+							@include animation(rental-slide-letter 1s ease);
+						}
+					}
 				}
 			}
 			.rental-slide-nav {
 				margin-left: 10%;
 				width: 20%;
-				height: 38rem;
+				height: 40rem;
 				background-color: $gray1;
 				position: absolute;
 				top:0;
@@ -361,19 +451,52 @@ body {
 					cursor: pointer;
 					@include box-sizing(border-box);
 					border-top: 1px solid $gray2;
+					background-color: transparent;
+					@include transition(all 0.5s ease);
 					&:nth-of-type(1) {
 						border-top: none;
 					}
-					img {
+					.nav-tab__icon {
 						height: 4rem;
 						width: auto;
+						position: relative;
+						.tab-icon__off {
+							height: 100%;
+							position: relative;
+							opacity: 1;
+							@include transition(all 0.5s ease);
+						}
+						.tab-icon__on {
+							height: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							opacity: 0;
+							@include transition(all 0.5s ease);
+						}
 					}
-					span {
+					.nav-tab__name {
 						font-size: 1.35rem;
 						line-height: 1rem;
 						margin-left: 2rem;
 						color: $font-white;
+						font-weight: 700;
 						font-family: 'NanumSquare', sans-serif;
+						@include transition(all 0.5s ease);
+					}
+					&.current {
+						background-color: $yellow;
+						.nav-tab__icon {
+							.tab-icon__off {
+								opacity: 0;
+							}
+							.tab-icon__on {
+								opacity: 1;
+							}
+						}
+						.nav-tab__name {
+							color: $gray1;
+						}
 					}
 				}
 			}

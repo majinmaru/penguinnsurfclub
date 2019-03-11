@@ -12,9 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="lib/stylesheets/jquery.mCustomScrollbar.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/header.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/index.css" />
-	<!--
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/footer.css" />
--->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="lib/javascripts/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
@@ -41,28 +39,63 @@
 		</a>
 	</header>
 	<section class="visual">
-		<div id="visual-01" class="visual-container">
-			<div class="slide-main">
-				<div class="slide-main__bg">
-					<img src="images/index/slide-01.jpg" alt="펭귄서프클럽 수업 슬라이드" />
+		<div class="visual-container">
+			<div id=visual-slide-01 class="visual-slide current">
+				<div class="slide-main">
+					<div class="slide-main__bg">
+						<img src="images/index/slide-01.jpg" alt="펭귄서프클럽 수업 슬라이드" />
+					</div>
+					<div class="slide-main__cont">
+						<div class="cont-title">서핑 수업 오픈</div>
+						<p class="cont-desc">완전 처음이라고 걱정은 NO! NO!</p>
+						<span class="cont-btn"><span class="cont-btn__name">수업 알아보기</span></span>
+					</div>
+					<div class="slide-num"><span>01</span></div>
 				</div>
-				<div class="slide-main__cont">
-					<div class="cont-title">서핑 수업 오픈</div>
-					<p class="cont-desc">완전 처음이라고 걱정은 NO! NO!</p>
-					<span class="cont-btn"><span class="cont-btn__name">수업 알아보기</span></span>
+				<div class="slide-sub">
+					<img src="images/index/slide-02-sub.jpg" alt="펭귄서프클럽 대여 슬라이드">
 				</div>
-				<div class="slide-num"><span>01</span></div>
 			</div>
-			<div class="slide-sub">
-				<img src="images/index/slide-02.jpg" alt="펭귄서프클럽 대여 슬라이드">
+			<div id=visual-slide-02 class="visual-slide">
+				<div class="slide-main">
+					<div class="slide-main__bg">
+						<img src="images/index/slide-02.jpg" alt="펭귄서프클럽 대여 슬라이드" />
+					</div>
+					<div class="slide-main__cont">
+						<div class="cont-title">대여해드립니다</div>
+						<p class="cont-desc">필요한 각종 장비가 구비되어있습니다</p>
+						<span class="cont-btn"><span class="cont-btn__name">대여 알아보기</span></span>
+					</div>
+					<div class="slide-num"><span>02</span></div>
+				</div>
+				<div class="slide-sub">
+					<img src="images/index/slide-03-sub.jpg" alt="펭귄서프클럽 대여 슬라이드">
+				</div>
+			</div>
+			<div id=visual-slide-03 class="visual-slide">
+				<div class="slide-main">
+					<div class="slide-main__bg">
+						<img src="images/index/slide-03.jpg" alt="펭귄서프클럽 스냅 슬라이드" />
+					</div>
+					<div class="slide-main__cont">
+						<div class="cont-title">최고의 순간들을<br>남기세요</div>
+						<p class="cont-desc">감각 넘치는 여름 화보를 찍어보세요</p>
+						<span class="cont-btn"><span class="cont-btn__name">스냅 알아보기</span></span>
+					</div>
+					<div class="slide-num"><span>03</span></div>
+				</div>
+				<div class="slide-sub">
+					<img src="images/index/slide-01-sub.jpg" alt="펭귄서프클럽 대여 슬라이드">
+				</div>
 			</div>
 		</div>
 		<div class="visual-dir">
-			<div class="dir-btn left">
+			<div class="dir-btn prev">
 				<img src="images/common/dir.svg" alt="이전"/>
 				<span class="dir-btn__name">이전</span>
 			</div>
-			<div class="dir-btn right">
+			<div class="dir-line"></div>
+			<div class="dir-btn next">
 				<img src="images/common/dir.svg" alt="다음"/>
 				<span class="dir-btn__name">다음</span>
 			</div>
@@ -135,30 +168,118 @@
 		</div>
 		<div class="container-content">
 			<div class="rental-wrapper">
-				<div class="rental-slide">
-					<img src="images/index/rental-01.jpg" alt="서핑보드 대여 슬라이드" />
+				<div class="rental-slide-list">
+					<div class="rental-slide active">
+						<img src="images/index/rental-01.jpg" alt="서핑보드 대여 슬라이드" />
+						<p>BEST<br>SURFING<br>BOARD</p>
+					</div>
+					<div class="rental-slide">
+						<img src="images/index/rental-02.jpg" alt="패들보드 대여 슬라이드" />
+						<p>ENJOY<br>THE<br>SUN</p>
+					</div>
+					<div class="rental-slide">
+						<img src="images/index/rental-03.jpg" alt="수상스키 대여 슬라이드" />
+						<p>HOP<br>ON THE<br>BOARD</p>
+					</div>
+					<div class="rental-slide">
+						<img src="images/index/rental-04.jpg" alt="안전용품 대여 슬라이드" />
+						<p>KEEP<br>YOU<br>SAFE</p>
+					</div>
 				</div>
 				<ul class="rental-slide-nav">
-					<li class="slide-nav__tab">
-						<img src="images/common/icon-surfboard-white.svg" alt="서핑보드">
-						<span>서핑보드</span>
+					<li class="slide-nav__tab current">
+						<span class="nav-tab__icon">
+							<img class="tab-icon__off" src="images/common/icon-surfboard-white.svg" alt="서핑보드">
+							<img class="tab-icon__on" src="images/common/icon-surfboard-dark.svg" alt="서핑보드">
+						</span>
+						<span class="nav-tab__name">서핑보드</span>
 					</li>
 					<li class="slide-nav__tab">
-						<img src="images/common/icon-paddle-white.svg" alt="패들보드">
-						<span>패들보드</span>
+						<span class="nav-tab__icon">
+							<img class="tab-icon__off" src="images/common/icon-paddle-white.svg" alt="패들보드">
+							<img class="tab-icon__on" src="images/common/icon-paddle-dark.svg" alt="패들보드">
+						</span>						
+						<span class="nav-tab__name">패들보드</span>
 					</li>
 					<li class="slide-nav__tab">
-						<img src="images/common/icon-ski-white.svg" alt="수상스키">
-						<span>수상스키</span>
+						<span class="nav-tab__icon">
+							<img class="tab-icon__off" src="images/common/icon-ski-white.svg" alt="수상스키">
+							<img class="tab-icon__on" src="images/common/icon-ski-dark.svg" alt="수상스키">
+						</span>
+						<span class="nav-tab__name">수상스키</span>
 					</li>
 					<li class="slide-nav__tab">
-						<img src="images/common/icon-safety-white.svg" alt="안전용품">
-						<span>안전용품</span>
+						<span class="nav-tab__icon">
+							<img class="tab-icon__off" src="images/common/icon-safety-white.svg" alt="안전용품">
+							<img class="tab-icon__on" src="images/common/icon-safety-dark.svg" alt="안전용품">
+						</span>
+						<span class="nav-tab__name">안전용품</span>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
+	<footer class="footer">
+		<div class="footer-insta">
+			<div class="insta-part">
+				<div class="insta-tab pic1">
+					<img src="images/common/pic1.jpg" alt="펭귄서프클럽 인스타그램">
+					<div class="img-filter"></div>
+					<span>#펭귄서프클럽</span>
+				</div>
+				<div class="pic3-wrapper">
+					<div class="pic3">
+						<img src="images/common/pic3-1.jpg" alt="그 여름날의 추억">
+						<div class="img-filter"></div>
+						<span>#그 여름날의 추억</span>
+					</div>
+					<div class="pic3">
+						<img src="images/common/pic3-2.jpg" alt="서핑스냅">
+						<div class="img-filter"></div>
+						<span>#서핑스냅</span>
+					</div>
+				</div>
+			</div>
+			<div class="insta-part small">
+				<div class="insta-tab pic2">
+					<img src="images/common/pic2.jpg" alt="즐거운서핑클럽">
+					<div class="img-filter"></div>
+					<span>#즐거운서핑클럽</span>
+				</div>
+				<div class="insta-tab pic3">
+					<img src="images/common/pic3-3.jpg" alt="여름엔 바다">
+					<div class="img-filter"></div>
+					<span>#여름엔 바다</span>
+				</div>
+				<div class="insta-tab pic3">
+					<img src="images/common/pic3-4.jpg" alt="서핑보드대여">
+					<div class="img-filter"></div>
+					<span>#서핑보드대여</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer-info">
+			<div class="footer-logo">
+				<img src="images/common/logo-white.svg" alt="펭귄서프클럽">
+				<img src="images/common/logoletter-white.svg" alt="펭귄서프클럽">
+			</div>
+			<div class="footer-sns">
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
+					<div class="sns-tab__tooltip">팔로우</div>
+				</div>
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
+					<div class="sns-tab__tooltip">페이지</div>
+				</div>
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
+					<div class="sns-tab__tooltip">소식보기</div>
+				</div>
+			</div>
+			<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
+		</div>
+	</footer>
 </body>
 	<script type="text/javascript" src="javascripts/common.js"></script>
 	<script type="text/javascript" src="javascripts/index.js"></script>

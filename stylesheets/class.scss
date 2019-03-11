@@ -2,15 +2,547 @@
 @import 'base/font.scss';
 @import 'base/mixin.scss';
 @import 'base/variable.scss';
+@import 'base/keyframes.scss';
 
 html {
-	font-size: 12px;
+	font-size: $desktop;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 body {
 	width: 100%;
 	overflow-x: hidden;
 }
-
+.header {
+	.gnb {
+		.gnb-list {
+			.gnb-tab {
+				&:nth-of-type(2) {
+					a {
+						span {
+							color: $blue;
+						}
+					}
+					&:hover {
+						a {
+							span {
+								color: $font-white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.jumbotron {
+	width: 100%;
+	height: 24rem;
+	overflow: hidden;
+	position: relative;
+	.jumbotron-img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+		img {
+			width: 100%;
+		}
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: $gray1-700;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	.jumbotron-title {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(center);
+		@include align-items(center);
+		img {
+			width: 3.5rem;
+		}
+		p {
+			font-size: 2rem;
+			color: $font-white;
+			font-family: 'NanumSquare', sans-serif;
+			text-align: center;
+			width: 40%;
+			margin-top: 1.5rem;
+			word-break: keep-all;
+		}
+	}
+}
+.container {
+	width: 100%;
+	position: relative;
+	margin-top: 5rem;
+	.container-title {
+		width: 100%;
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+		.title-line {
+			width: 1px;
+			height: 8rem;
+			background-color: $gray1;
+		}
+		.title {
+			font-family: 'TmonMonsori';
+			font-size: 2.9rem;
+			text-shadow: -1px -1px 0 $gray1, 1px -1px 0 $gray1, -1px 1px 0 $gray1, 1px 1px 0 $gray1;  
+			margin-top: 2rem;
+			text-align: center;
+			margin-bottom: 5rem;
+			color: $font-white;
+		}
+	}
+	.container-content {
+		width: 100%;
+		position: relative;
+		.icon-warpper {
+			width: 100%;
+			padding: 0 25%;
+			position: relative;
+			@include box-sizing(border-box);
+			@include flexbox();
+			@include justify-content(space-between);
+			.icon-tab {
+				width: 20%;
+				position: relative;
+				font-family: 'NanumSquare', sans-serif;
+				text-align: center;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				.icon-tab__img {
+					width: 100%;
+					height: 13rem;
+					position: relative;
+					text-decoration: none;
+					@include flexbox();
+					@include justify-content(center);
+					.tab-img__icon {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+					.tab-img__icon-effect {
+						width: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						&.effect {
+							@include animation(icon-effect 0.5s ease infinite);
+						}
+					}
+				}
+				.icon-tab__subtitle {
+					margin-top: 3rem;
+					color: $gray3;
+					font-size: 1rem;
+					word-break: keep-all;
+				}
+				.icon-tab__title {
+					color: $gray2;
+					font-size: 2rem;
+					margin-top: 1.15rem;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+.container-wave {
+	width: 100%;
+	opacity: 0.5;
+	img {
+		width: 100%;
+	}
+	&.flip {
+		@include transform(rotate(180deg));
+	}
+}
+.container-class {
+	width: 100%;
+	background-color: $class-bg;
+	padding-bottom: 5rem;
+	.class-info {
+		width: 100%;
+		@include flexbox();
+		position: relative;
+		padding-top: 10rem;
+		&:nth-of-type(1) {
+			padding-top: 0;
+		}
+		&:nth-of-type(2) {
+			.class-info__review {	
+				.info-review-card-list {
+					position: relative;
+					@include flex-direction(row);
+					.review-card {
+					}
+				}
+			}
+			.class-info__cont {
+				margin-left: 10%;
+				margin-right: 0;
+			}
+		}
+		.class-info__review {
+			width: 50%;
+			height: 45rem;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			.info-review-card-list {
+				@include flexbox();
+				@include flex-direction(row-reverse);
+				position: relative;
+				//width: calc(72vw + 10rem);
+				.review-card {
+					width: 18vw;
+					height: 40rem;
+					position: relative;
+					margin-left: 2rem;
+					@include flex(0 0 auto);
+					.card-img {
+						width: 100%;
+						height: 100%;
+						position: relative;
+						@include flexbox();
+						@include justify-content(center);
+						@include align-items(center);
+						overflow: hidden;
+						&:after {
+							content: '';
+							width: 100%;
+							height: 100%;
+							background-color: $gray1-700;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						img {
+							height: 100%;
+						}
+					}
+					.card-cont {
+						width: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						@include flexbox();
+						@include flex-direction(column);
+						padding: 10%;
+						@include box-sizing(border-box);
+						.cont-count {
+							color: $font-white;
+							font-family: 'NanumSquare', sans-serif;
+							font-weight: 800;
+							font-size: 1.15rem;
+						}
+						.cont-eval {
+							margin-top: 120%;
+							width: 100%;
+							height: 2rem;
+							@include flexbox();
+							img {
+								height: 2rem;
+								width: auto;
+								margin-right: 1rem;
+							}
+						}
+						.cont-comment {
+							border-left: 1px solid $white;
+							margin-top: 2rem;
+							width: 100%;
+							p {
+								margin-left: 5%;
+								width: 95%;
+								word-break: keep-all;
+								color: $font-white;
+								font-size: 1.35rem;
+								line-height: 1.5;
+								font-family: 'NanumSquare', sans-serif;
+							}
+						}
+					}
+				}
+			}
+		}
+		.class-info__cont {
+			width: 40%;
+			margin-right: 10%;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			.info-cont__text {
+				width: 100%;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				.text-title-line {
+					width: 1px;
+					height: 8rem;
+					background-color: $gray1;
+				}
+				.text-title {
+					font-family: 'TmonMonsori';
+					font-size: 2.9rem;
+					text-shadow: -1px -1px 0 $gray1, 1px -1px 0 $gray1, -1px 1px 0 $gray1, 1px 1px 0 $gray1;  
+					margin-top: 2rem;
+					text-align: center;
+					margin-bottom: 2rem;
+					color: $class-bg;
+				}
+				.text-desc {
+					width: 50%;
+					font-family: 'NanumSquare', sans-serif;
+					color: $gray2;
+					font-size: 1.15rem;
+					line-height: 1.5;
+					word-break: keep-all;
+					text-align: center;
+				}
+			}
+			.info-cont__benefit {
+				margin-top: 4rem;
+				width: 100%;
+				@include flexbox();
+				@include justify-content(center);
+				.benefit-tab {
+					width: 23%;
+					@include flexbox();
+					@include flex-direction(column);
+					@include align-items(center);
+					img {
+						height: 5rem;
+					}
+					span {
+						font-family: 'NanumSquare', sans-serif;
+						color: $gray2;
+						text-align: center;
+						font-size: 1.35rem;
+						margin-top: 1.35rem;
+					}
+				}
+			}
+			.info-cont__btn {
+				margin-top: 4rem;
+				width: 100%;
+				@include flexbox();
+				@include justify-content(center);
+				text-decoration: none;
+				.btn-name {
+					font-family: 'NanumSquare', sans-serif;
+					font-size: 1.35rem;
+					font-weight: 800;
+					color: $gray1;
+					text-align: center;
+					padding: 1.5rem 5rem;
+					background-color: $yellow;
+					border-radius: 5rem;
+					text-decoration: none;
+					@include transition(all 0.5s ease);
+					&:hover {
+						@include box-shadow(0 5px 15px $shadow);
+					}
+				}
+			}
+		}
+	}
+}
+.container-cost {
+	width: 100%;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	position: relative;
+	@include flexbox();
+	.cost-wrapper {
+		width: 70%;
+		position: relative;
+		@include flexbox();
+		.cost-tab {
+			width: 19vw;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include box-sizing(content-box);
+			padding: 5%;
+			font-family: 'NanumSquare', sans-serif;
+			color: $gray2;
+			border: 1px solid $gray3;
+			margin-right: 1rem;
+			@include transition(all 0.5s ease);
+			position: relative;
+			&:hover {
+				border: 1px solid $blue;
+				.cost-tab__icon {
+					.cost-tab__icon-effect {
+						@include animation(icon-effect 0.5s ease infinite);
+					}
+				}
+			}
+			&.choose {
+				border: 1px solid $blue;
+				.cost-tab__choose {
+					span {
+						background-color: $blue;
+						color: $font-white;
+					}
+				}
+			}
+			.cost-tab__icon {
+				width: 100%;
+				height: 12rem;
+				position: relative;
+				@include flexbox();
+				@include justify-content(center);
+				.cost-tab__icon-icon {
+					width: 70%;
+					height: auto;
+					position: absolute;
+					bottom: 3rem;
+				}
+				.cost-tab__icon-effect {
+					width: 80%;
+					height: auto;
+					position: absolute;
+					top: 0;
+				}
+				.cost-tab__icon-title {
+					font-size: 1.35rem;
+					font-weight: 700;
+					margin-top: 1.35rem;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					text-align: center;
+				}
+			}
+			.cost-tab__option {
+				margin-top: 2rem;
+				width: 100%;
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				.option {
+					width: 100%;
+					@include flexbox();					
+					@include align-items(center);
+					@include justify-content(center);
+					margin-top: 1.5rem;
+					.option-icon {
+						height: 2.5rem;
+						width: auto;
+						cursor: pointer;
+					}
+					.option-input {
+						width: 3.5em;
+						height: 3rem;
+						border: 1px solid #eaeaea;
+						font-size: 1.15rem;
+						line-height: 3rem;
+						font-weight: 700;
+						border-radius: 5px;
+						margin-left: 1rem;
+						margin-right: 1rem;
+						text-align: center;
+					}
+					.option-unit {
+						width: 2.2rem;
+						height: 3rem;
+						text-align: center;
+						font-size: 1.15rem;
+						line-height: 3rem;
+						margin-right: 1rem;
+					}
+				}
+			}
+			.cost-tab__benefit {
+				color: $gray3;
+				text-align: center;
+				width: 100%;
+				font-size: 1.15rem;
+				line-height: 1.5;
+				margin-top: 2rem;
+			}
+			.cost-tab__total {
+				margin-top: 2rem;
+				font-family: 'TmonMonsori'; 
+				font-size: 3rem;
+				text-align: center;
+				width: 100%;
+			}
+			.cost-tab__choose {
+				@include flexbox();
+				@include justify-content(center);
+				width: 100%;
+				margin-top: 2rem;
+				span {
+					font-size: 1.15rem;
+					color: $blue;
+					padding: 1rem 4rem;
+					border-radius: 5rem;
+					border: 1px solid $blue;
+					background-color: transparent;
+					cursor: pointer;
+					&:hover {
+						background-color: $blue;
+						color: $font-white;
+					}
+				}
+			}
+		}
+	}
+	.cost-final {
+		width: 30%;
+		@include flexbox();
+		@include flex-direction(column);
+		text-align: right;
+		.cost-final__list {
+			width: 100%;
+			margin-top: 2rem;
+			font-family: 'NanumSquare', sans-serif;
+			color: $gray2;
+			font-size: 1.15rem;
+			line-height: 1.8;
+		}
+		.cost-final__result {
+			width: 100%;
+			margin-top: 5rem;
+			@include flexbox();
+			@include flex-direction(column);
+			text-align: right;
+			.result-title {
+				font-family: 'NanumSquare', sans-serif;
+				color: $gray2;
+				font-size: 2.5rem;
+			}
+			.result-money {
+				font-family: 'TmonMonsori';
+				color: $blue;
+				margin-top: 1rem;
+				font-size: 4.5rem;
+			}
+		}
+		.cost-final__next {}
+	}
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
 }

@@ -4,4 +4,9 @@ $(document).ready(function(){
 	}, function() {
 		$(this).removeClass('current');
 	});
+	$(".sns-tab").hover(function(){
+		$(this).find(".sns-tab__tooltip").css('opacity', '1');
+	}, function(){
+		$(this).find(".sns-tab__tooltip").css('opacity', '0');
+	});
 });
