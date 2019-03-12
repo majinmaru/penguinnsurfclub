@@ -17,7 +17,7 @@ $(document).ready(function(){
 		$(".shopbag").addClass('active');
 		setTimeout(function(){
 			$(".shopbag").removeClass('active');
-		}, 2000);
+		}, 1500);
 		e.preventDefault();
 	});
 });

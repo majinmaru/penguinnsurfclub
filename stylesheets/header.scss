@@ -19,6 +19,16 @@ body {
 		background-color: $white;
 		position: relative;
 		@include flexbox();
+		@include transition(all 0.5s ease);
+		&.sticky {
+			height: $gnb-height-sticky;
+			background-color: $gnb-white;
+			position: fixed;
+			top: -60px;
+			@include transform(translateY($gnb-height-sticky));
+			@include transition(transform 0.5s ease, background-color 0.5s ease);
+			z-index: 9998;
+		}
 		.gnb-list {
 			@include box-sizing(border-box);
 			margin-left: $margin;
@@ -99,6 +109,27 @@ body {
 		left: $margin;
 		z-index: 9999;
 		@include transition(all 0.5s ease);
+		&.sticky {
+			height: $gnb-height-sticky;
+			position: fixed;
+			top: -60px;
+			@include transform(translateY($gnb-height-sticky));
+			@include transition(transform 0.5s ease, background-color 0.5s ease);
+			&:hover {
+				@include box-shadow(none);
+			}
+			.logo-symbol {
+				height: 100%;
+				img {
+					margin-top: unset;
+				}
+			}
+			.logo-title {
+				width: 0;
+				height: 0;
+				opacity: 0;
+			}
+		}
 		&:hover {
 			@include box-shadow(0 5px 15px $shadow);
 		}
@@ -108,9 +139,11 @@ body {
 			@include flexbox();
 			@include justify-content(center);
 			@include align-items(center);
+			@include transition(all 0.5s ease);
 			img {
 				width: 48%;
 				margin-top: 20%;
+				@include transition(all 0.5s ease);
 			}
 		}
 		.logo-title {
@@ -119,9 +152,11 @@ body {
 			@include flexbox();
 			@include justify-content(center);
 			@include align-items(center);
+			@include transition(all 0.5s ease);
 			img {
 				width: 48%;
 				margin-bottom: 20%;
+				@include transition(all 0.5s ease);
 			}
 		}
 	}

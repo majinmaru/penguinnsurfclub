@@ -259,6 +259,11 @@ body {
 				@include flexbox();
 				@include flex-direction(column);
 				@include align-items(center);
+				opacity: 0;
+				&.appear {
+					@include animation(class-type 1s ease);
+					opacity: 1;
+				}				
 				&:hover {
 					.class-type__img {
 						img {
@@ -318,6 +323,15 @@ body {
 				position: relative;
 				width: calc((100% / 6) * 4);
 				@include flexbox();
+				opacity: 0;
+				&.appear-ltr {
+					@include animation(location-ltr 1s ease);
+					opacity: 1;
+				}
+				&.appear-rtl {
+					@include animation(location-rtl 1s ease);
+					opacity: 1;
+				}				
 				.intro-image {
 					width: 62.5%;
 					height: 23vw;
@@ -325,6 +339,7 @@ body {
 					@include flexbox();
 					@include justify-content(center);
 					@include align-items(center);
+					position: relative;
 					img {
 						width: 100%;
 					}
@@ -338,10 +353,13 @@ body {
 					@include flexbox();
 					@include justify-content(center);
 					@include align-items(center);
+					@include transition(all 0.5s ease);
+					&:hover {
+						@include box-shadow(0 5px 10px $shadow);
+					}
 					img {
 						height: 1.8rem;
 						width: auto;
-
 					}
 					span {
 						color: $gray1;
