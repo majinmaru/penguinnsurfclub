@@ -1,3 +1,5 @@
+@import 'mixin.scss';
+
 @-webkit-keyframes slide-main-appear {
   0%   { -webkit-transform:translate(-20px,0); opacity: 0;  }
   50%  { opacity: 1;  }
@@ -137,4 +139,17 @@
   0%   { opacity: 0; }
   50%  { opacity: 1; }
   100% { opacity: 0; }
+}
+
+@-webkit-keyframes shopbag-letter {
+  0%   { -webkit-transform: translate(0, 100%);}
+  100% { -webkit-transform: translate(0, 0); }
+}
+@-moz-keyframes shopbag-letter {
+  0%   { -moz-transform: translate(0, 100%);}
+  100% { -moz-transform: translate(0, 0); }
+}
+@keyframes shopbag-letter {
+  0%   { transform: translate(0, 100%);}
+  100% { transform: translate(0, 0); }
 }

@@ -45,15 +45,15 @@ body {
 					}
 					.slide-main__cont {
 						.cont-title {
-							@include animation(leter-appear 0.5s ease);
+							@include animation(letter-appear 1.5s ease);
 							opacity: 1;
 						}
 						.cont-desc {
-							@include animation(leter-appear 0.5s ease);
+							@include animation(letter-appear 1.5s ease);
 							opacity: 1;
 						}
 						.cont-btn {
-							@include animation(leter-appear 0.5s ease);
+							@include animation(letter-appear 1.5s ease);
 							opacity: 1;
 						}
 					}

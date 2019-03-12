@@ -15,7 +15,587 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-
+	<header class="header">
+		<nav class="gnb">
+			<ul class="gnb-list">
+				<li class="gnb-tab"><a href="location.html"><span>위치</span></a></li>
+				<li class="gnb-tab"><a href="class.html"><span>수업</span></a></li>
+				<li class="gnb-tab"><a href="rent.html"><span>대여</span></a></li>
+			</ul>
+			<div class="wave-tab"><a href="#"><span>속초 파도 LIVE</span>
+				<img src="images/common/dir.svg" alt="속초 파도 LIVE 보러가기">
+			</a></div>
+		</nav>
+		<div class="nav-mobile"></div>
+		<a href="index.html" class="logo">
+			<div class="logo-symbol">
+				<img src="images/common/logo-white.svg" alt="펭귄서프클럽"/>
+			</div>
+			<div class="logo-title">
+				<img src="images/common/logoletter-white.svg" alt="펭귄서프클럽 로고" />
+			</div>
+		</a>
+	</header>
+	<section class="jumbotron">
+		<div class="jumbotron-img">
+			<img src="images/rent/jumbotron.png" alt="대문이미지">
+		</div>
+		<div class="jumbotron-title">
+			<img src="images/common/icon-surfboard-white.svg" alt="아이콘">
+			<p>장비 및 안전용품 대여</p>
+		</div>
+	</section>
+	<section class="container">
+		<div class="search-wrapper">
+			<div class="search-title">
+				<p>대여가 필요한 날짜를<br>입력해주세요</p>
+			</div>
+			<div class="search-date">
+				<div class="search-date__input">
+					<div class="date-input month">
+						<input type="text" name="month" placeholder="1">
+						<span>월</span>
+					</div>
+					<div class="date-input day">
+						<input type="text" name="day" placeholder="1">
+						<span>일</span>
+					</div>
+				</div>
+				<div class="search-date__btn">
+					<span>찾아보기</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container">
+		<div class="rent-wrapper">
+			<div class="rent-category">
+				<div class="category-tab current">
+					<span class="category-tab__title">전체</span>
+					<span class="category-tab__icon">&#9660;</span>
+				</div>
+				<div class="category-tab">
+					<span class="category-tab__title">서핑보드</span>
+					<span class="category-tab__icon">&#9660;</span>
+				</div>
+				<div class="category-tab">
+					<span class="category-tab__title">패들보드</span>
+					<span class="category-tab__icon">&#9660;</span>
+				</div>
+				<div class="category-tab">
+					<span class="category-tab__title">수상스키</span>
+					<span class="category-tab__icon">&#9660;</span>
+				</div>
+				<div class="category-tab">
+					<span class="category-tab__title">안전용품</span>
+					<span class="category-tab__icon">&#9660;</span>
+				</div>
+			</div>
+			<div class="rent-color">
+				<div class="color-tab">
+					<div class="color-tab__color color-01"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-02"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-03"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-04"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-05"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-06"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-07"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-08"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-09"></div>
+				</div>
+				<div class="color-tab">
+					<div class="color-tab__color color-10"></div>
+				</div>
+			</div>
+			<div class="rent-result">
+				<div class="result-title">총 137개의 결과</div>
+				<div class="result-option">
+					<span class="option current">최신순</span>
+					<span class="option">인기순</span>
+				</div>
+			</div>
+			<div class="rent-item-list">
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-01.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-02.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-03.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-04.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-05.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-06.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-07.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-08.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-09.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-10.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-11.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-12.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-13.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-14.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-15.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-img">
+						<img src="images/rent/00board-16.png" alt="보드이미지">
+						<div class="item-img__quickmenu">
+							<div class="quickmenu-tab">대여신청</div>
+							<div class="quickmenu-tab add">장바구니</div>
+						</div>
+					</div>
+					<div class="item-info">
+						<span class="info-title">우드-NBT</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">길이</span>
+							<span class="info-spec__value">170.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">너비</span>
+							<span class="info-spec__value">50.0cm</span>
+						</span>
+						<span class="info-spec">
+							<span class="info-spec__unit">두께</span>
+							<span class="info-spec__value">4.7cm</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="rent-more">
+				<span>불러오기</span>
+			</div>
+		</div>
+	</section>
+	<div class="shopbag">
+		<div class="shopbag-cont">
+			<p class="shopbag-text">
+				<span>장바구니에</span>
+			</p>
+			<p class="shopbag-text">
+				<span>담겼습니다</span>
+			</p>
+		</div>
+		<div class="shopbag-icon">
+			<img src="images/common/icon-shopbag-dark.svg" alt="장바구니 아이콘">
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-insta">
+			<div class="insta-part">
+				<div class="insta-tab pic1">
+					<img src="images/common/pic1.jpg" alt="펭귄서프클럽 인스타그램">
+					<div class="img-filter"></div>
+					<span>#펭귄서프클럽</span>
+				</div>
+				<div class="pic3-wrapper">
+					<div class="pic3">
+						<img src="images/common/pic3-1.jpg" alt="그 여름날의 추억">
+						<div class="img-filter"></div>
+						<span>#그 여름날의 추억</span>
+					</div>
+					<div class="pic3">
+						<img src="images/common/pic3-2.jpg" alt="서핑스냅">
+						<div class="img-filter"></div>
+						<span>#서핑스냅</span>
+					</div>
+				</div>
+			</div>
+			<div class="insta-part small">
+				<div class="insta-tab pic2">
+					<img src="images/common/pic2.jpg" alt="즐거운서핑클럽">
+					<div class="img-filter"></div>
+					<span>#즐거운서핑클럽</span>
+				</div>
+				<div class="insta-tab pic3">
+					<img src="images/common/pic3-3.jpg" alt="여름엔 바다">
+					<div class="img-filter"></div>
+					<span>#여름엔 바다</span>
+				</div>
+				<div class="insta-tab pic3">
+					<img src="images/common/pic3-4.jpg" alt="서핑보드대여">
+					<div class="img-filter"></div>
+					<span>#서핑보드대여</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer-info">
+			<div class="footer-logo">
+				<img src="images/common/logo-white.svg" alt="펭귄서프클럽">
+				<img src="images/common/logoletter-white.svg" alt="펭귄서프클럽">
+			</div>
+			<div class="footer-sns">
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-insta.svg" alt="인스타그램">
+					<div class="sns-tab__tooltip">팔로우</div>
+				</div>
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-fb.svg" alt="페이스북">
+					<div class="sns-tab__tooltip">페이지</div>
+				</div>
+				<div class="sns-tab">
+					<img class="sns-tab__icon" src="images/common/sns-tweeter.svg" alt="트위터">
+					<div class="sns-tab__tooltip">소식보기</div>
+				</div>
+			</div>
+			<div class="footer-rights">&copy; All rights reserver by Yujin Hwang 2019</div>
+		</div>
+	</footer>
 </body>
 <script type="text/javascript" src="javascripts/common.js"></script>
+<script type="text/javascript" src="javascripts/rent.js"></script>
 </html>

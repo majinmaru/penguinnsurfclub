@@ -515,19 +515,22 @@ body {
 		@include flex-direction(column);
 		text-align: right;
 		.cost-final__list {
-			width: 100%;
+			width: 90%;
 			margin-top: 2rem;
 			font-family: 'NanumSquare', sans-serif;
 			color: $gray2;
 			font-size: 1.15rem;
 			line-height: 1.8;
+			margin-left: 10%; 
 		}
 		.cost-final__result {
-			width: 100%;
+			width: 90%;
 			margin-top: 5rem;
 			@include flexbox();
 			@include flex-direction(column);
 			text-align: right;
+			border-bottom: 1px solid $gray3;
+			margin-left: 10%; 
 			.result-title {
 				font-family: 'NanumSquare', sans-serif;
 				color: $gray2;
@@ -538,9 +541,35 @@ body {
 				color: $blue;
 				margin-top: 1rem;
 				font-size: 4.5rem;
+				margin-bottom: 1rem;
 			}
 		}
-		.cost-final__next {}
+		.cost-final__next {
+			width: 100%;
+			@include flexbox();
+			@include box-sizing(border-box);
+			padding-left: 10%; 
+			margin-top: 2rem;
+			.next-reset {
+				width: 20%;
+				margin-right: 2%;
+				color: $font-white;
+				background-color: $gray2;
+				padding: 1.35rem;
+				font-size: 1.35rem;
+				text-align: center;
+				cursor: pointer;
+			}
+			.next-step {
+				width: 78%;
+				color: $gray1;
+				background-color: $yellow;
+				padding: 1.35rem;
+				font-size: 1.35rem;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {

@@ -91,7 +91,7 @@ body {
 	.logo {
 		position: absolute;
 		@include main-gradient();
-		width: $grid-1;
+		width: 11vw;
 		height: 170px;
 		@include flexbox();
 		@include flex-direction(column);
@@ -109,8 +109,8 @@ body {
 			@include justify-content(center);
 			@include align-items(center);
 			img {
-				width: 40%;
-				margin-top: 2.5rem;
+				width: 48%;
+				margin-top: 20%;
 			}
 		}
 		.logo-title {
@@ -120,8 +120,8 @@ body {
 			@include justify-content(center);
 			@include align-items(center);
 			img {
-				width: 40%;
-				margin-bottom: 2.5rem;
+				width: 48%;
+				margin-bottom: 20%;
 			}
 		}
 	}
