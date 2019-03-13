@@ -98,8 +98,16 @@ body {
 		@include align-items(center);
 		.title-line {
 			width: 1px;
-			height: 8rem;
+			height: 0;
 			background-color: $gray1;
+			opacity: 0;
+			@include transform-origin(center top);
+			@include transition(all 0.5s ease);
+			&.appear {
+				@include animation(title-line 0.5s ease);
+				opacity: 1;
+				height: 8rem;
+			}
 		}
 		.title {
 			font-family: 'TmonMonsori';
@@ -109,6 +117,12 @@ body {
 			text-align: center;
 			margin-bottom: 5rem;
 			color: $font-white;
+			opacity: 0;
+			@include transition(all 0.5s ease);
+			&.appear {
+				@include animation(title 1s ease);
+				opacity: 1;
+			}
 		}
 		.description {
 			text-align: center;
@@ -243,8 +257,20 @@ body {
 					@include flexbox();
 					@include justify-content(center);
 					@include align-items(center);
+					position: relative;
 					img {
 						width: 100%;
+					}
+					span {
+						position: absolute;
+						top: 0;
+						font-size: 8rem;
+						font-family: 'TmonMonsori'; 
+						color: $yellow;
+						z-index: 2;
+						text-align: center;
+						width: 100%;
+						margin-top: 23%;
 					}
 				}
 				.introduce-part__desc {

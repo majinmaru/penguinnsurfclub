@@ -8,15 +8,6 @@ $(document).ready(function(){
 	var slideDuration = 500;
 	let nextSlideIndex;
 	
-	$(".slide-nav__tab").click(function(){
-		var navTabIndex = $(this).index();
-
-		$(this).addClass('current');
-		$(this).siblings().removeClass('current');
-		$(".rental-slide").eq(navTabIndex).addClass('active');
-		$(".rental-slide").eq(navTabIndex).siblings().removeClass('active');
-	});
-
 	function autorunRent(){
 		var numberOfSlide = $(".slide-nav__tab").length;
 		for(var i = 0; i < numberOfSlide; i++) {
@@ -72,6 +63,17 @@ $(document).ready(function(){
 		$(".gallery-wrapper").css('background-position-y' , (400-(scrolled*.2))+'px')
 	}
 
+	function classTitle(){
+		var titleTop = $("#class-container-title").offset().top;
+		var scrolled = $(window).scrollTop();
+		if (scrolled > titleTop * 0.7){
+			$("#class-container-title .title-line").addClass('appear');
+			setTimeout(function(){
+				$("#class-container-title .title").addClass('appear');
+			}, 500);
+		}
+	}
+
 	function classType(){
 		var classTop = $(".class-type").offset().top;
 		var scrolled = $(window).scrollTop();
@@ -88,7 +90,7 @@ $(document).ready(function(){
 	function location(){
 		var introTop = $(".location-intro").offset().top;
 		var scrolled = $(window).scrollTop();
-		if (scrolled > introTop * 0.8){
+		if (scrolled > introTop * 0.7){
 			$(".location-intro").eq(0).addClass('appear-ltr');
 			setTimeout(function(){
 				$(".location-intro").eq(1).addClass('appear-rtl');
@@ -96,9 +98,54 @@ $(document).ready(function(){
 		}
 	}
 
+	function rentalTitle(){
+		var titleTop = $("#rental-container-title").offset().top;
+		var scrolled = $(window).scrollTop();
+		if (scrolled > titleTop * 0.9){
+			$("#rental-container-title .title-line").addClass('appear');
+			setTimeout(function(){
+				$("#rental-container-title .title").addClass('appear');
+			}, 500);
+		}
+	}
+
+	var rentalSlide = function() {
+		$(".slide-nav__tab").on('click', function(event){
+			var navTabIndex = $(this).index();
+
+			$(this).addClass('current');
+			$(this).siblings().removeClass('current');
+			$(".rental-slide").eq(navTabIndex).addClass('active');
+			$(".rental-slide").eq(navTabIndex).siblings().removeClass('active');
+			if (event.preventDefault) { 
+				event.preventDefault(); 
+			} else { 
+				event.returnValue = false; 
+			}
+		});
+	}
+	rentalSlide();
+	
+	/*
+	$(".slide-nav__tab").on('click', function(event){
+		var navTabIndex = $(this).index();
+
+		$(this).addClass('current');
+		$(this).siblings().removeClass('current');
+		$(".rental-slide").eq(navTabIndex).addClass('active');
+		$(".rental-slide").eq(navTabIndex).siblings().removeClass('active');
+		if (event.preventDefault) { 
+			event.preventDefault(); 
+		} else { 
+			event.returnValue = false; 
+		}
+	});
+*/
 	$(window).scroll(function() {
 		parallaxScroll();
+		classTitle();
 		classType();
 		location();
+		rentalTitle();
 	});
 });

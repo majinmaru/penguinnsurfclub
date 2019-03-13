@@ -27,12 +27,12 @@ body { width: 100%; overflow-x: hidden; }
 .header .logo.sticky { height: 60px; position: fixed; top: -60px; -webkit-transform: translateY(60px); -ms-transform: translateY(60px); transform: translateY(60px); -webkit-transition: transform 0.5s ease, background-color 0.5s ease; -o-transition: transform 0.5s ease, background-color 0.5s ease; transition: transform 0.5s ease, background-color 0.5s ease; }
 .header .logo.sticky:hover { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 .header .logo.sticky .logo-symbol { height: 100%; }
-.header .logo.sticky .logo-symbol img { margin-top: unset; }
+.header .logo.sticky .logo-symbol img { margin-top: 9%; }
 .header .logo.sticky .logo-title { width: 0; height: 0; opacity: 0; }
 .header .logo:hover { -webkit-box-shadow: 0 5px 15px rgba(40, 40, 40, 0.7); -moz-box-shadow: 0 5px 15px rgba(40, 40, 40, 0.7); box-shadow: 0 5px 15px rgba(40, 40, 40, 0.7); }
-.header .logo .logo-symbol { width: 100%; height: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.header .logo .logo-symbol img { width: 48%; margin-top: 20%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.header .logo .logo-symbol { width: 100%; height: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.header .logo .logo-symbol img { width: 48%; height: 48%; margin-top: 20%; margin-left: 26%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .header .logo .logo-title { width: 100%; height: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.header .logo .logo-title img { width: 48%; margin-bottom: 20%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.header .logo .logo-title img { width: 48%; height: 48%; margin-bottom: 20%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 
 /*# sourceMappingURL=header.css.map */
