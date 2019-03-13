@@ -238,16 +238,25 @@ body {
 		@include flex-direction(column);
 		@include align-items(center);
 		.title-line {
-			width: 1px;
-			height: 0;
-			background-color: $gray1;
-			opacity: 0;
-			@include transform-origin(center top);
-			@include transition(all 0.5s ease);
-			&.appear {
-				@include animation(title-line 0.5s ease);
-				opacity: 1;
+			width: 100%;
+			height: 8rem;
+			position: relative;
+			span {
+				display: block;
+				width: 1px;
 				height: 8rem;
+				background-color: $gray1;
+				opacity: 0;
+				margin-left: 50%;
+				@include transform-origin(center top);
+				@include transition(all 0.5s ease);
+			}
+			&.appear {
+				span {
+					@include animation(title-line 0.5s ease);
+					opacity: 1;
+					height: 8rem;
+				}
 			}
 		}
 		.title {
@@ -261,7 +270,7 @@ body {
 			opacity: 0;
 			@include transition(all 0.5s ease);
 			&.appear {
-				@include animation(title 1s ease);
+				@include animation(title 0.5s ease);
 				opacity: 1;
 			}
 		}
@@ -447,25 +456,28 @@ body {
 					position: relative;
 					width: 100%;
 					height: 40rem;
-					overflow: hidden;
-					@include justify-content(center);
-					@include align-items(center);
+					overflow: hidden;					
 					display: none;
 					img {
 						width: 100%;
+						position: absolute;
+						top: -5%;
+						left: 0;
 					}
 					p {
 						position: absolute;
 						right: 0;
+						top: 0;
 						text-align: right;
 						font-size: 7.16rem;
 						color: $yellow;
 						font-family: 'TmonMonsori'; 
 						line-height: 1.15;
 						margin-right: 10%;
+						margin-top: 7%;
 					}
 					&.active {
-						@include flexbox();
+						display: block;
 						@include animation(rental-slide 0.5s ease);
 						p {
 							@include animation(rental-slide-letter 1s ease);

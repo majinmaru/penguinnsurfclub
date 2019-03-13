@@ -1,14 +1,23 @@
 $(document).ready(function(){
 	function mapTitle(){
-		var titleTop = $("#map-container-title").offset().top;
+		$("#map-container-title .title-line").addClass('appear');
+		setTimeout(function(){
+			$("#map-container-title .title").addClass('appear');
+		}, 500);		
+	}
+	mapTitle();
+
+	function introduceTitle(){
+		var titleTop = $("#introduce-container-title").offset().top;
 		var scrolled = $(window).scrollTop();
-		if (scrolled > titleTop * 0.3){
-			$("#map-container-title .title-line").addClass('appear');
+		if (scrolled > titleTop * 0.4){
+			$("#introduce-container-title .title-line").addClass('appear');
 			setTimeout(function(){
-				$("#map-container-title .title").addClass('appear');
+				$("#introduce-container-title .title").addClass('appear');
 			}, 500);
 		}
 	}
+
 	function snapTitle(){
 		var titleTop = $("#snap-container-title").offset().top;
 		var scrolled = $(window).scrollTop();
@@ -17,11 +26,38 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$("#snap-container-title .title").addClass('appear');
 			}, 500);
+			setTimeout(function(){
+				$("#snap-container-title .description").addClass('appear');
+				$("#snap-container-title .button").addClass('appear');
+			}, 800);
+		}
+	}
+
+	function introduce(){
+		var titleTopFirst = $(".introduce-part").eq(0).offset().top;
+		var titleTopSecond = $(".introduce-part").eq(1).offset().top;
+		var scrolled = $(window).scrollTop();
+		var translateFirst = (scrolled - titleTopFirst) / $(window).height() * 100;
+		var translateSecond = (scrolled - titleTopSecond) / $(window).height() * 100;
+		if (scrolled > titleTopFirst * 0.9){
+			$(".introduce-part").eq(0).css({
+				'transform': 'translateY(' + translateFirst +'%)',
+				'-webkit-transform' : 'translateY(' + translateFirst +'%)',
+				'-ms-transform': 'translateY(' + translateFirst +'%)'
+			});
+		}
+		if (scrolled > titleTopSecond * 0.9){
+			$(".introduce-part").eq(1).css({
+				'transform': 'translateY(' + translateSecond +'%)',
+				'-webkit-transform' : 'translateY(' + translateSecond +'%)',
+				'-ms-transform': 'translateY(' + translateSecond +'%)'
+			});
 		}
 	}
 
 	$(window).scroll(function() {
-		mapTitle();
+		introduceTitle()	
 		snapTitle();
+		introduce();
 	});
 });
