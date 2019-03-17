@@ -1,12 +1,97 @@
 $(document).ready(function(){
 	var slide = $(".visual-slide");
-	var slideMain = slide.find(".slide-main");
-	var slideSub = slide.find(".slide-sub");
 	var dirBtn = $(".dir-btn");
+	var dirBtnNext = dirBtn.filter('.next');
 	var autorun;
 	var autoRent;
 	var slideDuration = 500;
-	var nextSlideIndex;
+	
+	$("#visual-slide-01").addClass('current');
+	$("#visual-slide-01").find(".main-slide-wrapper").addClass('current');
+	$("#visual-slide-01").find(".main-cont__bar").addClass('current');
+	$("#visual-slide-01").find(".bottom-sub-slide").addClass('current');
+	setTimeout(function(){
+		$("#visual-slide-01").find(".main-slide-num").addClass('current');
+	}, 1000);
+	setTimeout(function(){
+		$("#visual-slide-01").find(".wave-text-wrapper").addClass('current');
+	}, 500);
+	setTimeout(function(){
+		$("#visual-slide-01").find(".bottom-main-cont").addClass('current');
+	}, 1000);
+	$(".dir-btn.prev").addClass('current');
+	setTimeout(function(){
+		$(".dir-btn.next").addClass('current');
+	}, 300);
+	function runSlide(currentSlideIndex, currentSlide){
+		var nextItem = slide.eq(currentSlideIndex);
+		currentSlide.removeClass('current');
+		currentSlide.find(".main-slide-wrapper").removeClass('current');
+		currentSlide.find(".main-cont__bar").removeClass('current');
+		currentSlide.find(".bottom-sub-slide").removeClass('current');
+		setTimeout(function(){
+			currentSlide.find(".main-slide-num").removeClass('current');
+		}, 1000);
+		setTimeout(function(){
+			currentSlide.find(".wave-text-wrapper").removeClass('current');
+		}, 500);
+		setTimeout(function(){
+			currentSlide.find(".bottom-main-cont").removeClass('current');
+		}, 1000);
+		currentSlide.removeClass('current');
+		setTimeout(function(){
+			currentSlide.removeClass('current');
+		}, 300);
+
+		nextItem.find(".main-slide-wrapper").addClass('current');
+		nextItem.find(".main-cont__bar").addClass('current');
+		nextItem.find(".bottom-sub-slide").addClass('current');
+		setTimeout(function(){
+			nextItem.find(".main-slide-num").addClass('current');
+		}, 1000);
+		setTimeout(function(){
+			nextItem.find(".wave-text-wrapper").addClass('current');
+		}, 500);
+		setTimeout(function(){
+			nextItem.find(".bottom-main-cont").addClass('current');
+		}, 1000);
+		nextItem.addClass('current');
+		setTimeout(function(){
+			nextItem.addClass('current');
+		}, 300);
+	}
+
+
+	dirBtn.on('click', function(e){
+		e.preventDefault();
+		var currentSlide = slide.filter(".current");
+		var currentSlideIndex = currentSlide.index();
+		var nextSlideIndex;
+		if($(this).hasClass('prev')){
+			nextSlideIndex = currentSlide.prev().index();
+			currentSlideIndex = nextSlideIndex >= 0 ? nextSlideIndex : slide.last().index();			
+		}
+		if($(this).hasClass('next')){
+			nextSlideIndex = currentSlide.next().index();
+			currentSlideIndex = nextSlideIndex >= 0 ? nextSlideIndex : slide.first().index();			
+		}
+		runSlide(currentSlideIndex, currentSlide);
+	})
+	function autorunSlide(){
+		autoRun = setInterval(function() {
+            dirBtn.last().click();
+        }, 5000);        
+	}
+	autorunSlide();
+
+	function resetAutorun(){
+		dirBtn.click(function(e){
+			e.preventDefault();
+			clearInterval(autoRun);
+			autorunSlide();
+		});
+	}
+	resetAutorun();
 	/*
 	function autorunRent(){
 		var numberOfSlide = $(".slide-nav__tab").length;
@@ -18,15 +103,18 @@ $(document).ready(function(){
 	}
 	autorunRent();
 	*/
+/*
 	function runSlide(currentSlideIndex, currentSlide){
 		let $nextItem = slide.eq(currentSlideIndex);
 		$nextItem.addClass('current').siblings().removeClass('current');
 	}
 	runSlide();
 
-	dirBtn.click(function(event){
+	dirBtn.click(function(e){
+		e.preventDefault();
 		let currentSlide = slide.filter(".current");
 		let currentSlideIndex = currentSlide.index();
+		let nextSlideIndex;
 		if($(this).hasClass('prev')){
 			nextSlideIndex = currentSlide.prev().index();
 			currentSlideIndex = nextSlideIndex >= 0 ? nextSlideIndex : slide.last().index();			
@@ -36,26 +124,15 @@ $(document).ready(function(){
 			currentSlideIndex = nextSlideIndex >= 0 ? nextSlideIndex : slide.first().index();			
 		}
 		runSlide(currentSlideIndex, currentSlide);
-		if (event.preventDefault) { 
-			event.preventDefault(); 
-		} else { 
-			event.returnValue = false; 
-		}
 	})
 
 	function autorunSlide(){
-		 if ($("body").css('direction') === 'ltr') {
-            autoRun = setInterval(function() {
-                dirBtn.last().click();
-            }, 5000);
-        } else if ($("body").css('direction') === 'rtl') {
-            autoRun = setInterval(function() {
-                dirBtn.first().click();
-            }, 5000);
-        }
+		autoRun = setInterval(function() {
+            dirBtn.last().click();
+        }, 5000);
 	}
 	autorunSlide();
-	
+*/
 	function parallaxScroll(){
 		var divTop = $(".intro-image").offset().top;
 		var scrolled = $(window).scrollTop();

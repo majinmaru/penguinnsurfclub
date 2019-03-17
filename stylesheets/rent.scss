@@ -109,6 +109,7 @@ body {
 		}
 		.search-date {
 			width: 45%;
+			height: 100%;
 			@include flexbox();
 			@include align-items(center);
 			font-family: 'NanumSquare', sans-serif;
@@ -118,6 +119,7 @@ body {
 				@include align-items(center);
 				width: 60%;
 				margin-left: 2rem;
+				height: 100%;
 				.date-input {
 					width: 50%;
 					@include flexbox();
@@ -142,7 +144,9 @@ body {
 			}
 			.search-date__btn {
 				width: 38%;
+				height: 100%;
 				margin-left: 2%;
+				display: inline-block;
 				span {
 					color: $gray1;
 					font-size: 1.35rem;
@@ -151,6 +155,7 @@ body {
 					background-color: $yellow;
 					@include transition(all 0.5s ease);
 					cursor: pointer;
+					display: inline-block;
 					&:hover {
 						@include box-shadow(0 5px 10px $shadow);
 					}
@@ -166,17 +171,20 @@ body {
 		.rent-category {
 			width: 100%;
 			@include flexbox();
-			@include justify-content(space-between);
 			@include box-sizing(border-box);
 			padding: 0 10%;
 			.category-tab {
-				width: 17%;
+				width: 17.6%;
+				margin-left: 3%;
 				@include flexbox();
 				@include align-items(center);
 				border-bottom: 1px solid $gray3;
 				@include box-sizing(border-box);
 				padding: 1%;
 				cursor: pointer;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
 				&.current {
 					border-bottom: 1px solid $blue;
 					.category-tab__title {
@@ -191,12 +199,16 @@ body {
 					text-align: center;
 					color: $gray3;
 					font-size: 1.35rem;
+					font-family: 'NanumSquare', sans-serif;
+					display: inline-block;
 				}
 				.category-tab__icon {
 					width: 20%;
 					color: $gray3;
 					font-size: 1.35rem;
 					text-align: center;
+					font-family: 'NanumSquare', sans-serif;
+					display: inline-block;
 				}
 			}
 		}
@@ -204,7 +216,8 @@ body {
 			width: 100%;
 			margin-top: 4rem;
 			@include box-sizing(border-box);
-			padding: 0 25%;
+			padding-left: calc((100% - 58rem) / 2);
+			padding-right: calc((100% - 58rem) / 2);
 			@include flexbox();
 			@include justify-content(space-between);
 			position: relative;
@@ -219,6 +232,10 @@ body {
 				@include align-items(center);
 				@include box-sizing(border-box);
 				border: 1px solid $white;
+				margin-left: 2rem;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
 				&:hover {
 					opacity: 0.7;
 				}
@@ -277,6 +294,7 @@ body {
 				margin-top: 3rem;
 				margin-bottom: 3rem;
 				color: $gray2;
+				font-family: 'NanumSquare', sans-serif;
 			}
 			.result-option {
 				width: 100%;
@@ -293,6 +311,7 @@ body {
 					margin-right: 1rem;
 					cursor: pointer;
 					font-weight: 700;
+					font-family: 'NanumSquare', sans-serif;
 					&:hover {
 						opacity: 0.8;
 					}
@@ -376,6 +395,7 @@ body {
 						word-break: keep-all;
 						margin-top: 2.5rem;
 						margin-bottom: 1rem;
+						display: block;
 					}
 					.info-spec {
 						width: 30%;
@@ -385,10 +405,12 @@ body {
 						.info-spec__unit {
 							width: 50%;
 							font-size: 1.15rem;
+							display: inline-block;
 						}
 						.info-spec__value {
 							width: 50%;
 							font-size: 1.15rem;
+							display: inline-block;
 						}
 					}
 				}
@@ -405,6 +427,7 @@ body {
 				border-radius: 4rem;
 				cursor: pointer;
 				@include transition(all 0.5s ease);
+				font-family: 'NanumSquare', sans-serif;
 				&:hover {
 					background-color: $blue;
 					color: $font-white;
