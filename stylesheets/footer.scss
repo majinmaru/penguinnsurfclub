@@ -80,7 +80,6 @@ body {
 					width: 20vw;
 					height: 20vw;
 				}
-
 			}
 			.pic3-wrapper {
 				width: 20vw;
@@ -221,6 +220,126 @@ body {
 		}
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {}
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.footer {
+	.footer-insta {
+		.insta-part {
+			.insta-tab {
+				img {
+				}
+				p {
+					bottom: 4rem;
+					span {
+						font-size: 1.1rem;
+						padding: 1.1rem 2rem;
+						border-radius: 5rem;
+						&:hover {
+							background-color: $white;
+							color: $blue;
+						}
+					}
+				}				
+			}
+			.pic3-wrapper {
+				.pic3 {
+					p {
+						bottom: 4rem;
+						span {
+							font-size: 1.1rem;
+							padding: 1.1rem 2rem;							
+						}
+					}
+				}
+			}
+			&.small {
+			}
+		}
+	}
+	.footer-info {
+		.footer-logo {
+			width: 9%;
+		}
+		.footer-sns {
+			margin-top: 3rem;
+			height: 6rem;
+		}
+	}
+}
+}
+@media screen and (max-width: 768px) {
+.footer {
+	.footer-insta {
+		@include flex-direction(column);
+		.insta-part {
+			width: 100%;
+			.insta-tab {
+				img {
+				}
+				p {
+					bottom: 3rem;
+					span {
+						font-size: 1.1rem;
+						padding: 1.1rem 2rem;
+						border-radius: 5rem;
+						&:hover {
+							background-color: $white;
+							color: $blue;
+						}
+					}
+				}
+				&.pic1 {
+					width: calc(100vw / 3 * 2);
+					height: calc(100vw / 3 * 2);
+				}
+				&.pic2 {
+					width: 100vw;
+					height: 50vw;
+				}
+				&.pic3 {
+					width: 50vw;
+					height: 50vw;
+				}
+			}
+			.pic3-wrapper {
+				width: calc(100vw / 3);
+				height: calc(100vw / 3 * 2);
+				.pic3 {
+					width: calc(100vw / 3);
+					height: calc(100vw / 3);
+					p {
+						bottom: 2rem;
+						span {
+							font-size: 1rem;
+							padding: 0.8rem 1rem;							
+						}
+					}
+				}
+			}
+			&.small {
+				width: 100vw;
+			}
+		}
+	}
+	.footer-info {
+		padding-top: 7%;
+		padding-bottom: 5%;
+		.footer-logo {
+			width: 20%;
+		}
+		.footer-sns {
+			margin-top: 2rem;
+			height: 6rem;
+			.sns-tab {
+				width: 7rem;
+				.sns-tab__icon {
+					width: 3rem;
+					height: 3rem;
+				}
+			}
+		}
+	}
+}
 }

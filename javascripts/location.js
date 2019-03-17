@@ -37,8 +37,8 @@ $(document).ready(function(){
 		var titleTopFirst = $(".introduce-part").eq(0).offset().top;
 		var titleTopSecond = $(".introduce-part").eq(1).offset().top;
 		var scrolled = $(window).scrollTop();
-		var translateFirst = (scrolled - titleTopFirst) / $(window).height() * 100;
-		var translateSecond = (scrolled - titleTopSecond) / $(window).height() * 100;
+		var translateFirst = (scrolled - titleTopFirst) / $(window).height() * 80;
+		var translateSecond = (scrolled - titleTopSecond) / $(window).height() * 70;
 		if (scrolled > titleTopFirst * 0.9){
 			$(".introduce-part").eq(0).css({
 				'transform': 'translateY(' + translateFirst +'%)',

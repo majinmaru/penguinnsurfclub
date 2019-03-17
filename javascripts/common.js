@@ -15,12 +15,14 @@ $(document).ready(function(){
 	var stickyHeader = function() {
 		var stickyHeaderTop = $("#start").offset().top;
 		var scrollTop = $(window).scrollTop();
-		if(scrollTop > stickyHeaderTop){
-			$(".gnb").addClass('sticky');
-			$(".logo").addClass('sticky');
-		} else {
-			$(".gnb").removeClass('sticky');
-			$(".logo").removeClass('sticky');
+		if(windowWidth > 768){
+			if(scrollTop > stickyHeaderTop){
+				$(".gnb").addClass('sticky');
+				$(".logo").addClass('sticky');
+			} else {
+				$(".gnb").removeClass('sticky');
+				$(".logo").removeClass('sticky');
+			}
 		}
 	}
 	$(window).scroll(function() {

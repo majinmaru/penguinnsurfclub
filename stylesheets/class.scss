@@ -651,6 +651,7 @@ body {
 				cursor: pointer;
 				display: inline-block;
 				position: relative;
+				font-family: 'NanumSquare', sans-serif;
 			}
 			.next-step {
 				width: 73%;
@@ -663,13 +664,379 @@ body {
 				cursor: pointer;
 				display: inline-block;
 				position: relative;
+				font-family: 'NanumSquare', sans-serif;
 			}
 		}
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+.container-class {
+	.class-info {
+		&:nth-of-type(1) {
+		}
+		&:nth-of-type(2) {
+			.class-info__review {
+				.mCustomScrollBox {
+					.mCSB_container {
+					}
+				}
+				.info-review-card-list {
+					.review-card {
+					}
+				}
+			}
+			.class-info__cont {
+			}
+		}
+		.class-info__review {
+			.mCustomScrollBox {
+				.mCSB_container {
+				}
+			}
+			.info-review-card-list {		
+				.review-card {
+					&.appear{
+					}
+					.card-img {
+						&:after {
+						}
+						img {
+						}
+					}
+					.card-cont {
+						.cont-count {
+						}
+						.cont-eval {
+							margin-top: 155%;
+							img {
+							}
+						}
+						.cont-comment {
+							p {
+							}
+						}
+					}
+				}
+			}
+		}
+		.class-info__cont {
+			.info-cont__text {
+				.text-title-line {
+					span {
+					}
+					&.appear {
+						span {
+						}
+					}
+				}
+				.text-title {
+					&.appear {
+					}
+				}
+				.text-desc {
+					&.appear {
+					}
+				}
+			}
+			.info-cont__benefit {
+				.benefit-tab {
+					&.appear {
+					}
+					img {
+					}
+					span {
+					}
+				}
+			}
+			.info-cont__btn {
+				.btn-name {
+					&.appear {
+					}
+				}
+			}
+		}
+	}
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-
+.container-cost {
+	.cost-wrapper {
+		.cost-tab {
+			width: 25%;
+			padding: 3%;
+			&:hover {
+				.cost-tab__icon {
+					.cost-tab__icon-effect {
+					}
+				}
+			}
+			&.choose {
+				.cost-tab__choose {
+					span {
+					}
+				}
+			}
+			.cost-tab__icon {
+				.cost-tab__icon-icon {
+				}
+				.cost-tab__icon-effect {
+				}
+				.cost-tab__icon-title {
+				}
+			}
+			.cost-tab__option {
+				.option {
+					.option-icon {
+					}
+					.option-input {
+						width: 2.5em;
+					}
+					.option-unit {
+					}
+				}
+			}
+			.cost-tab__benefit {
+			}
+			.cost-tab__total {
+			}
+			.cost-tab__choose {
+				span {
+				}
+			}
+		}
+	}
+	.cost-final {
+		.cost-final__list {
+		}
+		.cost-final__result {
+			.result-title {
+			}
+			.result-money {
+			}
+		}
+		.cost-final__next {
+			.next-reset {
+			}
+			.next-step {
+			}
+		}
+	}
+}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.container {
+	.container-title {
+		.title-line {
+		}
+		.title {
+		}
+	}
+	.container-content {
+		.icon-warpper {
+			width: 100%;
+			padding: 0 16%;
+			.icon-tab {
+				width: calc(70% / 3);
+				margin-left: 15%;
+				.icon-tab__img {
+					width: 100%;
+					height: 13rem;
+					position: relative;
+					text-decoration: none;
+					@include flexbox();
+					@include justify-content(center);
+					.tab-img__icon {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+					.tab-img__icon-effect {
+						width: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						&.effect {
+							@include animation(icon-effect 0.5s ease infinite);
+						}
+					}
+				}
+				.icon-tab__subtitle {
+					width: 100%;
+					text-align: center;
+					margin-top: 3rem;
+					color: $gray3;
+					font-size: 1rem;
+					word-break: keep-all;
+					display: block;
+				}
+				.icon-tab__title {
+					width: 100%;
+					text-align: center;
+					color: $gray2;
+					font-size: 2rem;
+					margin-top: 1.15rem;
+					font-weight: 700;
+					display: block;
+				}
+			}
+		}
+	}
+}
+.container-class {
+	.class-info {
+		&:nth-of-type(1) {
+		}
+		&:nth-of-type(2) {
+			.class-info__review {
+				.mCustomScrollBox {
+					.mCSB_container {
+					}
+				}
+				.info-review-card-list {
+					.review-card {
+					}
+				}
+			}
+			.class-info__cont {
+			}
+		}
+		.class-info__review {
+			.mCustomScrollBox {
+				.mCSB_container {
+				}
+			}
+			.info-review-card-list {
+			width: 123vw;		
+				.review-card {
+					width: 23%;
+					&.appear{
+					}
+					.card-img {
+					}
+					.card-cont {
+						.cont-count {
+						}
+						.cont-eval {
+							margin-top: 121%;
+							img {
+							}
+						}
+						.cont-comment {
+							p {
+							}
+						}
+					}
+				}
+			}
+		}
+		.class-info__cont {
+			.info-cont__text {
+				.text-title-line {
+					span {
+					}
+					&.appear {
+						span {
+						}
+					}
+				}
+				.text-title {
+					&.appear {
+					}
+				}
+				.text-desc {
+					width: 60%;
+					&.appear {
+					}
+				}
+			}
+			.info-cont__benefit {
+				.benefit-tab {
+					width: 27%;
+					&.appear {
+					}
+					img {
+					}
+					span {
+					}
+				}
+			}
+			.info-cont__btn {
+				.btn-name {
+					margin-left: 28%;
+					&.appear {
+					}
+				}
+			}
+		}
+	}
+}
+.container-cost {
+	display: block;
+	.cost-wrapper {
+		width: 100%;
+		.cost-tab {
+			width: calc((100% - 4rem) / 3);
+			padding: 3%;
+			margin-right: 0;
+			margin-left: 2rem;
+			@include box-sizing(border-box);
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			&.choose {
+				.cost-tab__choose {
+					span {
+					}
+				}
+			}
+			.cost-tab__icon {
+				.cost-tab__icon-icon {
+				}
+				.cost-tab__icon-effect {
+				}
+				.cost-tab__icon-title {
+				}
+			}
+			.cost-tab__option {
+				.option {
+					.option-icon {
+					}
+					.option-input {
+						width: 2.5em;
+					}
+					.option-unit {
+					}
+				}
+			}
+			.cost-tab__benefit {
+			}
+			.cost-tab__total {
+			}
+			.cost-tab__choose {
+				span {
+				}
+			}
+		}
+	}
+	.cost-final {
+		width: 55%;
+		margin-left: 45%;
+		.cost-final__list {
+		}
+		.cost-final__result {
+			.result-title {
+			}
+			.result-money {
+			}
+		}
+		.cost-final__next {
+			.next-reset {
+			}
+			.next-step {
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 768px) {
+	
 }

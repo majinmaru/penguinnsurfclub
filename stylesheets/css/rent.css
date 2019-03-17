@@ -88,4 +88,18 @@ body { width: 100%; overflow-x: hidden; }
 .shopbag .shopbag-icon { width: 5rem; height: 5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: absolute; bottom: 0; right: 0; cursor: pointer; }
 .shopbag .shopbag-icon img { width: 3rem; height: auto; }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) { .container .search-wrapper { padding: 3% 12%; }
+  .container .search-wrapper .search-title { width: 45%; }
+  .container .search-wrapper .search-title p { font-size: 3rem; line-height: 1.5; }
+  .container .search-wrapper .search-date { width: 55%; }
+  .container .search-wrapper .search-date .search-date__input { width: 60%; }
+  .container .search-wrapper .search-date .search-date__input .date-input { width: 50%; }
+  .container .search-wrapper .search-date .search-date__input .date-input input { width: 5rem; height: 4rem; }
+  .container .search-wrapper .search-date .search-date__btn { width: 38%; height: 100%; margin-left: 2%; display: inline-block; }
+  .container .search-wrapper .search-date .search-date__btn span { font-size: 1.35rem; padding: 1.35rem 3rem; }
+  .container .rent-wrapper .rent-category { padding: 0; }
+  .container .rent-wrapper .rent-item-list .item .item-info .info-spec { width: 53%; }
+  .container .rent-wrapper .rent-item-list .item .item-info .info-spec .info-spec__unit { width: 50%; }
+  .container .rent-wrapper .rent-item-list .item .item-info .info-spec .info-spec__value { width: 50%; } }
+
 /*# sourceMappingURL=rent.css.map */

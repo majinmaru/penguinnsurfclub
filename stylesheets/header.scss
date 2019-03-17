@@ -178,9 +178,158 @@ body {
 		}
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	.header {
+		.logo {
+			width: 14vw;
+		}
+	}
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-	
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+.header {
+	.gnb {		
+		&.sticky {			
+		}
+		.gnb-list {			
+			.gnb-tab {
+				&:nth-of-type(1){
+				}
+				&:nth-of-type(2){
+				}
+				&:nth-of-type(3){
+				}
+				&.current {
+					a {
+						span {
+						}
+					}
+				}
+				a {
+					span {
+					}
+				}
+			}
+		}
+		.wave-tab {
+			a {
+				&:hover {
+				}
+				span {
+				}
+				img {
+				}
+			}
+		}
+	}
+	.nav-mobile {
+	}
+	.logo {
+		width: 18vw;
+		height: 170px;		
+		left: $margin-tablet;
+		&.sticky {
+			.logo-symbol {
+				img {
+				}
+			}
+			.logo-title {
+			}
+		}
+		&:hover {
+		}
+		.logo-symbol {
+			img {
+			}
+		}
+		.logo-title {
+			img {
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 768px) {
+.header {
+	height: $gnb-height-mobile;
+	.gnb {
+		display: none;
+		width: 100%;
+		&.sticky {			
+		}
+		.gnb-list {			
+			.gnb-tab {
+				&:nth-of-type(1){
+				}
+				&:nth-of-type(2){
+				}
+				&:nth-of-type(3){
+				}
+				&.current {
+					a {
+						span {
+						}
+					}
+				}
+				a {
+					span {
+					}
+				}
+			}
+		}
+		.wave-tab {
+			a {
+				span {
+				}
+				img {
+				}
+			}
+		}
+	}
+	.nav-mobile {
+		position: absolute;
+		margin-right: $margin-mobile;
+		width: $gnb-height-mobile;
+		height: $gnb-height-mobile;
+		top: 0;
+		right: 0;
+		display: block;
+		cursor: pointer;
+		img {
+			width: 60%;
+			height: 50%;
+			margin-left: 20%;
+			margin-top: 26%;
+		}
+	}
+	.logo {
+		width: calc((100% / 6) * 1.6);
+		height: 90px;		
+		left: $margin-mobile;
+		&.sticky {
+			.logo-symbol {
+				img {
+				}
+			}
+			.logo-title {
+			}
+		}
+		&:hover {
+		}
+		.logo-symbol {
+			img {
+				width: 70%;
+				height: 70%;
+				margin-left: 15%;
+				margin-top: 15%;
+			}
+		}
+		.logo-title {
+			img {
+				width: 60%;
+				height: 60%;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 }

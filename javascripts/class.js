@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$("#class-info-01 .class-info__review").mCustomScrollbar({
 		axis:"x",
 		theme:"minimal-dark",
-		setLeft: "-100%"
+		setLeft: "-150%"
 	});
 	$("#class-info-02 .class-info__review").mCustomScrollbar({
 		axis:"x",
@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$("#class-info-03 .class-info__review").mCustomScrollbar({
 		axis:"x",
 		theme:"minimal-dark",
-		setLeft: "-100%"
+		setLeft: "-150%"
 	});
 
 	function classSurfTitle(){
