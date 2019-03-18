@@ -25,6 +25,30 @@ $(document).ready(function(){
 			}
 		}
 	}
+
+	function mobileMenu(){
+		$(".nav-mobile").click(function(){
+			if($(".gnb").hasClass('.mobile-menu')){
+				$(".gnb").animate({
+					height: "0"
+				}, 500);
+				$(".gnb").removeClass('.mobile-menu');
+				$(".gnb").css('display', 'none');
+				$(".nav-mobile").css('position', 'absolute');
+				$(".logo").css('position', 'absolute');
+			} else {
+				$(".gnb").css('display', 'block');
+				$(".gnb").addClass('.mobile-menu');
+				$(".gnb").animate({
+					height: "100vh"
+				}, 500);
+				$(".nav-mobile").css('position', 'fixed');
+				$(".logo").css('position', 'fixed');
+			}
+		});
+	}
+	mobileMenu();
+
 	$(window).scroll(function() {
 		stickyHeader();
 	});

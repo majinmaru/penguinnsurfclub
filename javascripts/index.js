@@ -211,7 +211,7 @@ $(document).ready(function(){
 				}, 500);
 			}
 		} else if (windowWidth <= 768){
-			if (scrolled > introTop * 0.5){
+			if (scrolled > introTop * 0.8){
 				$(".location-wrapper .location-intro.left").addClass('appear-ltr');
 				setTimeout(function(){
 					$(".location-wrapper .location-intro.right").addClass('appear-rtl');
@@ -232,7 +232,7 @@ $(document).ready(function(){
 				}, 500);
 			}
 		} else if (windowWidth <= 768){
-			if (scrolled > titleTop * 0.6){
+			if (scrolled > titleTop * 0.9){
 				$("#rental-container-title .title-line").addClass('appear');
 				setTimeout(function(){
 					$("#rental-container-title .title").addClass('appear');
@@ -273,6 +273,7 @@ $(document).ready(function(){
 		}
 	});
 */
+
 	$(window).scroll(function() {
 		parallaxScroll();
 		classTitle();
