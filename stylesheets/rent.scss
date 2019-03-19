@@ -640,8 +640,8 @@ body {
 				margin-left: 0;
 				display: inline-block;
 				span {
-					font-size: 1.35rem;
-					padding: 1.35rem 3rem;
+					font-size: 1.1rem;
+					padding: 1.1rem 3rem;
 					margin-left: 18%;
 				}
 			}
@@ -743,7 +743,6 @@ body {
 	right: $margin-mobile;
 	bottom: 5%;
 	border-radius: 50%;
-	@include transition(all 0.5s ease);
 	@include box-shadow(0 5px 5px $shadow);
 	z-index: 3;
 	&.done {
@@ -754,7 +753,6 @@ body {
 	}
 	.mobile-active {
 		display: none;
-		@include transition(all 0.5s ease);
 		&:before {
 			content: '';
 			display: inline-block;
