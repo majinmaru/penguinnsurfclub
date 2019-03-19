@@ -260,6 +260,7 @@ body {
 		&.mobile-menu {
 			@include animation(gnb-mobile 0.5s ease);
 			height: 100vh;
+			overflow-y: hidden;
 		}
 		&.sticky {			
 		}

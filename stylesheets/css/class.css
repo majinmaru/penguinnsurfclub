@@ -78,6 +78,12 @@
   100% { width: 100%; } }
 @keyframes loading-bar { 0% { width: 0%; }
   100% { width: 100%; } }
+@-webkit-keyframes gnb-mobile { 0% { height: 0; }
+  100% { height: 100vh; } }
+@-moz-keyframes gnb-mobile { 0% { height: 0; }
+  100% { height: 100vh; } }
+@keyframes gnb-mobile { 0% { height: 0; }
+  100% { height: 100vh; } }
 @-webkit-keyframes letter-appear { 0% { -webkit-transform: translate(0, 20px); opacity: 0; }
   50% { opacity: 1; }
   100% { -webkit-transform: translate(0, 0); opacity: 1; } }
@@ -310,5 +316,49 @@ body { width: 100%; overflow-x: hidden; }
   .container-cost .cost-wrapper .cost-tab:nth-of-type(1) { margin-left: 0; }
   .container-cost .cost-wrapper .cost-tab .cost-tab__option .option .option-input { width: 2.5em; }
   .container-cost .cost-final { width: 55%; margin-left: 45%; } }
+@media screen and (max-width: 768px) { .jumbotron .jumbotron-img img { width: auto; height: 100%; }
+  .container .container-title .title { font-size: 2rem; }
+  .container .container-content .icon-warpper { padding: 0 10%; }
+  .container .container-content .icon-warpper .icon-tab { width: calc(84% / 3); margin-left: 8%; }
+  .container .container-content .icon-warpper .icon-tab .icon-tab__img { width: 100%; height: 6rem; }
+  .container .container-content .icon-warpper .icon-tab .icon-tab__subtitle { margin-top: 2rem; font-size: 1rem; line-height: 1.2; display: none; }
+  .container .container-content .icon-warpper .icon-tab .icon-tab__title { font-size: 1.5rem; margin-top: 1.5rem; }
+  .container-class .class-info { -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
+  .container-class .class-info:nth-of-type(2) { padding-top: 0; }
+  .container-class .class-info:nth-of-type(2) .class-info__review { width: 100%; }
+  .container-class .class-info:nth-of-type(2) .class-info__cont { position: absolute; top: 100%; margin-right: 0; margin-left: 0; }
+  .container-class .class-info:nth-of-type(3) { margin-top: 100%; }
+  .container-class .class-info .class-info__review { height: 35rem; width: 100%; }
+  .container-class .class-info .class-info__review .info-review-card-list { width: 310vw; height: 35rem; }
+  .container-class .class-info .class-info__review .info-review-card-list .review-card { width: 18%; height: 30rem; }
+  .container-class .class-info .class-info__review .info-review-card-list .review-card .card-cont .cont-eval { margin-top: 121%; }
+  .container-class .class-info .class-info__review .info-review-card-list .review-card .card-cont .cont-eval img { height: 1.6rem; margin-right: 0.7rem; }
+  .container-class .class-info .class-info__review .info-review-card-list .review-card .card-cont .cont-comment { margin-top: 1.5rem; }
+  .container-class .class-info .class-info__review .info-review-card-list .review-card .card-cont .cont-comment p { font-size: 1.1rem; }
+  .container-class .class-info .class-info__cont { width: 100%; margin-left: 0; margin-right: 0; }
+  .container-class .class-info .class-info__cont .info-cont__text .text-title { font-size: 2rem; }
+  .container-class .class-info .class-info__cont .info-cont__text .text-desc { width: 70%; }
+  .container-class .class-info .class-info__cont .info-cont__benefit .benefit-tab { width: 27%; }
+  .container-class .class-info .class-info__cont .info-cont__benefit .benefit-tab img { height: 4.3rem; }
+  .container-class .class-info .class-info__cont .info-cont__benefit .benefit-tab span { font-size: 1.1rem; }
+  .container-class .class-info .class-info__cont .info-cont__btn .btn-name { margin-left: 30%; font-size: 1.15rem; padding: 1.3rem 4rem; }
+  .container-cost { display: block; padding: 0 20px; }
+  .container-cost .cost-wrapper { width: 100%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
+  .container-cost .cost-wrapper .cost-tab { -webkit-box-direction: row; -ms-flex-direction: row; flex-direction: row; margin-left: 0; margin-right: 0; width: 100%; height: 21rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-bottom: 1rem; }
+  .container-cost .cost-wrapper .cost-tab:nth-of-type(1) { margin-left: 0; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__icon { width: 40%; height: 10rem; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__icon .cost-tab__icon-title { word-break: keep-all; line-height: 1.5; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__option { width: 60%; position: absolute; top: 0; right: 0; margin-top: 1rem; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__option .option { margin-top: 1.2rem; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__option .option .option-input { width: 2.5em; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__benefit { display: none; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__total { width: 60%; position: absolute; right: 0; padding-right: 9%; text-align: right; font-size: 2rem; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__choose { width: 60%; position: absolute; right: 0; top: 65%; display: inline; margin-top: 3rem; }
+  .container-cost .cost-wrapper .cost-tab .cost-tab__choose span { font-size: 1.1rem; padding: 1rem 3rem; margin-left: 43%; }
+  .container-cost .cost-final { width: 78%; margin-left: 22%; }
+  .container-cost .cost-final .cost-final__result .result-money { font-size: 3.5rem; }
+  .container-cost .cost-final .cost-final__next { margin-top: 1rem; }
+  .container-cost .cost-final .cost-final__next .next-reset { font-size: 1.1rem; }
+  .container-cost .cost-final .cost-final__next .next-step { font-size: 1.1rem; } }
 
 /*# sourceMappingURL=class.css.map */

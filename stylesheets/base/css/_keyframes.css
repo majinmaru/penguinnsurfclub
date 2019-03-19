@@ -81,6 +81,24 @@
   100% { height: 100vh; } }
 @keyframes gnb-mobile { 0% { height: 0; }
   100% { height: 100vh; } }
+@-webkit-keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-moz-keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-webkit-keyframes done { 0% { -webkit-transform: scale(1); }
+  70% { -webkit-transform: scale(1.05); }
+  85% { -webkit-transform: scale(0.95); }
+  100% { -webkit-transform: scale(1); } }
+@-moz-keyframes done { 0% { -moz-transform: scale(1); }
+  70% { -moz-transform: scale(1.05); }
+  85% { -moz-transform: scale(0.95); }
+  100% { -moz-transform: scale(1); } }
+@keyframes done { 0% { transform: scale(1); }
+  70% { transform: scale(1.05); }
+  85% { transform: scale(0.95); }
+  100% { transform: scale(1); } }
 @-webkit-keyframes letter-appear { 0% { -webkit-transform: translate(0, 20px); opacity: 0; }
   50% { opacity: 1; }
   100% { -webkit-transform: translate(0, 0); opacity: 1; } }

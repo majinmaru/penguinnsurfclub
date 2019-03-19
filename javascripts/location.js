@@ -39,19 +39,22 @@ $(document).ready(function(){
 		var scrolled = $(window).scrollTop();
 		var translateFirst = (scrolled - titleTopFirst) / $(window).height() * 80;
 		var translateSecond = (scrolled - titleTopSecond) / $(window).height() * 70;
-		if (scrolled > titleTopFirst * 0.9){
-			$(".introduce-part").eq(0).css({
-				'transform': 'translateY(' + translateFirst +'%)',
-				'-webkit-transform' : 'translateY(' + translateFirst +'%)',
-				'-ms-transform': 'translateY(' + translateFirst +'%)'
-			});
-		}
-		if (scrolled > titleTopSecond * 0.9){
-			$(".introduce-part").eq(1).css({
-				'transform': 'translateY(' + translateSecond +'%)',
-				'-webkit-transform' : 'translateY(' + translateSecond +'%)',
-				'-ms-transform': 'translateY(' + translateSecond +'%)'
-			});
+		var windowWidth = $(window).width();
+		if(windowWidth > 768){
+			if (scrolled > titleTopFirst * 0.9){
+				$(".introduce-part").eq(0).css({
+					'transform': 'translateY(' + translateFirst +'%)',
+					'-webkit-transform' : 'translateY(' + translateFirst +'%)',
+					'-ms-transform': 'translateY(' + translateFirst +'%)'
+				});
+			}
+			if (scrolled > titleTopSecond * 0.9){
+				$(".introduce-part").eq(1).css({
+					'transform': 'translateY(' + translateSecond +'%)',
+					'-webkit-transform' : 'translateY(' + translateSecond +'%)',
+					'-ms-transform': 'translateY(' + translateSecond +'%)'
+				});
+			}
 		}
 	}
 

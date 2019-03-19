@@ -2,6 +2,7 @@
 @import 'base/font.scss';
 @import 'base/mixin.scss';
 @import 'base/variable.scss';
+@import 'base/keyframes.scss';
 
 html {
 	font-size: $desktop;
@@ -491,6 +492,9 @@ body {
 			height: auto;
 		}
 	}
+	.mobile-active {
+		display: none;
+	}
 }
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 
@@ -589,5 +593,220 @@ body {
 }
 }
 @media screen and (max-width: 768px) {
-	
+.jumbotron {
+	.jumbotron-img {
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+}
+.container {
+	.search-wrapper {
+		padding: 7% 10%;
+		@include flex-direction(column);
+		@include align-items(baseline);
+		.search-title {
+			width: 100%;
+			p {
+				font-size: 1.5rem;
+				line-height: 1.5;
+				text-align: center;
+			}
+		}
+		.search-date {
+			width: 100%;
+			margin-top: 2rem;
+			.search-date__input {
+				width: 50%;
+				margin-left: 0;
+				.date-input {
+					width: 50%;
+					input {
+						width: 4rem;
+						height: 3rem;
+						font-size: 1.5rem;
+						line-height: 2rem;
+						margin-right: 0.4rem;
+					}
+					span {
+						font-size: 2rem;
+					}
+				}
+			}
+			.search-date__btn {
+				width: 50%;
+				height: 100%;
+				margin-left: 0;
+				display: inline-block;
+				span {
+					font-size: 1.35rem;
+					padding: 1.35rem 3rem;
+					margin-left: 18%;
+				}
+			}
+		}
+	}
+	.rent-wrapper {
+		padding: 0 $margin-mobile;
+		.rent-category {
+			padding: 0;
+			.category-tab {
+				width: 44%;
+				&:nth-of-type(1){
+					margin-left: 28%;
+				}
+				&:nth-of-type(2){
+					display: none;
+				}
+				&:nth-of-type(3){
+					display: none;
+				}
+				&:nth-of-type(4){
+					display: none;
+				}
+				&:nth-of-type(5){
+					display: none;
+				}
+				.category-tab__title {
+				}
+				.category-tab__icon {
+				}
+			}
+		}
+		.rent-color {
+			@include flex-wrap(wrap);
+			width: 28rem;
+			margin-top: 3rem;
+			padding: 0;
+			margin-left: calc((100% - 28rem) / 2);
+			.color-tab {
+				margin-top: 1rem;
+				&:nth-of-type(6){
+					margin-left: 0;
+				}
+				.color-tab__color {
+				}
+			}
+		}
+		.rent-result {			
+			.result-title {
+			}
+			.result-option {
+				.option {					
+				}
+			}
+		}
+		.rent-item-list {
+			.item {
+				width: calc(97% / 2);
+				&:nth-of-type(4n) {
+					margin-right: 1%;
+				}
+				&:nth-of-type(2n) {
+					margin-right: 0;
+				}
+				.item-img {
+					img {					
+					}
+					.item-img__quickmenu {
+						.quickmenu-tab {
+						}
+					}
+				}
+				.item-info {
+					.info-title {
+					}
+					.info-spec {
+						width: 53%;
+						.info-spec__unit {
+							width: 50%;
+						}
+						.info-spec__value {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+		.rent-more {
+			span {
+			}
+		}
+	}
+}
+.shopbag {
+	width: 5rem;
+	height: 5rem;
+	position: fixed;
+	top: auto;
+	right: $margin-mobile;
+	bottom: 5%;
+	border-radius: 50%;
+	@include transition(all 0.5s ease);
+	@include box-shadow(0 5px 5px $shadow);
+	z-index: 3;
+	&.done {
+		@include animation(done 0.5s ease);
+	}
+	.shopbag-icon {
+		z-index: 4;
+	}
+	.mobile-active {
+		display: none;
+		@include transition(all 0.5s ease);
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 1rem;
+			height: 1rem;
+			@include transform(rotate(45deg));
+			border-right: 12px solid $yellow;
+			border-bottom: 12px solid $yellow;
+			position: absolute;
+			left: 30%;
+			bottom: -0.5rem;
+		}
+		&.active {
+			display: inline-block;
+			width: 5rem;
+			height: 3rem;
+			border-radius: 5px;
+			background-color: $yellow;
+			position: fixed;
+			bottom: calc(5% + 6.5rem);
+		}
+		span {
+			width: 1rem;
+			height: 1rem;
+			border-radius: 50%;
+			background-color: $gray1;
+			display: inline-block;
+			margin-left: 0.5rem;
+			margin-top: 1rem;
+			@include transition(all 0.3s ease);
+			z-index: 3;
+			&.active {
+				@include animation(dot-loading 0.5s linear infinite);
+			}
+			&.go-into {
+				&:nth-of-type(1){
+					@include transform(translate(1.5rem, 7rem));
+					background-color: $yellow;
+				}
+				&:nth-of-type(2){
+					@include transform(translate(0, 7rem));
+					background-color: $yellow;
+				}
+				&:nth-of-type(3){
+					@include transform(translate(-1.5rem, 7rem));
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+	.shopbag-cont {
+		display: none;
+	}
+}
 }

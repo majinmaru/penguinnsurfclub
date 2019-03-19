@@ -36,6 +36,7 @@ $(document).ready(function(){
 				$(".gnb").css('display', 'none');
 				$(".nav-mobile").css('position', 'absolute');
 				$(".logo").css('position', 'absolute');
+				$("html").css('overflow-y', 'scroll');
 			} else {
 				$(".gnb").css('display', 'block');
 				$(".gnb").addClass('.mobile-menu');
@@ -44,6 +45,7 @@ $(document).ready(function(){
 				}, 500);
 				$(".nav-mobile").css('position', 'fixed');
 				$(".logo").css('position', 'fixed');
+				$("html").css('overflow-y', 'hidden')
 			}
 		});
 	}
