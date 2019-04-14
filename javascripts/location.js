@@ -32,7 +32,27 @@ $(document).ready(function(){
 			}, 800);
 		}
 	}
-
+	/*
+	$(".introduce-part").eq(0).paroller({
+		factor: -0.1,
+		type: 'foreground',
+		direction: 'vertical',
+		transition: 'transform 0.5s linear'
+	});
+	*/
+	$(".introduce-part").eq(1).paroller({
+		factor: -0.1,
+		type: 'foreground',
+		direction: 'vertical',
+		transition: 'transform 0.3s linear'
+	});
+	$(".introduce-part").eq(2).paroller({
+		factor: -0.2,
+		type: 'foreground',
+		direction: 'vertical',
+		transition: 'transform 0.3s linear'
+	});
+/*
 	function introduce(){
 		var titleTopFirst = $(".introduce-part").eq(0).offset().top;
 		var titleTopSecond = $(".introduce-part").eq(1).offset().top;
@@ -57,10 +77,10 @@ $(document).ready(function(){
 			}
 		}
 	}
-
+*/
 	$(window).scroll(function() {
 		introduceTitle()	
 		snapTitle();
-		introduce();
+		//introduce();
 	});
 });

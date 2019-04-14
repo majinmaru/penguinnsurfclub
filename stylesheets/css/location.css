@@ -273,6 +273,7 @@ body { width: 100%; overflow-x: hidden; }
 .container .container-content .gallery-wrapper .gallery-dir .gallery-dir__tab img { height: 5rem; cursor: pointer; }
 .container .container-content .gallery-wrapper .gallery-dir .gallery-dir__tab.prev img { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 
+@media screen and (min-width: 1920px) { html { font-size: 14px; } }
 @media screen and (min-width: 1025px) and (max-width: 1280px) { .container .container-content .location-warpper .location-map { position: relative; }
   .container .container-content .location-warpper .location-map img { width: auto; height: 100%; position: absolute; top: 0; left: 0; }
   .container .container-content .gallery-wrapper .gallery-tab-list .gallery-tab { width: 22vw; } }

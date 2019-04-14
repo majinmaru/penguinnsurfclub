@@ -295,6 +295,7 @@ body { width: 100%; overflow-x: hidden; }
 .shopbag .shopbag-icon img { width: 3rem; height: auto; }
 .shopbag .mobile-active { display: none; }
 
+@media screen and (min-width: 1920px) { html { font-size: 14px; } }
 @media screen and (min-width: 769px) and (max-width: 1024px) { .container .search-wrapper { padding: 3% 12%; }
   .container .search-wrapper .search-title { width: 45%; }
   .container .search-wrapper .search-title p { font-size: 3rem; line-height: 1.5; }

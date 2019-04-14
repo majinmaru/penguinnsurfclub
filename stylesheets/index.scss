@@ -200,7 +200,7 @@ body {
 							font-family: 'TmonMonsori'; 
 							font-size: 3rem;
 							line-height: 3.15rem;
-							width: 22%;
+							display: inline;
 							@include transition(all 0.5s ease);
 						}
 						.title-btn {
@@ -671,7 +671,67 @@ body {
 		}
 	}
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1920px) {
+html {
+	font-size: $desktop-large;
+}
+.visual {	
+	.visual-container {		
+		.visual-slide {
+			&.current {
+			}
+			.visual-slide__top {
+				.top-main-slide {
+					.main-slide-img {
+						.main-slide-wrapper {
+							&.current {
+								img {									
+								}
+								.main-slide-img__cover {
+								}
+							}
+							img {
+								height: 100%;
+								width: auto;						
+							}
+							.main-slide-img__cover {					
+							}
+						}
+					}
+					.main-slide-num {
+						&.current {
+							&:after {
+							}
+						}
+						&:after {
+						}
+						.main-slide-num__box {
+							span {
+							}
+						}
+					}
+				}
+				.top-wave-text {
+					.wave-text-wrapper {
+						&.current {
+							.wave-text {
+								@include transform(rotate(-90deg) translate(-35%, 4%));
+							}
+							.wave-text-cover {
+							}
+						}
+						.wave-text {
+						}
+						.wave-text-cover {
+						}
+					}
+				}
+			}			
+		}		
+	}	
+}
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
 .visual {	
 	.visual-container {		
 		.visual-slide {
@@ -721,65 +781,8 @@ body {
 						}
 					}
 				}
-			}
-			.visual-slide__bottom {
-				.bottom-main-cont {
-					&.current {
-						.main-cont__title {
-							
-						}
-						.main-cont__desc {
-						}	
-					}			
-					.main-cont__title {
-						.title-text {
-							width: 32%;
-						}
-						.title-btn {
-							a {
-							}
-						}
-					}
-					.main-cont__desc {
-					}
-					.main-cont__bar {
-						&.current {
-							&:after {
-							}
-						}
-						&:after {
-						}
-					}
-				}			
-				.bottom-sub-slide {
-					&.current {
-						img {
-						}
-						.sub-slide__cover {
-						}
-					}
-					img {
-					}
-					.sub-slide__cover {
-					}
-				}
-			}
+			}			
 		}		
-	}
-	.visual-dir {
-		.dir-btn {
-			&.current {
-			}
-			&:hover {
-			}
-			img {
-			}
-			&.prev {
-				img {
-				}
-			}
-			&.next {}
-		}	
 	}
 }
 }

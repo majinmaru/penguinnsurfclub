@@ -84,6 +84,24 @@
   100% { height: 100vh; } }
 @keyframes gnb-mobile { 0% { height: 0; }
   100% { height: 100vh; } }
+@-webkit-keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-moz-keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@keyframes dot-loading { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-webkit-keyframes done { 0% { -webkit-transform: scale(1); }
+  70% { -webkit-transform: scale(1.05); }
+  85% { -webkit-transform: scale(0.95); }
+  100% { -webkit-transform: scale(1); } }
+@-moz-keyframes done { 0% { -moz-transform: scale(1); }
+  70% { -moz-transform: scale(1.05); }
+  85% { -moz-transform: scale(0.95); }
+  100% { -moz-transform: scale(1); } }
+@keyframes done { 0% { transform: scale(1); }
+  70% { transform: scale(1.05); }
+  85% { transform: scale(0.95); }
+  100% { transform: scale(1); } }
 @-webkit-keyframes letter-appear { 0% { -webkit-transform: translate(0, 20px); opacity: 0; }
   50% { opacity: 1; }
   100% { -webkit-transform: translate(0, 0); opacity: 1; } }
@@ -293,6 +311,7 @@ body { width: 100%; overflow-x: hidden; }
 .container-cost .cost-final .cost-final__next .next-reset { width: 25%; margin-right: 2%; color: white; background-color: #606060; padding-top: 1.35rem; padding-bottom: 1.35rem; font-size: 1.35rem; text-align: center; cursor: pointer; display: inline-block; position: relative; font-family: 'NanumSquare', sans-serif; }
 .container-cost .cost-final .cost-final__next .next-step { width: 73%; color: #2b2b2b; background-color: #f7ff5a; padding-top: 1.35rem; padding-bottom: 1.35rem; font-size: 1.35rem; text-align: center; cursor: pointer; display: inline-block; position: relative; font-family: 'NanumSquare', sans-serif; }
 
+@media screen and (min-width: 1920px) { html { font-size: 14px; } }
 @media screen and (min-width: 1025px) and (max-width: 1280px) { .container-class .class-info .class-info__review .info-review-card-list .review-card .card-cont .cont-eval { margin-top: 155%; }
   .container-cost .cost-wrapper .cost-tab { width: 25%; padding: 3%; }
   .container-cost .cost-wrapper .cost-tab .cost-tab__option .option .option-input { width: 2.5em; } }
