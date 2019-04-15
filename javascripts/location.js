@@ -39,15 +39,18 @@ $(document).ready(function(){
 		direction: 'vertical',
 		transition: 'transform 0.5s linear'
 	});
-	*/
+	*/	
 	$(".introduce-part").eq(1).paroller({
-		factor: -0.1,
+		factor: -0.05,
+		factorXs: -0.07,
 		type: 'foreground',
 		direction: 'vertical',
 		transition: 'transform 0.3s linear'
 	});
+
 	$(".introduce-part").eq(2).paroller({
-		factor: -0.2,
+		factor: -0.08,
+		factorXs: -0.1,
 		type: 'foreground',
 		direction: 'vertical',
 		transition: 'transform 0.3s linear'
